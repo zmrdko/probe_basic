@@ -60,20 +60,20 @@ class ProbeBasic(VCPMainWindow):
         self.load_user_tabs()
 
     def get_extents(self, file_path):
-        xdist = self.gcode_properties.x_extents_size()
-        ydist = self.gcode_properties.y_extents_size()
-        x0 = self.gcode_properties.x_min_extents()
-        y0 = self.gcode_properties.y_min_extents()
+        xmin = self.gcode_properties.x_min_extents()
+        ymin = self.gcode_properties.y_min_extents()
+        xmax = self.gcode_properties.x_max_extents()
+        ymax = self.gcode_properties.y_max_extents()
         
-        grid_spacing = getSetting('surface-scan.grid-spacing').getValue()
-        grid_xdist = math.ceil(xdist/grid_spacing)*grid_spacing
-        grid_ydist = math.ceil(ydist/grid_spacing)*grid_spacing
-        grid_x0 = x0-(grid_xdist-xdist)/2
-        grid_y0 = x0-(grid_ydist-ydist)/2
-        setSetting('surface-scan.xdist', grid_xdist)
-        setSetting('surface-scan.ydist', grid_ydist)
-        setSetting('surface-scan.x0', grid_x0)
-        setSetting('surface-scan.y0', grid_y0)
+        #grid_spacing = getSetting('surface-scan.grid-spacing').getValue()
+        #grid_xdist = math.ceil(xdist/grid_spacing)*grid_spacing
+        #grid_ydist = math.ceil(ydist/grid_spacing)*grid_spacing
+        #grid_x0 = x0-(grid_xdist-xdist)/2
+        #grid_y0 = x0-(grid_ydist-ydist)/2
+        setSetting('surface-scan.x-start-pos', xmin)
+        setSetting('surface-scan.y-start-pos', ymin)
+        setSetting('surface-scan.x-end-pos', xmax)
+        setSetting('surface-scan.y-end-pos', ymax)
 
     def load_user_tabs(self):
         self.user_tab_modules = {}
