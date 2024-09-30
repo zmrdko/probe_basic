@@ -30,6 +30,40 @@ INIFILE = linuxcnc.ini(os.getenv("INI_FILE_NAME"))
 # Add custom fonts
 QFontDatabase.addApplicationFont(os.path.join(VCP_DIR, 'fonts/BebasKai.ttf'))
 
+# Constant array for reading parameter values from file into probe_basic settings
+const_setting_parameter = {
+    "tool-setter-probe.fast-probe-fr": 3004,
+    "tool-setter-probe.slow-probe-fr": 3005,
+    "tool-setter-probe.traverse-fr": 3006,
+    "tool-setter-probe.z-max-travel": 3007,
+    "tool-setter-probe.xy-max-travel": 3008,
+    "tool-setter-probe.retract-distance": 3009,
+    "tool-setter-probe.spindle-nose-height": 3010,
+    "probe-parameters.probe-tool-number": 3014,
+    "probe-parameters.probe-slow-fr": 3015,
+    "probe-parameters.probe-fast-fr": 3016,
+    "probe-parameters.probe-traverse-fr": 3017,
+    "probe-parameters.max-xy-distance": 3018,
+    "probe-parameters.xy-clearance": 3019,
+    "probe-parameters.max-z-distance": 3020,
+    "probe-parameters.z-clearance": 3021,
+    "probe-parameters.extra-probe-depth": 3022,
+    "probe-parameters.step-off-width": 3023,
+    "surface-scan.x-start-pos": 3050,
+    "surface-scan.x-end-pos": 3051,
+    "surface-scan.x-point-spacing": 3052,
+    "surface-scan.y-start-pos": 3053,
+    "surface-scan.y-end-pos": 3054,
+    "surface-scan.y-point-spacing": 3055,
+    "surface-scan.end-pos-roundup": 3056,
+    "surface-scan.z-safety-pos": 3057,
+    "surface-scan.z-probe-min-pos": 3058,
+    "surface-scan.probe-z-fast-feedrate": 3059,
+    "surface-scan.probe-z-slow-feedrate": 3060,
+    "surface-scan.probe-xy-traverse-feedrate": 3061,
+    "surface-scan.probe-z-retract-feedrate": 3062
+}
+
 class ProbeBasic(VCPMainWindow):
     """Main window class for the ProbeBasic VCP."""
     def __init__(self, *args, **kwargs):
@@ -58,22 +92,74 @@ class ProbeBasic(VCPMainWindow):
             self.spindle_rpm_source_widget.setCurrentIndex(self.spindle_encoder_rpm_button.property('page'))
     
         self.load_user_tabs()
+        self.load_var_file()
+
+    def load_var_file(self):
+
+        var_filename = INIFILE.find("RS274NGC", "PARAMETER_FILE") # Get var file name from INI
+        if not var_filename:
+            print("No PARAMETER_FILE found in INI")
+            return
+
+        var_filename = os.path.expanduser(var_filename)  # Expand user directory if needed
+        if not os.path.isfile(var_filename):
+            print(f"File {var_filename} does not exist.")
+            return
+
+        try:
+            with open(var_filename, 'r') as file:
+                for line in file:
+                    parsed_line = line.strip().split('\t') # Strip and split the line (assuming tab-separated)
+
+                    if len(parsed_line) == 2:  # Expecting key-value pairs
+                        file_code, file_value = parsed_line
+
+                        try:
+                            # Convert the code of parameter to an integer, as the constant dictionary values are integers
+                            file_code_as_int = int(file_code)
+                        except ValueError:
+                            print(f"Parameter code '{file_code}' from var file is not a valid integer, skipping...")
+                            continue
+
+                        # Look for the parameter codes in the values of const_setting_parameter
+                        matching_key = next((k for k, v in const_setting_parameter.items() if v == file_code_as_int), None)
+
+                        if matching_key:
+                            # Set Setting according to value from var file
+                            print(f"setting variable {matching_key} to value {file_value}")
+                            setSetting(matching_key, file_value)
+                        else:
+                            print(f"Code '{file_code_as_int}' not found in const_setting_parameter, skipping...")
+                    else:
+                        print(f"Unexpected format in line: {line.strip()}")
+        except Exception as e:
+            print(f"Failed to load var file {var_filename}: {e}")
+            return
+
+        return parsed_data  # Returning the dictionary for further use
 
     def get_extents(self, file_path):
         xmin = self.gcode_properties.x_min_extents()
         ymin = self.gcode_properties.y_min_extents()
         xmax = self.gcode_properties.x_max_extents()
         ymax = self.gcode_properties.y_max_extents()
-        
-        #grid_spacing = getSetting('surface-scan.grid-spacing').getValue()
-        #grid_xdist = math.ceil(xdist/grid_spacing)*grid_spacing
-        #grid_ydist = math.ceil(ydist/grid_spacing)*grid_spacing
-        #grid_x0 = x0-(grid_xdist-xdist)/2
-        #grid_y0 = x0-(grid_ydist-ydist)/2
-        setSetting('surface-scan.x-start-pos', xmin)
-        setSetting('surface-scan.y-start-pos', ymin)
-        setSetting('surface-scan.x-end-pos', xmax)
-        setSetting('surface-scan.y-end-pos', ymax)
+        xdist = self.gcode_properties.x_extents_size()
+        ydist = self.gcode_properties.y_extents_size()
+
+        if getSetting('surface-scan.end-pos-roundup').getValue():
+            x_point_spacing = getSetting('surface-scan.x-point-spacing').getValue()
+            y_point_spacing = getSetting('surface-scan.y-point-spacing').getValue()
+            grid_xdist = math.ceil(xdist/x_point_spacing)*x_point_spacing
+            grid_ydist = math.ceil(ydist/y_point_spacing)*y_point_spacing
+        else:
+            grid_xdist = xdist
+            grid_ydist = ydist
+        grid_x0 = xmin-(grid_xdist-xdist)/2
+        grid_y0 = ymin-(grid_ydist-ydist)/2
+        setSetting('surface-scan.x-start-pos', grid_x0)
+        setSetting('surface-scan.y-start-pos', grid_y0)
+        setSetting('surface-scan.x-end-pos', (grid_x0+grid_xdist))
+        setSetting('surface-scan.y-end-pos', (grid_y0+grid_ydist))
 
     def load_user_tabs(self):
         self.user_tab_modules = {}
