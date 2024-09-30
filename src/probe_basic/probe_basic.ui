@@ -28851,6 +28851,9 @@ color: white;
                          <height>38</height>
                         </size>
                        </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
@@ -28916,6 +28919,9 @@ color: white;
                          <height>38</height>
                         </size>
                        </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
@@ -28974,6 +28980,9 @@ color: white;
                          <width>100</width>
                          <height>38</height>
                         </size>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29053,6 +29062,9 @@ color: white;
                          <height>38</height>
                         </size>
                        </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
@@ -29112,6 +29124,9 @@ color: white;
                          <height>38</height>
                         </size>
                        </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
@@ -29170,6 +29185,9 @@ color: white;
                          <width>100</width>
                          <height>38</height>
                         </size>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29363,6 +29381,9 @@ color: white;
                          <height>38</height>
                         </size>
                        </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
@@ -29421,6 +29442,9 @@ color: white;
                          <width>100</width>
                          <height>38</height>
                         </size>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29494,6 +29518,9 @@ color: white;
                          <height>38</height>
                         </size>
                        </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
@@ -29558,6 +29585,9 @@ color: white;
                          <width>100</width>
                          <height>38</height>
                         </size>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
                        </property>
                        <property name="toolTip">
                         <string>Set 0 to disable</string>
@@ -29634,6 +29664,9 @@ color: white;
                          <height>38</height>
                         </size>
                        </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
@@ -29698,6 +29731,9 @@ color: white;
                          <width>100</width>
                          <height>38</height>
                         </size>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -30423,13 +30459,13 @@ QPushButton:checked {
                              </rect>
                             </property>
                            </widget>
-                           <widget class="VTKBackPlot" name="vtkbackplotsurfacemap">
+                           <widget class="GCodeProperties" name="gcodeproperties_2">
                             <property name="geometry">
                              <rect>
-                              <x>-10</x>
-                              <y>0</y>
-                              <width>1011</width>
-                              <height>531</height>
+                              <x>40</x>
+                              <y>60</y>
+                              <width>621</width>
+                              <height>401</height>
                              </rect>
                             </property>
                            </widget>
@@ -48204,18 +48240,18 @@ font: 11pt bebas kai;
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="probepagewcsbtnGroup"/>
-  <buttongroup name="sidebartabGroup"/>
-  <buttongroup name="probehelpGroup"/>
+  <buttongroup name="gcodemdibtnGroup"/>
+  <buttongroup name="customwcsbtnGroup"/>
+  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="tooloffsetdirbtnGroup"/>
+  <buttongroup name="proberoutinebtnGroup"/>
+  <buttongroup name="spindlerpmsourcebtnGroup"/>
+  <buttongroup name="probetabGroup"/>
   <buttongroup name="mainorthoperspbtnGroup"/>
   <buttongroup name="settertabGroup"/>
-  <buttongroup name="gcodemdibtnGroup"/>
-  <buttongroup name="proberoutinebtnGroup"/>
-  <buttongroup name="customwcsbtnGroup"/>
-  <buttongroup name="probetabGroup"/>
-  <buttongroup name="tooloffsetdirbtnGroup"/>
-  <buttongroup name="xycalbtnGroup"/>
-  <buttongroup name="spindlerpmsourcebtnGroup"/>
+  <buttongroup name="probehelpGroup"/>
+  <buttongroup name="sidebartabGroup"/>
   <buttongroup name="btngrpMdi"/>
+  <buttongroup name="probepagewcsbtnGroup"/>
  </buttongroups>
 </ui>
