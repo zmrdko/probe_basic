@@ -39,6 +39,9 @@ const_setting_parameter = {
     "tool-setter-probe.xy-max-travel": 3008,
     "tool-setter-probe.retract-distance": 3009,
     "tool-setter-probe.spindle-nose-height": 3010,
+    "tool-setter-probe.diameter-probe": 3011,
+    "tool-setter-probe.diameter-offset": 3012,
+    "tool-setter-probe.setter-offset-direction": 3013,
     "probe-parameters.probe-tool-number": 3014,
     "probe-parameters.probe-slow-fr": 3015,
     "probe-parameters.probe-fast-fr": 3016,
@@ -127,7 +130,30 @@ class ProbeBasic(VCPMainWindow):
                         if matching_key:
                             # Set Setting according to value from var file
                             print(f"setting variable {matching_key} to value {file_value}")
-                            setSetting(matching_key, file_value)
+                            if matching_key == 'tool-setter-probe.setter-offset-direction':
+                                match file_value:
+                                    case 0:
+                                         setSetting('tool-setter-probe.setter-offset-direction-front', 0)
+                                         setSetting('tool-setter-probe.setter-offset-direction-back', 0)
+                                         setSetting('tool-setter-probe.setter-offset-direction-left', 1)
+                                         setSetting('tool-setter-probe.setter-offset-direction-right', 0)
+                                    case 1:
+                                         setSetting('tool-setter-probe.setter-offset-direction-front', 0)
+                                         setSetting('tool-setter-probe.setter-offset-direction-back', 0)
+                                         setSetting('tool-setter-probe.setter-offset-direction-left', 0)
+                                         setSetting('tool-setter-probe.setter-offset-direction-right', 1)
+                                    case 2:
+                                         setSetting('tool-setter-probe.setter-offset-direction-front', 1)
+                                         setSetting('tool-setter-probe.setter-offset-direction-back', 0)
+                                         setSetting('tool-setter-probe.setter-offset-direction-left', 0)
+                                         setSetting('tool-setter-probe.setter-offset-direction-right', 0)
+                                    case 3:
+                                         setSetting('tool-setter-probe.setter-offset-direction-front', 0)
+                                         setSetting('tool-setter-probe.setter-offset-direction-back', 1)
+                                         setSetting('tool-setter-probe.setter-offset-direction-left', 0)
+                                         setSetting('tool-setter-probe.setter-offset-direction-right', 0)
+                            else:
+                                setSetting(matching_key, file_value)
                         else:
                             print(f"Code '{file_code_as_int}' not found in const_setting_parameter, skipping...")
                     else:
