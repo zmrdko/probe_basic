@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1920</width>
+    <width>1918</width>
     <height>1101</height>
    </rect>
   </property>
@@ -4560,6 +4560,28 @@ QPushButton:checked {
                     </attribute>
                    </widget>
                   </item>
+                  <item>
+                   <widget class="VCPSettingsPushButton" name="settings_pushbutton">
+                    <property name="minimumSize">
+                     <size>
+                      <width>75</width>
+                      <height>33</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>75</width>
+                      <height>33</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>SF MAP</string>
+                    </property>
+                    <property name="settingName" stdset="0">
+                     <string>backplot.show-points-surface</string>
+                    </property>
+                   </widget>
+                  </item>
                  </layout>
                 </widget>
                </item>
@@ -5792,7 +5814,7 @@ QTabWidget QTabBar::tab {
                          <rect>
                           <x>0</x>
                           <y>0</y>
-                          <width>80</width>
+                          <width>240</width>
                           <height>811</height>
                          </rect>
                         </property>
@@ -29384,6 +29406,9 @@ color: white;
                        <property name="focusPolicy">
                         <enum>Qt::ClickFocus</enum>
                        </property>
+                       <property name="statusTip">
+                        <string>Z safety position</string>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
@@ -45844,7 +45869,7 @@ border-radius: 1px;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1920</width>
+     <width>1918</width>
      <height>26</height>
     </rect>
    </property>
@@ -48240,18 +48265,18 @@ font: 11pt bebas kai;
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="gcodemdibtnGroup"/>
   <buttongroup name="customwcsbtnGroup"/>
-  <buttongroup name="xycalbtnGroup"/>
-  <buttongroup name="tooloffsetdirbtnGroup"/>
-  <buttongroup name="proberoutinebtnGroup"/>
-  <buttongroup name="spindlerpmsourcebtnGroup"/>
   <buttongroup name="probetabGroup"/>
-  <buttongroup name="mainorthoperspbtnGroup"/>
-  <buttongroup name="settertabGroup"/>
-  <buttongroup name="probehelpGroup"/>
-  <buttongroup name="sidebartabGroup"/>
-  <buttongroup name="btngrpMdi"/>
   <buttongroup name="probepagewcsbtnGroup"/>
+  <buttongroup name="btngrpMdi"/>
+  <buttongroup name="proberoutinebtnGroup"/>
+  <buttongroup name="tooloffsetdirbtnGroup"/>
+  <buttongroup name="spindlerpmsourcebtnGroup"/>
+  <buttongroup name="settertabGroup"/>
+  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="sidebartabGroup"/>
+  <buttongroup name="mainorthoperspbtnGroup"/>
+  <buttongroup name="gcodemdibtnGroup"/>
+  <buttongroup name="probehelpGroup"/>
  </buttongroups>
 </ui>

@@ -16,7 +16,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 """
 
-update = 0.05	# this is how often the z external offset value is updated based on current x & y position 
+update = 0.001	# this is how often the z external offset value is updated based on current x & y position 
 
 import sys
 import os.path, time

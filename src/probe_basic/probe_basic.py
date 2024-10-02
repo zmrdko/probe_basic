@@ -133,25 +133,13 @@ class ProbeBasic(VCPMainWindow):
                             if matching_key == 'tool-setter-probe.setter-offset-direction':
                                 match file_value:
                                     case 0:
-                                         setSetting('tool-setter-probe.setter-offset-direction-front', 0)
-                                         setSetting('tool-setter-probe.setter-offset-direction-back', 0)
                                          setSetting('tool-setter-probe.setter-offset-direction-left', 1)
-                                         setSetting('tool-setter-probe.setter-offset-direction-right', 0)
                                     case 1:
-                                         setSetting('tool-setter-probe.setter-offset-direction-front', 0)
-                                         setSetting('tool-setter-probe.setter-offset-direction-back', 0)
-                                         setSetting('tool-setter-probe.setter-offset-direction-left', 0)
                                          setSetting('tool-setter-probe.setter-offset-direction-right', 1)
                                     case 2:
                                          setSetting('tool-setter-probe.setter-offset-direction-front', 1)
-                                         setSetting('tool-setter-probe.setter-offset-direction-back', 0)
-                                         setSetting('tool-setter-probe.setter-offset-direction-left', 0)
-                                         setSetting('tool-setter-probe.setter-offset-direction-right', 0)
                                     case 3:
-                                         setSetting('tool-setter-probe.setter-offset-direction-front', 0)
                                          setSetting('tool-setter-probe.setter-offset-direction-back', 1)
-                                         setSetting('tool-setter-probe.setter-offset-direction-left', 0)
-                                         setSetting('tool-setter-probe.setter-offset-direction-right', 0)
                             else:
                                 setSetting(matching_key, file_value)
                         else:
@@ -161,8 +149,6 @@ class ProbeBasic(VCPMainWindow):
         except Exception as e:
             print(f"Failed to load var file {var_filename}: {e}")
             return
-
-        return parsed_data  # Returning the dictionary for further use
 
     def get_extents(self, file_path):
         xmin = self.gcode_properties.x_min_extents()

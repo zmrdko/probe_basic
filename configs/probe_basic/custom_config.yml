@@ -44,5 +44,17 @@ settings:
     default_value: false
 
   backplot.multitool-colors:
-    default_value: True
+    default_value: true
 
+  backplot.show-points-surface:
+    default_value: true
+
+  backplot.mesh-x-offset:
+    default_value: -200.0
+
+  backplot.mesh-y-offset:
+    default_value: -200.0
+
+  backplot.mesh-z-offset:
+    default_value: -90.0
+  
