@@ -5814,7 +5814,7 @@ QTabWidget QTabBar::tab {
                          <rect>
                           <x>0</x>
                           <y>0</y>
-                          <width>240</width>
+                          <width>80</width>
                           <height>811</height>
                          </rect>
                         </property>
@@ -28763,16 +28763,6 @@ border: none;
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_90" native="true">
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>10</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
                     <widget class="QLabel" name="label_128">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -28822,11 +28812,14 @@ border: none;
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_185">
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
                      <property name="topMargin">
                       <number>2</number>
                      </property>
                      <property name="rightMargin">
-                      <number>15</number>
+                      <number>5</number>
                      </property>
                      <property name="bottomMargin">
                       <number>2</number>
@@ -28849,7 +28842,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>X min pos</string>
+                        <string>X min pos:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -28883,7 +28876,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.x-start-pos</string>
@@ -28917,7 +28910,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>X max pos</string>
+                        <string>X max pos:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -28951,7 +28944,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.x-end-pos</string>
@@ -28979,7 +28972,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>X spacing</string>
+                        <string>X spacing:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29013,7 +29006,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.x-point-spacing</string>
@@ -29027,11 +29020,14 @@ color: white;
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_196">
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
                      <property name="topMargin">
                       <number>2</number>
                      </property>
                      <property name="rightMargin">
-                      <number>15</number>
+                      <number>5</number>
                      </property>
                      <property name="bottomMargin">
                       <number>2</number>
@@ -29060,7 +29056,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Y min pos</string>
+                        <string>Y min pos:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29094,7 +29090,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.y-start-pos</string>
@@ -29122,7 +29118,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Y max pos</string>
+                        <string>Y max pos:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29156,7 +29152,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.y-end-pos</string>
@@ -29184,7 +29180,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Y spacing</string>
+                        <string>Y spacing:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29218,7 +29214,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.y-point-spacing</string>
@@ -29231,43 +29227,90 @@ color: white;
                     </layout>
                    </item>
                    <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_197">
+                    <layout class="QHBoxLayout" name="horizontalLayout_170">
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
                      <property name="topMargin">
                       <number>2</number>
                      </property>
                      <property name="rightMargin">
-                      <number>15</number>
+                      <number>5</number>
                      </property>
                      <property name="bottomMargin">
                       <number>2</number>
                      </property>
                      <item>
-                      <widget class="ActionButton" name="actionbutton">
-                       <property name="minimumSize">
-                        <size>
-                         <width>325</width>
-                         <height>38</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>300</width>
-                         <height>38</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Load extents from NC file</string>
-                       </property>
-                       <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable_rule&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if (ch[0] and ch[1] and bool(ch[2])) else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:enabled&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:file&quot;, &quot;trigger&quot;: true}]}]</string>
-                       </property>
-                      </widget>
+                      <layout class="QHBoxLayout" name="horizontalLayout_177">
+                       <item>
+                        <widget class="QLabel" name="label_166">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="baseSize">
+                          <size>
+                           <width>140</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+                         </property>
+                         <property name="lineWidth">
+                          <number>0</number>
+                         </property>
+                         <property name="text">
+                          <string>Subroutine:</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="indent">
+                          <number>0</number>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="VCPSettingsComboBox" name="surface_scan_subroutine_combobox">
+                         <property name="minimumSize">
+                          <size>
+                           <width>200</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="statusTip">
+                          <string>pick probing subroutine</string>
+                         </property>
+                         <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="editable">
+                          <bool>false</bool>
+                         </property>
+                         <property name="currentText">
+                          <string/>
+                         </property>
+                         <property name="placeholderText">
+                          <string>smart_probe.ngc</string>
+                         </property>
+                         <property name="settingName" stdset="0">
+                          <string>surface-scan.subroutine</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
                      </item>
                      <item>
                       <widget class="VCPSettingsCheckBox" name="surface_scan_end_pos_roundup_3056">
                        <property name="minimumSize">
                         <size>
-                         <width>0</width>
+                         <width>200</width>
                          <height>0</height>
                         </size>
                        </property>
@@ -29300,7 +29343,112 @@ color: white;
                     </layout>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_88" native="true"/>
+                    <layout class="QHBoxLayout" name="horizontalLayout_197">
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>2</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>2</number>
+                     </property>
+                     <item>
+                      <widget class="ActionButton" name="surface_scan_load_extents">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>Load extents from NC file</string>
+                       </property>
+                       <property name="rules" stdset="0">
+                        <string>[{&quot;name&quot;: &quot;enable_rule&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if (ch[0] and ch[1] and bool(ch[2])) else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:enabled&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:file&quot;, &quot;trigger&quot;: true}]}]</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="SubCallButton" name="surface_scan_execute">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::NoFocus</enum>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">.SubCallButton {
+    color: white;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
+}
+
+.SubCallButton {
+    font-family: &quot;Bebas Kai&quot;;
+    font-size: 15pt;
+}
+
+.SubCallButton:disabled {
+    border-color: gray;
+}
+
+.SubCallButton:hover {
+    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
+}
+
+.SubCallButton:pressed {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+.SubCallButton:checked[option=&quot;true&quot;] {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}
+
+.SubCallButton:checked {
+    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Scan Surface</string>
+                       </property>
+                       <property name="rules" stdset="0">
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                       </property>
+                       <property name="filename" stdset="0">
+                        <string>smartprobe_compensation.ngc</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
                    </item>
                    <item>
                     <widget class="QLabel" name="label_154">
@@ -29352,11 +29500,14 @@ color: white;
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_199">
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
                      <property name="topMargin">
                       <number>2</number>
                      </property>
                      <property name="rightMargin">
-                      <number>15</number>
+                      <number>5</number>
                      </property>
                      <property name="bottomMargin">
                       <number>2</number>
@@ -29379,7 +29530,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z safety position</string>
+                        <string>Z safety position:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29416,7 +29567,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.z-safety-pos</string>
@@ -29444,7 +29595,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z probe min position</string>
+                        <string>Z probe min position:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29478,7 +29629,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.z-probe-min-pos</string>
@@ -29492,11 +29643,14 @@ color: white;
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_203">
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
                      <property name="topMargin">
                       <number>2</number>
                      </property>
                      <property name="rightMargin">
-                      <number>15</number>
+                      <number>5</number>
                      </property>
                      <property name="bottomMargin">
                       <number>2</number>
@@ -29519,7 +29673,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z fast probe FR</string>
+                        <string>Z fast probe FR:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29553,7 +29707,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.probe-z-fast-feedrate</string>
@@ -29587,7 +29741,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z slow probe FR</string>
+                        <string>Z slow probe FR:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29624,7 +29778,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.probe-z-slow-feedrate</string>
@@ -29638,11 +29792,14 @@ color: white;
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_198">
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
                      <property name="topMargin">
                       <number>2</number>
                      </property>
                      <property name="rightMargin">
-                      <number>15</number>
+                      <number>5</number>
                      </property>
                      <property name="bottomMargin">
                       <number>2</number>
@@ -29665,7 +29822,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>XY Feedrate</string>
+                        <string>XY Feedrate:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29699,7 +29856,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.probe-xy-traverse-feedrate</string>
@@ -29733,7 +29890,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z retract feedrate</string>
+                        <string>Z retract feedrate:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29767,7 +29924,7 @@ color: white;
                         <string>0.0000</string>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.probe-z-retract-feedrate</string>
@@ -29780,17 +29937,237 @@ color: white;
                     </layout>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_89" native="true">
+                    <widget class="QLabel" name="label_163">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>27</height>
+                      </size>
+                     </property>
                      <property name="maximumSize">
                       <size>
                        <width>16777215</width>
-                       <height>20</height>
+                       <height>27</height>
                       </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Bebas Kai</family>
+                       <pointsize>14</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLabel{
+    border-style: solid;
+    border-color: rgb(176, 179, 172);
+    border-width: 2px;
+    border-radius: 5px;
+    color: white;
+    background: rgb(90, 90, 90);
+	font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>Compensation settings</string>
+                     </property>
+                     <property name="indent">
+                      <number>10</number>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="SubCallButton" name="update_digitizing_parameters_btn">
+                    <layout class="QHBoxLayout" name="horizontalLayout_169">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_164">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+                       </property>
+                       <property name="lineWidth">
+                        <number>0</number>
+                       </property>
+                       <property name="text">
+                        <string>Fade height:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>0</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="VCPSettingsLineEdit" name="surface_scan_compensation_fade_height_3064">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>100</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="focusPolicy">
+                        <enum>Qt::ClickFocus</enum>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string>0.0000</string>
+                       </property>
+                       <property name="rules" stdset="0">
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                       </property>
+                       <property name="settingName" stdset="0">
+                        <string>surface-scan.compensation-fade-height</string>
+                       </property>
+                       <property name="textFormat" stdset="0">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_165">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+                       </property>
+                       <property name="lineWidth">
+                        <number>0</number>
+                       </property>
+                       <property name="text">
+                        <string>interpolation method:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>0</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="VCPSettingsComboBox" name="settingscombobox">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="placeholderText">
+                        <string>bicubic</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_76">
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>5</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_162">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+font: 75 14pt &quot;Bebas Kai&quot;;
+color: white;
+}</string>
+                       </property>
+                       <property name="lineWidth">
+                        <number>0</number>
+                       </property>
+                       <property name="text">
+                        <string>Transparency</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>0</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="VCPSettingsSlider" name="surface_scan_opacity_slider">
+                       <property name="minimum">
+                        <number>1</number>
+                       </property>
+                       <property name="maximum">
+                        <number>100</number>
+                       </property>
+                       <property name="sliderPosition">
+                        <number>50</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="settingName" stdset="0">
+                        <string>backplot.surface-map-transparency</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="SubCallButton" name="surface_scan_param_update">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                        <horstretch>1</horstretch>
@@ -29847,74 +30224,7 @@ color: white;
                        <number>3</number>
                       </property>
                       <item>
-                       <widget class="SubCallButton" name="surface_scan_button_2">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="minimumSize">
-                         <size>
-                          <width>0</width>
-                          <height>38</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>38</height>
-                         </size>
-                        </property>
-                        <property name="focusPolicy">
-                         <enum>Qt::NoFocus</enum>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">.SubCallButton {
-    color: white;
-    border-color: black;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 2px;
-    background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));
-}
-
-.SubCallButton {
-    font-family: &quot;Bebas Kai&quot;;
-    font-size: 15pt;
-}
-
-.SubCallButton:disabled {
-    border-color: gray;
-}
-
-.SubCallButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-.SubCallButton:pressed {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-.SubCallButton:checked[option=&quot;true&quot;] {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}
-
-.SubCallButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));
-}</string>
-                        </property>
-                        <property name="text">
-                         <string>Scan Surface</string>
-                        </property>
-                        <property name="filename" stdset="0">
-                         <string>smartprobe_compensation.ngc</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="HalButton" name="halbutton_compensation_enable">
+                       <widget class="HalButton" name="surface_scan_compensation_enable">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                           <horstretch>0</horstretch>
@@ -29946,22 +30256,15 @@ color: white;
                         <property name="checkable">
                          <bool>true</bool>
                         </property>
+                        <property name="rules" stdset="0">
+                         <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        </property>
                         <property name="pinBaseName" stdset="0">
                          <string>compensation_enable</string>
                         </property>
                        </widget>
                       </item>
                      </layout>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QWidget" name="widget_87" native="true">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                       <horstretch>0</horstretch>
-                       <verstretch>1</verstretch>
-                      </sizepolicy>
-                     </property>
                     </widget>
                    </item>
                   </layout>
@@ -46181,6 +46484,11 @@ font: 11pt bebas kai;
    <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
   </customwidget>
   <customwidget>
+   <class>VCPSettingsComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
+  </customwidget>
+  <customwidget>
    <class>OffsetTable</class>
    <extends>QTableView</extends>
    <header>qtpyvcp.widgets.input_widgets.offset_table</header>
@@ -48057,7 +48365,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_x_start_pos_3050</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48073,7 +48381,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_x_end_pos_3051</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48089,7 +48397,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_x_point_spacing_3052</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48105,7 +48413,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_y_start_pos_3053</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48121,7 +48429,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_y_end_pos_3054</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48137,7 +48445,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_y_spacing_3055</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48153,7 +48461,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_z_safety_pos_3057</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48169,7 +48477,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_z_probe_min_pos_3058</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48185,7 +48493,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_probe_z_slow_feedrate_3060</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48201,7 +48509,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_probe_z_fast_feedrate_3059</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48217,7 +48525,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_probe_xy_traverse_feedrate_3061</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48233,7 +48541,7 @@ font: 11pt bebas kai;
   <connection>
    <sender>surface_scan_probe_z_retract_feedrate_3062</sender>
    <signal>editingFinished()</signal>
-   <receiver>update_digitizing_parameters_btn</receiver>
+   <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -48243,6 +48551,38 @@ font: 11pt bebas kai;
     <hint type="destinationlabel">
      <x>295</x>
      <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>settings_pushbutton</sender>
+   <signal>clicked()</signal>
+   <receiver>vtk</receiver>
+   <slot>getSurfaceSettingValue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>840</x>
+     <y>629</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1261</x>
+     <y>355</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>surface_scan_load_extents</sender>
+   <signal>released()</signal>
+   <receiver>surface_scan_param_update</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>268</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>295</x>
+     <y>577</y>
     </hint>
    </hints>
   </connection>
@@ -48265,18 +48605,18 @@ font: 11pt bebas kai;
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="customwcsbtnGroup"/>
-  <buttongroup name="probetabGroup"/>
-  <buttongroup name="probepagewcsbtnGroup"/>
-  <buttongroup name="btngrpMdi"/>
-  <buttongroup name="proberoutinebtnGroup"/>
   <buttongroup name="tooloffsetdirbtnGroup"/>
   <buttongroup name="spindlerpmsourcebtnGroup"/>
   <buttongroup name="settertabGroup"/>
-  <buttongroup name="xycalbtnGroup"/>
-  <buttongroup name="sidebartabGroup"/>
-  <buttongroup name="mainorthoperspbtnGroup"/>
   <buttongroup name="gcodemdibtnGroup"/>
   <buttongroup name="probehelpGroup"/>
+  <buttongroup name="proberoutinebtnGroup"/>
+  <buttongroup name="customwcsbtnGroup"/>
+  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="sidebartabGroup"/>
+  <buttongroup name="probepagewcsbtnGroup"/>
+  <buttongroup name="probetabGroup"/>
+  <buttongroup name="btngrpMdi"/>
+  <buttongroup name="mainorthoperspbtnGroup"/>
  </buttongroups>
 </ui>

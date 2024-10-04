@@ -439,6 +439,13 @@ settings:
     min_value: -10000
     max_value: 10000
 
+  surface-scan.subroutine:
+    description: Active subroutine procedure
+    default_value: 0
+    persistent: true
+    min_value: -10000
+    max_value: 10000
+
 dialogs:
   about_probebasic:
     provider: qtpyvcp.widgets.dialogs.about_dialog:AboutDialog

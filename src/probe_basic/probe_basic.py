@@ -79,7 +79,7 @@ class ProbeBasic(VCPMainWindow):
         
         self.stat = getPlugin('status')
         self.gcode_properties = getPlugin("gcode_properties")
-        self.actionbutton.clicked.connect(self.get_extents)
+        self.surface_scan_load_extents.clicked.connect(self.get_extents)
 
         if (0 == int(INIFILE.find("ATC", "POCKETS") or 0)):
             atc_tab_index = self.tabWidget.indexOf(self.atc_tab)

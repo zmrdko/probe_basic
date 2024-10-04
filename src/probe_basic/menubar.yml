@@ -110,6 +110,9 @@ menubar:
       - title: Show Machine Ticks
         action: settings.backplot.show-machine-ticks
 
+      - title: Show Surface Map
+        action: settings.backplot.show-points-surface
+
       - separator
 
       - title: Show Program Bounds

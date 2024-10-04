@@ -49,12 +49,5 @@ settings:
   backplot.show-points-surface:
     default_value: true
 
-  backplot.mesh-x-offset:
-    default_value: -200.0
-
-  backplot.mesh-y-offset:
-    default_value: -200.0
-
-  backplot.mesh-z-offset:
-    default_value: -90.0
-  
+  backplot.surface-map-transparency:
+    default_value: 50
