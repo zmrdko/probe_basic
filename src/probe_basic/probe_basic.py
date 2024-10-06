@@ -19,6 +19,7 @@ from qtpyvcp.utilities import logger
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
 from qtpyvcp.utilities.settings import getSetting, setSetting
 from qtpyvcp.plugins import getPlugin
+from probe_basic.surface_scan import SurfaceScan
 
 sys.path.insert(0,'/usr/lib/python3/dist-packages/probe_basic')
 import probe_basic_rc
@@ -76,10 +77,10 @@ class ProbeBasic(VCPMainWindow):
         self.run_from_line_Num.setValidator(QRegExpValidator(QRegExp("[0-9]*")))
         self.btnMdiBksp.clicked.connect(self.mdiBackSpace_clicked)
         self.btnMdiSpace.clicked.connect(self.mdiSpace_clicked)
+        self.surface_scan = SurfaceScan()
         
         self.stat = getPlugin('status')
-        self.gcode_properties = getPlugin("gcode_properties")
-        self.surface_scan_load_extents.clicked.connect(self.get_extents)
+        self.surface_scan_load_extents.clicked.connect(SurfaceScan.get_extents)
 
         if (0 == int(INIFILE.find("ATC", "POCKETS") or 0)):
             atc_tab_index = self.tabWidget.indexOf(self.atc_tab)
@@ -94,6 +95,9 @@ class ProbeBasic(VCPMainWindow):
         else:
             self.spindle_rpm_source_widget.setCurrentIndex(self.spindle_encoder_rpm_button.property('page'))
     
+        self.surface_scan_subroutine_combobox.addItem("smartprobe_compensation.ngc",{'probe_ngc':"smartprobe_compensation.ngc"})
+        self.surface_scan_subroutine_combobox.addItem("simple_probe.ngc",{'probe_ngc':"simple_probe.ngc"})
+
         self.load_user_tabs()
         self.load_var_file()
 
@@ -149,29 +153,6 @@ class ProbeBasic(VCPMainWindow):
         except Exception as e:
             print(f"Failed to load var file {var_filename}: {e}")
             return
-
-    def get_extents(self, file_path):
-        xmin = self.gcode_properties.x_min_extents()
-        ymin = self.gcode_properties.y_min_extents()
-        xmax = self.gcode_properties.x_max_extents()
-        ymax = self.gcode_properties.y_max_extents()
-        xdist = self.gcode_properties.x_extents_size()
-        ydist = self.gcode_properties.y_extents_size()
-
-        if getSetting('surface-scan.end-pos-roundup').getValue():
-            x_point_spacing = getSetting('surface-scan.x-point-spacing').getValue()
-            y_point_spacing = getSetting('surface-scan.y-point-spacing').getValue()
-            grid_xdist = math.ceil(xdist/x_point_spacing)*x_point_spacing
-            grid_ydist = math.ceil(ydist/y_point_spacing)*y_point_spacing
-        else:
-            grid_xdist = xdist
-            grid_ydist = ydist
-        grid_x0 = xmin-(grid_xdist-xdist)/2
-        grid_y0 = ymin-(grid_ydist-ydist)/2
-        setSetting('surface-scan.x-start-pos', grid_x0)
-        setSetting('surface-scan.y-start-pos', grid_y0)
-        setSetting('surface-scan.x-end-pos', (grid_x0+grid_xdist))
-        setSetting('surface-scan.y-end-pos', (grid_y0+grid_ydist))
 
     def load_user_tabs(self):
         self.user_tab_modules = {}
