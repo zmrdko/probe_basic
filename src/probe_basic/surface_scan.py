@@ -40,6 +40,5 @@ class SurfaceScan:
         setSetting('surface-scan.x-end-pos', (grid_x0+grid_xdist))
         setSetting('surface-scan.y-end-pos', (grid_y0+grid_ydist))
 
-    def update_probing_procedure(self):
-        # magic
-        return
+    def some_function(self, index):
+        print(index)

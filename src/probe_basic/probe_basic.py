@@ -80,7 +80,7 @@ class ProbeBasic(VCPMainWindow):
         self.surface_scan = SurfaceScan()
         
         self.stat = getPlugin('status')
-        self.surface_scan_load_extents.clicked.connect(SurfaceScan.get_extents)
+        self.surface_scan_load_extents.clicked.connect(self.surface_scan.get_extents)
 
         if (0 == int(INIFILE.find("ATC", "POCKETS") or 0)):
             atc_tab_index = self.tabWidget.indexOf(self.atc_tab)
@@ -97,6 +97,7 @@ class ProbeBasic(VCPMainWindow):
     
         self.surface_scan_subroutine_combobox.addItem("smartprobe_compensation.ngc",{'probe_ngc':"smartprobe_compensation.ngc"})
         self.surface_scan_subroutine_combobox.addItem("simple_probe.ngc",{'probe_ngc':"simple_probe.ngc"})
+        self.surface_scan_subroutine_combobox.currentIndexChanged.connect(self.surface_scan.some_function)
 
         self.load_user_tabs()
         self.load_var_file()
