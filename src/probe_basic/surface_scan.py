@@ -13,9 +13,21 @@ INIFILE = linuxcnc.ini(os.getenv("INI_FILE_NAME"))
 class SurfaceScan:
 
 
-    def __init__(self):
+    def __init__(self, subroutine_combobox,scan_execute):
         self.gcode_properties = getPlugin("gcode_properties")
         # I dont know how to handle this: self.surface_scan_subroutine_combobox.currentIndexChanged.connect(self.function)
+        self.subroutine_combobox = subroutine_combobox
+        self.scan_execute = scan_execute
+        self.initialize_combobox()
+
+    def initialize_combobox(self):
+        """Populate combobox and connect the signal for when the selected index changes."""
+        # Add items to combobox
+        self.subroutine_combobox.addItem("smartprobe_compensation.ngc", {'probe_ngc': "smartprobe_compensation.ngc"})
+        self.subroutine_combobox.addItem("simple_probe.ngc", {'probe_ngc': "simple_probe.ngc"})
+        self.subroutine_combobox.addItem("test_probe.ngc",{'probe_ngc':"test_probe.ngc"})
+        # Connect the combobox's index changed signal to a method
+        self.subroutine_combobox.currentIndexChanged.connect(self.some_function)
 
     def get_extents(self):
         xmin = self.gcode_properties.x_min_extents()
@@ -41,4 +53,8 @@ class SurfaceScan:
         setSetting('surface-scan.y-end-pos', (grid_y0+grid_ydist))
 
     def some_function(self, index):
-        print(index)
+        """Method to handle combobox selection changes."""
+        print(f"Selected index: {index}, Subroutine: {self.subroutine_combobox.itemText(index)}")
+        # Add more logic here if needed
+        self.scan_execute.setProperty("text",f"RUN {self.subroutine_combobox.itemText(index)}")
+        self.scan_execute.setProperty("filename",self.subroutine_combobox.itemText(index))

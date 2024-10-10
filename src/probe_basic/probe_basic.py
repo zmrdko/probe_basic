@@ -77,7 +77,7 @@ class ProbeBasic(VCPMainWindow):
         self.run_from_line_Num.setValidator(QRegExpValidator(QRegExp("[0-9]*")))
         self.btnMdiBksp.clicked.connect(self.mdiBackSpace_clicked)
         self.btnMdiSpace.clicked.connect(self.mdiSpace_clicked)
-        self.surface_scan = SurfaceScan()
+        self.surface_scan = SurfaceScan(self.surface_scan_subroutine_combobox,self.surface_scan_execute)
         
         self.stat = getPlugin('status')
         self.surface_scan_load_extents.clicked.connect(self.surface_scan.get_extents)
@@ -95,10 +95,6 @@ class ProbeBasic(VCPMainWindow):
         else:
             self.spindle_rpm_source_widget.setCurrentIndex(self.spindle_encoder_rpm_button.property('page'))
     
-        self.surface_scan_subroutine_combobox.addItem("smartprobe_compensation.ngc",{'probe_ngc':"smartprobe_compensation.ngc"})
-        self.surface_scan_subroutine_combobox.addItem("simple_probe.ngc",{'probe_ngc':"simple_probe.ngc"})
-        self.surface_scan_subroutine_combobox.currentIndexChanged.connect(self.surface_scan.some_function)
-
         self.load_user_tabs()
         self.load_var_file()
 
