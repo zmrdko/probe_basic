@@ -4,6 +4,7 @@ import os
 
 import linuxcnc
 
+from qtpyvcp.hal import getComponent
 from qtpyvcp.plugins import getPlugin
 from qtpyvcp.utilities.settings import getSetting, setSetting
 
@@ -13,11 +14,12 @@ INIFILE = linuxcnc.ini(os.getenv("INI_FILE_NAME"))
 class SurfaceScan:
 
 
-    def __init__(self, subroutine_combobox,scan_execute):
+    def __init__(self, subroutine_combobox,scan_execute,interpolation_method):
         self.gcode_properties = getPlugin("gcode_properties")
         # I dont know how to handle this: self.surface_scan_subroutine_combobox.currentIndexChanged.connect(self.function)
         self.subroutine_combobox = subroutine_combobox
         self.scan_execute = scan_execute
+        self.interpolation_method = interpolation_method
         self.initialize_combobox()
 
     def initialize_combobox(self):
@@ -27,7 +29,14 @@ class SurfaceScan:
         self.subroutine_combobox.addItem("simple_probe.ngc", {'probe_ngc': "simple_probe.ngc"})
         self.subroutine_combobox.addItem("test_probe.ngc",{'probe_ngc':"test_probe.ngc"})
         # Connect the combobox's index changed signal to a method
-        self.subroutine_combobox.currentIndexChanged.connect(self.some_function)
+        self.subroutine_combobox.currentIndexChanged.connect(self.update_probing_subroutine)
+
+        self.interpolation_method.addItem("bicubic",{'interpolation':0})
+        self.interpolation_method.addItem("bilinear",{'interpolation':1})
+        self.interpolation_method.addItem("nearest",{'interpolation':2})
+        self.interpolation_method.currentIndexChanged.connect(self.update_interpolation_method)
+
+        self.comp = getComponent("qtpyvcp")
 
     def get_extents(self):
         xmin = self.gcode_properties.x_min_extents()
@@ -52,9 +61,16 @@ class SurfaceScan:
         setSetting('surface-scan.x-end-pos', (grid_x0+grid_xdist))
         setSetting('surface-scan.y-end-pos', (grid_y0+grid_ydist))
 
-    def some_function(self, index):
+    def update_probing_subroutine(self, index):
         """Method to handle combobox selection changes."""
         print(f"Selected index: {index}, Subroutine: {self.subroutine_combobox.itemText(index)}")
         # Add more logic here if needed
         self.scan_execute.setProperty("text",f"RUN {self.subroutine_combobox.itemText(index)}")
         self.scan_execute.setProperty("filename",self.subroutine_combobox.itemText(index))
+
+    def update_interpolation_method(self, index):
+        """Method to handle combobox selection changes."""
+        print(f"Selected index: {index}, interpolation method: {self.interpolation_method.itemText(index)}")
+        # Add more logic here if needed
+        self.comp.getPin("compensation_enable.interp-method").value = index
+        

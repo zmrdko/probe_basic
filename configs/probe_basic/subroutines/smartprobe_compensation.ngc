@@ -37,7 +37,9 @@ o<smartprobe_compensation> sub
 #<_probe-z-slow-feedrate> = #3060 (probe Z slow feedrate - for recording points if the slow probe move is enabled.)
 (If not equal to 0, a successful Z probe hit at a point recording location will be followed with a slow probe move. If 0, this is disabled.)
 
-
+#<_wco_x> = [#<_abs_x> - #<_x>] (X axis work coordinate offset)
+#<_wco_y> = [#<_abs_y> - #<_y>] (Y axis work coordinate offset)
+#<_wco_z> = [#<_abs_z> - #<_z>] (Z axis work coordinate offset)
 
 (End configuration section)
 
@@ -61,6 +63,7 @@ G0 Z#<_z-safety-pos> (rapid to start point in Z)
 G0 X#<_x-start-pos> Y#<_y-start-pos> (rapid to start point in XY)
 
 (LOGOPEN,probe-results.txt)
+(LOG,WCO #<_wco_x> #<_wco_y> #<_wco_z>)
 
 O2 while [#<_y-row> lt #<_y-num-rows>] (while Y row variable is less than Y end position:)
     #<_x-column> = 0 (set X column variable to 0)

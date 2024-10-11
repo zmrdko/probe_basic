@@ -15,6 +15,7 @@ from qtpy.QtGui import QFontDatabase, QRegExpValidator
 from qtpy.QtWidgets import QAbstractButton
 
 from qtpyvcp import actions
+from qtpyvcp.hal import getComponent
 from qtpyvcp.utilities import logger
 from qtpyvcp.widgets.form_widgets.main_window import VCPMainWindow
 from qtpyvcp.utilities.settings import getSetting, setSetting
@@ -77,10 +78,14 @@ class ProbeBasic(VCPMainWindow):
         self.run_from_line_Num.setValidator(QRegExpValidator(QRegExp("[0-9]*")))
         self.btnMdiBksp.clicked.connect(self.mdiBackSpace_clicked)
         self.btnMdiSpace.clicked.connect(self.mdiSpace_clicked)
-        self.surface_scan = SurfaceScan(self.surface_scan_subroutine_combobox,self.surface_scan_execute)
+        self.surface_scan = SurfaceScan(self.surface_scan_subroutine_combobox,self.surface_scan_execute,self.surface_scan_interpolation)
         
         self.stat = getPlugin('status')
         self.surface_scan_load_extents.clicked.connect(self.surface_scan.get_extents)
+
+        comp = getComponent("qtpyvcp")
+        comp.addPin("compensation_enable.interp-method", "s32", "out")
+        comp.getPin("compensation_enable.interp-method").value = 1
 
         if (0 == int(INIFILE.find("ATC", "POCKETS") or 0)):
             atc_tab_index = self.tabWidget.indexOf(self.atc_tab)

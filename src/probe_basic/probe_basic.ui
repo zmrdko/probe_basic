@@ -5814,7 +5814,7 @@ QTabWidget QTabBar::tab {
                          <rect>
                           <x>0</x>
                           <y>0</y>
-                          <width>80</width>
+                          <width>240</width>
                           <height>811</height>
                          </rect>
                         </property>
@@ -30089,7 +30089,7 @@ color: white;
                       </widget>
                      </item>
                      <item>
-                      <widget class="VCPSettingsComboBox" name="settingscombobox">
+                      <widget class="VCPSettingsComboBox" name="surface_scan_interpolation">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -30098,6 +30098,9 @@ color: white;
                        </property>
                        <property name="placeholderText">
                         <string>bicubic</string>
+                       </property>
+                       <property name="settingName" stdset="0">
+                        <string>surface-scan.interpolation-method</string>
                        </property>
                       </widget>
                      </item>
@@ -48606,17 +48609,17 @@ font: 11pt bebas kai;
  </designerdata>
  <buttongroups>
   <buttongroup name="tooloffsetdirbtnGroup"/>
-  <buttongroup name="spindlerpmsourcebtnGroup"/>
-  <buttongroup name="settertabGroup"/>
-  <buttongroup name="gcodemdibtnGroup"/>
-  <buttongroup name="probehelpGroup"/>
+  <buttongroup name="btngrpMdi"/>
+  <buttongroup name="probetabGroup"/>
+  <buttongroup name="mainorthoperspbtnGroup"/>
   <buttongroup name="proberoutinebtnGroup"/>
-  <buttongroup name="customwcsbtnGroup"/>
   <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="settertabGroup"/>
+  <buttongroup name="probehelpGroup"/>
+  <buttongroup name="spindlerpmsourcebtnGroup"/>
   <buttongroup name="sidebartabGroup"/>
   <buttongroup name="probepagewcsbtnGroup"/>
-  <buttongroup name="probetabGroup"/>
-  <buttongroup name="btngrpMdi"/>
-  <buttongroup name="mainorthoperspbtnGroup"/>
+  <buttongroup name="customwcsbtnGroup"/>
+  <buttongroup name="gcodemdibtnGroup"/>
  </buttongroups>
 </ui>

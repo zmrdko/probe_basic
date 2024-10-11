@@ -1,4 +1,4 @@
-loadusr -Wn compensation python compensation.py probe-results.txt cubic
+loadusr -Wn compensation python compensation.py probe-results.txt
 
 net eoffset-xpos     <= halui.axis.x.pos-relative   => compensation.x-pos
 net eoffset-ypos     <= halui.axis.y.pos-relative   => compensation.y-pos
@@ -9,4 +9,5 @@ net eoffset-enable   <= compensation.enable-out     => axis.z.eoffset-enable
 net eoffset-scale    <= compensation.scale          => axis.z.eoffset-scale
 net eoffset-counts   <= compensation.counts         => axis.z.eoffset-counts
 net eoffset-clear    <= compensation.clear          => axis.z.eoffset-clear
+net interp-method    => compensation.interp-method
 net compensation-on  <= compensation.enable-in
