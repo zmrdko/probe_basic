@@ -79,9 +79,12 @@ class ProbeBasic(VCPMainWindow):
         self.btnMdiBksp.clicked.connect(self.mdiBackSpace_clicked)
         self.btnMdiSpace.clicked.connect(self.mdiSpace_clicked)
         self.surface_scan = SurfaceScan(self.surface_scan_subroutine_combobox,self.surface_scan_execute,self.surface_scan_interpolation)
-        
+
+
+
         self.stat = getPlugin('status')
         self.surface_scan_load_extents.clicked.connect(self.surface_scan.get_extents)
+        self.surface_scan_opacity_slider.valueChanged.connect(self.change_suface_mesh_transparency)
 
         comp = getComponent("qtpyvcp")
         comp.addPin("compensation_enable.interp-method", "s32", "out")
@@ -189,6 +192,10 @@ class ProbeBasic(VCPMainWindow):
         if sidebar_loaded == False:
             self.user_sb_tab.hide()
             self.plot_tab.setStyleSheet(self.user_sb_tab.styleSheet())
+
+    def change_suface_mesh_transparency(self):
+        level = self.surface_scan_opacity_slider.value()
+        setSetting('backplot.surface-map-transparency', level)
 
     @Slot(QAbstractButton)
     def on_probetabGroup_buttonClicked(self, button):
