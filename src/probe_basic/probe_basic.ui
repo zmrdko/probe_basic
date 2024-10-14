@@ -30465,7 +30465,7 @@ QPushButton:checked {
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="digitize_tab_7">
+                       <widget class="QPushButton" name="digitize_tab_5">
                         <property name="minimumSize">
                          <size>
                           <width>127</width>
@@ -30516,7 +30516,7 @@ QPushButton:checked {
                          <bool>true</bool>
                         </property>
                         <property name="page" stdset="0">
-                         <number>6</number>
+                         <number>4</number>
                         </property>
                        </widget>
                       </item>
@@ -30560,7 +30560,7 @@ QPushButton:checked {
                        <property name="currentIndex">
                         <number>0</number>
                        </property>
-                       <widget class="QWidget" name="page_8">
+                       <widget class="QWidget" name="page_1">
                         <layout class="QHBoxLayout" name="horizontalLayout_74">
                          <item>
                           <widget class="QWidget" name="widget_102" native="true">
@@ -30590,16 +30590,19 @@ QPushButton:checked {
                           </widget>
                          </item>
                          <item>
-                          <widget class="GCodeProperties" name="gcodeproperties"/>
+                          <widget class="GCodeProperties" name="gcodeproperties">
+                           <property name="styleSheet">
+                            <string notr="true">color: white;
+font: 16pt &quot;Bebas Kai&quot;;</string>
+                           </property>
+                          </widget>
                          </item>
                         </layout>
                        </widget>
-                       <widget class="QWidget" name="page_9"/>
-                       <widget class="QWidget" name="page_10"/>
-                       <widget class="QWidget" name="page_11"/>
-                       <widget class="QWidget" name="page_12"/>
-                       <widget class="QWidget" name="page_13"/>
-                       <widget class="QWidget" name="page_14"/>
+                       <widget class="QWidget" name="page_2"/>
+                       <widget class="QWidget" name="page_3"/>
+                       <widget class="QWidget" name="page_4"/>
+                       <widget class="QWidget" name="page_5"/>
                       </widget>
                      </item>
                     </layout>
@@ -48394,17 +48397,17 @@ font: 11pt bebas kai;
  </designerdata>
  <buttongroups>
   <buttongroup name="mainorthoperspbtnGroup"/>
-  <buttongroup name="gcodemdibtnGroup"/>
-  <buttongroup name="xycalbtnGroup"/>
-  <buttongroup name="probehelpGroup"/>
-  <buttongroup name="proberoutinebtnGroup"/>
-  <buttongroup name="settertabGroup"/>
-  <buttongroup name="customwcsbtnGroup"/>
-  <buttongroup name="tooloffsetdirbtnGroup"/>
-  <buttongroup name="probetabGroup"/>
-  <buttongroup name="spindlerpmsourcebtnGroup"/>
   <buttongroup name="sidebartabGroup"/>
+  <buttongroup name="tooloffsetdirbtnGroup"/>
+  <buttongroup name="spindlerpmsourcebtnGroup"/>
   <buttongroup name="probepagewcsbtnGroup"/>
+  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="proberoutinebtnGroup"/>
+  <buttongroup name="probehelpGroup"/>
   <buttongroup name="btngrpMdi"/>
+  <buttongroup name="customwcsbtnGroup"/>
+  <buttongroup name="gcodemdibtnGroup"/>
+  <buttongroup name="settertabGroup"/>
+  <buttongroup name="probetabGroup"/>
  </buttongroups>
 </ui>
