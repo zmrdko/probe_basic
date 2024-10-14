@@ -196,6 +196,7 @@ class ProbeBasic(VCPMainWindow):
     def change_suface_mesh_transparency(self):
         level = self.surface_scan_opacity_slider.value()
         setSetting('backplot.surface-map-transparency', level)
+        print(f"backplot map transparency set to {level}")
 
     @Slot(QAbstractButton)
     def on_probetabGroup_buttonClicked(self, button):

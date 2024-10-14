@@ -96,242 +96,22 @@ bottom-margin: 0px;
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>25</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
             <height>16777214</height>
            </size>
           </property>
-          <property name="palette">
-           <palette>
-            <active>
-             <colorrole role="WindowText">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Button">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>129</red>
-                <green>133</green>
-                <blue>132</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Text">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="ButtonText">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Base">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>129</red>
-                <green>133</green>
-                <blue>132</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Window">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>129</red>
-                <green>133</green>
-                <blue>132</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Highlight">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>85</red>
-                <green>255</green>
-                <blue>127</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="PlaceholderText">
-              <brush brushstyle="NoBrush">
-               <color alpha="128">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-            </active>
-            <inactive>
-             <colorrole role="WindowText">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Button">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>129</red>
-                <green>133</green>
-                <blue>132</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Text">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="ButtonText">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Base">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>129</red>
-                <green>133</green>
-                <blue>132</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Window">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>129</red>
-                <green>133</green>
-                <blue>132</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Highlight">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>85</red>
-                <green>255</green>
-                <blue>127</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="PlaceholderText">
-              <brush brushstyle="NoBrush">
-               <color alpha="128">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-            </inactive>
-            <disabled>
-             <colorrole role="WindowText">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Button">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>129</red>
-                <green>133</green>
-                <blue>132</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Text">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="ButtonText">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Base">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>129</red>
-                <green>133</green>
-                <blue>132</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Window">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>129</red>
-                <green>133</green>
-                <blue>132</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="Highlight">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>145</red>
-                <green>141</green>
-                <blue>126</blue>
-               </color>
-              </brush>
-             </colorrole>
-             <colorrole role="PlaceholderText">
-              <brush brushstyle="NoBrush">
-               <color alpha="128">
-                <red>241</red>
-                <green>241</green>
-                <blue>241</blue>
-               </color>
-              </brush>
-             </colorrole>
-            </disabled>
-           </palette>
-          </property>
           <property name="font">
            <font>
-            <family>Bebas Kai</family>
-            <pointsize>15</pointsize>
+            <family>BebasKai</family>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="cursor">
@@ -27591,7 +27371,7 @@ QPushButton:checked {
                       <number>0</number>
                      </property>
                      <property name="bottomMargin">
-                      <number>9</number>
+                      <number>0</number>
                      </property>
                      <item>
                       <widget class="QStackedWidget" name="setter_tab_widget">
@@ -27617,7 +27397,7 @@ QPushButton:checked {
                         <string notr="true">background-color: #929695;</string>
                        </property>
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>1</number>
                        </property>
                        <widget class="QWidget" name="page_1">
                         <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -28676,6 +28456,18 @@ border: none;
                 <string>DIGITIZING</string>
                </attribute>
                <layout class="QHBoxLayout" name="horizontalLayout_202">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QWidget" name="widget_78" native="true">
                   <property name="sizePolicy">
@@ -28752,58 +28544,10 @@ border: none;
 }</string>
                      </property>
                      <property name="text">
-                      <string>SURFACE MAP</string>
+                      <string>Surface Map Parameters</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                     </property>
-                     <property name="indent">
-                      <number>10</number>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="label_128">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>27</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>27</height>
-                      </size>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <family>Bebas Kai</family>
-                       <pointsize>14</pointsize>
-                       <weight>50</weight>
-                       <italic>false</italic>
-                       <bold>false</bold>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QLabel{
-    border-style: solid;
-    border-color: rgb(176, 179, 172);
-    border-width: 2px;
-    border-radius: 5px;
-    color: white;
-    background: rgb(90, 90, 90);
-	font: 14pt &quot;Bebas Kai&quot;;
-}</string>
-                     </property>
-                     <property name="text">
-                      <string>Grid Dimensions</string>
                      </property>
                      <property name="indent">
                       <number>10</number>
@@ -29280,7 +29024,7 @@ color: white;
                         <widget class="VCPSettingsComboBox" name="surface_scan_subroutine_combobox">
                          <property name="minimumSize">
                           <size>
-                           <width>200</width>
+                           <width>142</width>
                            <height>0</height>
                           </size>
                          </property>
@@ -29289,6 +29033,35 @@ color: white;
                          </property>
                          <property name="layoutDirection">
                           <enum>Qt::LeftToRight</enum>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 1px solid black;
+	border-radius: 3px;
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(81, 86, 85), stop:0.489795 rgb(99, 102, 102), stop:0.699799 rgb(85, 88, 94), stop:0.90444 rgb(77, 84, 86), stop:0.160246 rgb(83, 84, 91), stop:1 rgb(109, 115, 118));
+	padding: 1px 23px 1px 3px;
+	min-width: 6em;
+	color: #ffffff;
+    font: 12pt &quot;Bebas Kai&quot;;
+}
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 20px;
+ 	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+    font: 12pt &quot;Bebas Kai&quot;;
+}
+QComboBox::down-arrow {
+     image: url(:/images/combobox-arrow.png);
+}
+
+QComboBox QAbstractItemView{
+	background-color: #4f4f4f;
+	color: #999999;
+ 	selection-background-color: #999999;
+	selection-color: #4f4f4f;
+}</string>
                          </property>
                          <property name="editable">
                           <bool>false</bool>
@@ -29311,7 +29084,7 @@ color: white;
                        <property name="minimumSize">
                         <size>
                          <width>200</width>
-                         <height>0</height>
+                         <height>25</height>
                         </size>
                        </property>
                        <property name="baseSize">
@@ -29320,11 +29093,54 @@ color: white;
                          <height>0</height>
                         </size>
                        </property>
+                       <property name="palette">
+                        <palette>
+                         <active>
+                          <colorrole role="WindowText">
+                           <brush brushstyle="SolidPattern">
+                            <color alpha="255">
+                             <red>255</red>
+                             <green>255</green>
+                             <blue>255</blue>
+                            </color>
+                           </brush>
+                          </colorrole>
+                         </active>
+                         <inactive>
+                          <colorrole role="WindowText">
+                           <brush brushstyle="SolidPattern">
+                            <color alpha="255">
+                             <red>255</red>
+                             <green>255</green>
+                             <blue>255</blue>
+                            </color>
+                           </brush>
+                          </colorrole>
+                         </inactive>
+                         <disabled>
+                          <colorrole role="WindowText">
+                           <brush brushstyle="SolidPattern">
+                            <color alpha="255">
+                             <red>190</red>
+                             <green>190</green>
+                             <blue>190</blue>
+                            </color>
+                           </brush>
+                          </colorrole>
+                         </disabled>
+                        </palette>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>BebasKai</family>
+                         <pointsize>14</pointsize>
+                        </font>
+                       </property>
                        <property name="layoutDirection">
                         <enum>Qt::RightToLeft</enum>
                        </property>
                        <property name="text">
-                        <string>Round up </string>
+                        <string>Round up:</string>
                        </property>
                        <property name="iconSize">
                         <size>
@@ -29380,12 +29196,6 @@ color: white;
                      </item>
                      <item>
                       <widget class="SubCallButton" name="surface_scan_execute">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -29461,7 +29271,7 @@ color: white;
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
-                       <height>27</height>
+                       <height>30</height>
                       </size>
                      </property>
                      <property name="maximumSize">
@@ -29491,7 +29301,7 @@ color: white;
 }</string>
                      </property>
                      <property name="text">
-                      <string>Probing settings</string>
+                      <string>Probing Parameters</string>
                      </property>
                      <property name="indent">
                       <number>10</number>
@@ -29947,7 +29757,7 @@ color: white;
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
-                       <height>27</height>
+                       <height>30</height>
                       </size>
                      </property>
                      <property name="maximumSize">
@@ -29977,7 +29787,7 @@ color: white;
 }</string>
                      </property>
                      <property name="text">
-                      <string>Compensation settings</string>
+                      <string>Compensation Settings</string>
                      </property>
                      <property name="indent">
                       <number>10</number>
@@ -29987,16 +29797,16 @@ color: white;
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_169">
                      <property name="leftMargin">
-                      <number>0</number>
+                      <number>5</number>
                      </property>
                      <property name="topMargin">
-                      <number>0</number>
+                      <number>2</number>
                      </property>
                      <property name="rightMargin">
-                      <number>0</number>
+                      <number>5</number>
                      </property>
                      <property name="bottomMargin">
-                      <number>0</number>
+                      <number>2</number>
                      </property>
                      <item>
                       <widget class="QLabel" name="label_164">
@@ -30078,7 +29888,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>interpolation method:</string>
+                        <string>Interpolation method:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -30092,9 +29902,38 @@ color: white;
                       <widget class="VCPSettingsComboBox" name="surface_scan_interpolation">
                        <property name="minimumSize">
                         <size>
-                         <width>0</width>
+                         <width>142</width>
                          <height>0</height>
                         </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QComboBox {
+	border: 1px solid black;
+	border-radius: 3px;
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(81, 86, 85), stop:0.489795 rgb(99, 102, 102), stop:0.699799 rgb(85, 88, 94), stop:0.90444 rgb(77, 84, 86), stop:0.160246 rgb(83, 84, 91), stop:1 rgb(109, 115, 118));
+	padding: 1px 23px 1px 3px;
+	min-width: 6em;
+	color: #ffffff;
+    font: 12pt &quot;Bebas Kai&quot;;
+}
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 20px;
+ 	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+    font: 12pt &quot;Bebas Kai&quot;;
+}
+QComboBox::down-arrow {
+     image: url(:/images/combobox-arrow.png);
+}
+
+QComboBox QAbstractItemView{
+	background-color: #4f4f4f;
+	color: #999999;
+ 	selection-background-color: #999999;
+	selection-color: #4f4f4f;
+}</string>
                        </property>
                        <property name="placeholderText">
                         <string>bicubic</string>
@@ -30112,13 +29951,13 @@ color: white;
                       <number>5</number>
                      </property>
                      <property name="topMargin">
-                      <number>5</number>
+                      <number>2</number>
                      </property>
                      <property name="rightMargin">
                       <number>5</number>
                      </property>
                      <property name="bottomMargin">
-                      <number>5</number>
+                      <number>2</number>
                      </property>
                      <item>
                       <widget class="QLabel" name="label_162">
@@ -30138,7 +29977,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Transparency</string>
+                        <string>Mesh transparency:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -30150,8 +29989,68 @@ color: white;
                      </item>
                      <item>
                       <widget class="VCPSettingsSlider" name="surface_scan_opacity_slider">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QSlider::groove:horizontal {
+border: 1px solid #bbb;
+background: white;
+height: 20px;
+border-radius: 3px;
+}
+
+QSlider::sub-page:horizontal {
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,
+    stop: 0 #66e, stop: 1 #bbf);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,
+    stop: 0 #bbf, stop: 1 #55f);
+border: 1px solid #777;
+height: 20px;
+border-radius: 3px;
+}
+
+QSlider::add-page:horizontal {
+background: rgb(235, 235, 235);
+border: 1px solid #777;
+height: 20px;
+border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+background: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 255, 255, 255), stop:0.1 rgba(60, 60, 60, 255), stop:0.21 rgba(60, 60, 60, 255), stop:0.25 rgba(255, 255, 255, 255), stop:0.29 rgba(60, 60, 60, 255), stop:0.46 rgba(60, 60, 60, 255), stop:0.5 rgba(255, 255, 255, 255), stop:0.54 rgba(60, 60, 60, 255), stop:0.71 rgba(60, 60, 60, 255), stop:0.75 rgba(255, 255, 255, 255), stop:0.79 rgba(60, 60, 60, 255), stop:0.9 rgba(60, 60, 60, 255), stop:1 rgba(255, 255, 255, 255));
+border: 1px solid #777;
+border-color: rgba(40, 40, 40, 255);
+width: 40px;
+margin-top: -13px;
+margin-bottom: -13px;
+border-radius: 4px;
+}
+
+QSlider::handle:horizontal:hover {
+background: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 255, 255, 255), stop:0.1 rgba(60, 60, 60, 255), stop:0.21 rgba(60, 60, 60, 255), stop:0.25 rgba(255, 255, 255, 255), stop:0.29 rgba(60, 60, 60, 255), stop:0.46 rgba(60, 60, 60, 255), stop:0.5 rgba(255, 255, 255, 255), stop:0.54 rgba(60, 60, 60, 255), stop:0.71 rgba(60, 60, 60, 255), stop:0.75 rgba(255, 255, 255, 255), stop:0.79 rgba(60, 60, 60, 255), stop:0.9 rgba(60, 60, 60, 255), stop:1 rgba(255, 255, 255, 255));
+border: 1px solid #444;
+border-color: rgb(241, 239, 237);
+border-radius: 4px;
+}
+
+QSlider::sub-page:horizontal:disabled {
+border: 2px solid gray;
+}
+
+QSlider::add-page:horizontal:disabled {
+border: 2px solid gray;
+}
+
+QSlider::handle:horizontal:disabled {
+border: 2px solid gray;
+}</string>
+                       </property>
                        <property name="minimum">
-                        <number>1</number>
+                        <number>0</number>
                        </property>
                        <property name="maximum">
                         <number>100</number>
@@ -30167,107 +30066,139 @@ color: white;
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <widget class="StatusLabel" name="opacity_val">
+                       <property name="minimumSize">
+                        <size>
+                         <width>48</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>48</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">StatusLabel {
+    border-style: transparent;
+    border-color: rgb(235, 235, 235);
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    background: rgb(235, 235, 235);
+	font: 75 15pt &quot;Bebas Kai&quot;;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>30%</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="rules" stdset="0">
+                        <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.linear-speed-percentage&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;f\&quot;{ch[0]}%\&quot;&quot;, &quot;name&quot;: &quot;linear_jog_slider_dro&quot;}]</string>
+                       </property>
+                      </widget>
+                     </item>
                     </layout>
                    </item>
                    <item>
-                    <widget class="SubCallButton" name="surface_scan_param_update">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                       <horstretch>1</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_171">
+                     <item>
+                      <widget class="SubCallButton" name="surface_scan_param_update">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">SubCallButton{
+    font: 14pt &quot;Bebas Kai&quot;;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>UPDATE PARAMETERS</string>
+                       </property>
+                       <property name="filename" stdset="0">
+                        <string>surface_scan_param_update.ngc</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="HalButton" name="surface_scan_compensation_enable">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>38</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Bebas Kai</family>
+                         <pointsize>15</pointsize>
+                         <kerning>true</kerning>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Enable compensation</string>
+                       </property>
+                       <property name="checkable">
+                        <bool>true</bool>
+                       </property>
+                       <property name="rules" stdset="0">
+                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                       </property>
+                       <property name="pinBaseName" stdset="0">
+                        <string>compensation_enable</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="MDIEntry" name="mdi_entry_box_8">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
-                       <height>38</height>
+                       <height>42</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
                        <width>16777215</width>
-                       <height>38</height>
+                       <height>42</height>
                       </size>
                      </property>
-                     <property name="styleSheet">
-                      <string notr="true">SubCallButton{
-    font: 14pt &quot;Bebas Kai&quot;;
-}</string>
+                     <property name="font">
+                      <font>
+                       <family>Bebas Kai</family>
+                       <pointsize>15</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
                      </property>
-                     <property name="text">
-                      <string>UPDATE SURFACE MAPPING PARAMETERS</string>
+                     <property name="focusPolicy">
+                      <enum>Qt::ClickFocus</enum>
                      </property>
-                     <property name="filename" stdset="0">
-                      <string>surface_scan_param_update.ngc</string>
+                     <property name="placeholderText">
+                      <string>MDI</string>
                      </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QWidget" name="widget_85" native="true">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_200">
-                      <property name="spacing">
-                       <number>6</number>
-                      </property>
-                      <property name="leftMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>3</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>3</number>
-                      </property>
-                      <item>
-                       <widget class="HalButton" name="surface_scan_compensation_enable">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="minimumSize">
-                         <size>
-                          <width>0</width>
-                          <height>38</height>
-                         </size>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>38</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>Bebas Kai</family>
-                          <pointsize>15</pointsize>
-                          <kerning>true</kerning>
-                         </font>
-                        </property>
-                        <property name="text">
-                         <string>Compensation map enable</string>
-                        </property>
-                        <property name="checkable">
-                         <bool>true</bool>
-                        </property>
-                        <property name="rules" stdset="0">
-                         <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
-                        </property>
-                        <property name="pinBaseName" stdset="0">
-                         <string>compensation_enable</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -30416,7 +30347,7 @@ QPushButton:checked {
 }</string>
                         </property>
                         <property name="text">
-                         <string>FUTURE 2</string>
+                         <string>Grid Dimensions</string>
                         </property>
                         <property name="checkable">
                          <bool>true</bool>
@@ -30472,7 +30403,7 @@ QPushButton:checked {
 }</string>
                         </property>
                         <property name="text">
-                         <string>FUTURE 3</string>
+                         <string>Load extents from NC file</string>
                         </property>
                         <property name="checkable">
                          <bool>true</bool>
@@ -30528,7 +30459,7 @@ QPushButton:checked {
 }</string>
                         </property>
                         <property name="text">
-                         <string>FUTURE 4</string>
+                         <string>Probing parameters</string>
                         </property>
                         <property name="checkable">
                          <bool>true</bool>
@@ -30538,118 +30469,6 @@ QPushButton:checked {
                         </property>
                         <property name="page" stdset="0">
                          <number>3</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QPushButton" name="digitize_tab_5">
-                        <property name="minimumSize">
-                         <size>
-                          <width>126</width>
-                          <height>37</height>
-                         </size>
-                        </property>
-                        <property name="focusPolicy">
-                         <enum>Qt::NoFocus</enum>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QPushButton {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: white;
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #4e4e4e, stop: 1.0 #3a3a3a);
-    border-style: solid;
-    border-color: black;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-right-width: 1px;
-    border-left-width: 1px;
-    min-width: 10ex;
-    min-height: 25;
-    padding: 2px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-QPushButton:pressed, QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(112, 112, 238, 255), stop:0.121053 rgba(123, 123, 232, 255), stop:0.3 rgba(85, 85, 238, 255), stop:0.694737 rgba(85, 85, 238, 255), stop:0.915789 rgba(123, 123, 232, 255), stop:1 rgba(112, 112, 238, 255))
-}</string>
-                        </property>
-                        <property name="text">
-                         <string>FUTURE 5</string>
-                        </property>
-                        <property name="checkable">
-                         <bool>true</bool>
-                        </property>
-                        <property name="autoExclusive">
-                         <bool>true</bool>
-                        </property>
-                        <property name="page" stdset="0">
-                         <number>4</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QPushButton" name="digitize_tab_6">
-                        <property name="minimumSize">
-                         <size>
-                          <width>126</width>
-                          <height>37</height>
-                         </size>
-                        </property>
-                        <property name="focusPolicy">
-                         <enum>Qt::NoFocus</enum>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QPushButton {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: white;
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #4e4e4e, stop: 1.0 #3a3a3a);
-    border-style: solid;
-    border-color: black;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    border-right-width: 1px;
-    border-left-width: 1px;
-    min-width: 10ex;
-    min-height: 25;
-    padding: 2px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-QPushButton:pressed, QPushButton:hover {
-    background:  qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #A19E9E, stop: 1.0 #5C5959);
-}
-
-QPushButton:checked {
-    background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(112, 112, 238, 255), stop:0.121053 rgba(123, 123, 232, 255), stop:0.3 rgba(85, 85, 238, 255), stop:0.694737 rgba(85, 85, 238, 255), stop:0.915789 rgba(123, 123, 232, 255), stop:1 rgba(112, 112, 238, 255))
-}</string>
-                        </property>
-                        <property name="text">
-                         <string>FUTURE 6</string>
-                        </property>
-                        <property name="checkable">
-                         <bool>true</bool>
-                        </property>
-                        <property name="autoExclusive">
-                         <bool>true</bool>
-                        </property>
-                        <property name="page" stdset="0">
-                         <number>5</number>
                         </property>
                        </widget>
                       </item>
@@ -30696,7 +30515,7 @@ QPushButton:checked {
 }</string>
                         </property>
                         <property name="text">
-                         <string>FUTURE 7</string>
+                         <string>Compensation settings</string>
                         </property>
                         <property name="checkable">
                          <bool>true</bool>
@@ -30721,7 +30540,7 @@ QPushButton:checked {
                       <number>0</number>
                      </property>
                      <property name="bottomMargin">
-                      <number>9</number>
+                      <number>0</number>
                      </property>
                      <item>
                       <widget class="QStackedWidget" name="digitizing_tab_widget">
@@ -30752,6 +30571,9 @@ QPushButton:checked {
                        <widget class="QWidget" name="page_8">
                         <layout class="QHBoxLayout" name="horizontalLayout_74">
                          <item>
+                          <widget class="GCodeProperties" name="gcodeproperties"/>
+                         </item>
+                         <item>
                           <widget class="QWidget" name="widget_102" native="true">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -30776,30 +30598,6 @@ QPushButton:checked {
                              <number>0</number>
                             </property>
                            </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QWidget" name="widget_103" native="true">
-                           <widget class="GCodeProperties" name="gcodeproperties">
-                            <property name="geometry">
-                             <rect>
-                              <x>370</x>
-                              <y>150</y>
-                              <width>511</width>
-                              <height>351</height>
-                             </rect>
-                            </property>
-                           </widget>
-                           <widget class="GCodeProperties" name="gcodeproperties_2">
-                            <property name="geometry">
-                             <rect>
-                              <x>40</x>
-                              <y>60</y>
-                              <width>621</width>
-                              <height>401</height>
-                             </rect>
-                            </property>
-                           </widget>
                           </widget>
                          </item>
                         </layout>
@@ -48608,18 +48406,18 @@ font: 11pt bebas kai;
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="tooloffsetdirbtnGroup"/>
-  <buttongroup name="btngrpMdi"/>
-  <buttongroup name="probetabGroup"/>
   <buttongroup name="mainorthoperspbtnGroup"/>
-  <buttongroup name="proberoutinebtnGroup"/>
-  <buttongroup name="xycalbtnGroup"/>
-  <buttongroup name="settertabGroup"/>
-  <buttongroup name="probehelpGroup"/>
-  <buttongroup name="spindlerpmsourcebtnGroup"/>
-  <buttongroup name="sidebartabGroup"/>
   <buttongroup name="probepagewcsbtnGroup"/>
-  <buttongroup name="customwcsbtnGroup"/>
   <buttongroup name="gcodemdibtnGroup"/>
+  <buttongroup name="probetabGroup"/>
+  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="customwcsbtnGroup"/>
+  <buttongroup name="spindlerpmsourcebtnGroup"/>
+  <buttongroup name="proberoutinebtnGroup"/>
+  <buttongroup name="tooloffsetdirbtnGroup"/>
+  <buttongroup name="settertabGroup"/>
+  <buttongroup name="btngrpMdi"/>
+  <buttongroup name="sidebartabGroup"/>
+  <buttongroup name="probehelpGroup"/>
  </buttongroups>
 </ui>

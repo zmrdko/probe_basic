@@ -25,15 +25,15 @@ class SurfaceScan:
     def initialize_combobox(self):
         """Populate combobox and connect the signal for when the selected index changes."""
         # Add items to combobox
-        self.subroutine_combobox.addItem("smartprobe_compensation.ngc", {'probe_ngc': "smartprobe_compensation.ngc"})
-        self.subroutine_combobox.addItem("simple_probe.ngc", {'probe_ngc': "simple_probe.ngc"})
-        self.subroutine_combobox.addItem("test_probe.ngc",{'probe_ngc':"test_probe.ngc"})
+        self.subroutine_combobox.addItem("SMARTPROBE COMPENSATION", {'probe_ngc': "smartprobe_compensation.ngc"})
+        self.subroutine_combobox.addItem("SIMPLE PROBE", {'probe_ngc': "simple_probe.ngc"})
+        self.subroutine_combobox.addItem("TEST PROBE",{'probe_ngc':"test_probe.ngc"})
         # Connect the combobox's index changed signal to a method
         self.subroutine_combobox.currentIndexChanged.connect(self.update_probing_subroutine)
 
-        self.interpolation_method.addItem("bicubic",{'interpolation':0})
-        self.interpolation_method.addItem("bilinear",{'interpolation':1})
-        self.interpolation_method.addItem("nearest",{'interpolation':2})
+        self.interpolation_method.addItem("BICUBIC",{'interpolation':0})
+        self.interpolation_method.addItem("BILINEAR",{'interpolation':1})
+        self.interpolation_method.addItem("NEAREST",{'interpolation':2})
         self.interpolation_method.currentIndexChanged.connect(self.update_interpolation_method)
 
         self.comp = getComponent("qtpyvcp")
