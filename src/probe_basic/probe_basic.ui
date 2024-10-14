@@ -17623,13 +17623,14 @@ QTabBar::tab:only-one {
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Probe Tool #:</string>
+                          <string>Probe Tool #</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -17709,13 +17710,14 @@ color: white;
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>PROBE SLOW FDRATE:</string>
+                          <string>PROBE SLOW FDRATE</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -17824,13 +17826,14 @@ color: white;
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>PROBE TRAVERSE FR:</string>
+                          <string>PROBE TRAVERSE FR</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -17904,13 +17907,14 @@ color: white;
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>PROBE FAST FDRATE:</string>
+                          <string>PROBE FAST FDRATE</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -18013,13 +18017,14 @@ color: white;
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Max X/Y Distance:</string>
+                          <string>Max X/Y Distance</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -18099,13 +18104,14 @@ color: white;
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>X/Y Clearance:</string>
+                          <string>X/Y Clearance</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -18208,13 +18214,14 @@ color: white;
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Max Z Distance:</string>
+                          <string>Max Z Distance</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -18294,13 +18301,14 @@ color: white;
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Z Clearance:</string>
+                          <string>Z Clearance</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -18409,13 +18417,14 @@ color: white;
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Extra Probe Depth:</string>
+                          <string>Extra Probe Depth</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -18495,13 +18504,14 @@ color: white;
                           <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                          </property>
                          <property name="lineWidth">
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Step Off Width:</string>
+                          <string>Step Off Width</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -18907,7 +18917,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>X- PROBED:</string>
+                          <string>X- PROBED</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -18995,7 +19005,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>X+ PROBED:</string>
+                          <string>X+ PROBED</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19080,7 +19090,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>X WIDTH:</string>
+                          <string>X WIDTH</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19181,7 +19191,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Y- PROBED:</string>
+                          <string>Y- PROBED</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19266,7 +19276,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Y+ PROBED:</string>
+                          <string>Y+ PROBED</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19351,7 +19361,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Y WIDTH:</string>
+                          <string>Y WIDTH</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19452,7 +19462,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Z- PROBED:</string>
+                          <string>Z- PROBED</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19540,7 +19550,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>DIAM:</string>
+                          <string>DIAMETER</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19625,7 +19635,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>X CENTER:</string>
+                          <string>X CENTER</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19729,7 +19739,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EDGE DELTA:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;EDGE DELTA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19814,7 +19824,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>EDGE ANGLE:</string>
+                          <string>EDGE ANGLE</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -19908,7 +19918,7 @@ color: white;
                           <number>0</number>
                          </property>
                          <property name="text">
-                          <string>Y CENTER:</string>
+                          <string>Y CENTER</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -28586,7 +28596,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>X min pos:</string>
+                        <string>X min pos</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -28654,7 +28664,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>X max pos:</string>
+                        <string>X max pos</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -28716,7 +28726,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>X spacing:</string>
+                        <string>X spacing</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -28800,7 +28810,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Y min pos:</string>
+                        <string>Y min pos</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -28862,7 +28872,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Y max pos:</string>
+                        <string>Y max pos</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -28924,7 +28934,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Y spacing:</string>
+                        <string>Y spacing</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -28985,57 +28995,67 @@ color: white;
                       <number>2</number>
                      </property>
                      <item>
-                      <layout class="QHBoxLayout" name="horizontalLayout_177">
-                       <item>
-                        <widget class="QLabel" name="label_166">
-                         <property name="sizePolicy">
-                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                          </sizepolicy>
-                         </property>
-                         <property name="baseSize">
-                          <size>
-                           <width>140</width>
-                           <height>30</height>
-                          </size>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QLabel{
+                      <widget class="QLabel" name="label_166">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="baseSize">
+                        <size>
+                         <width>140</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
 }</string>
-                         </property>
-                         <property name="lineWidth">
-                          <number>0</number>
-                         </property>
-                         <property name="text">
-                          <string>Subroutine:</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                         </property>
-                         <property name="indent">
-                          <number>0</number>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="VCPSettingsComboBox" name="surface_scan_subroutine_combobox">
-                         <property name="minimumSize">
-                          <size>
-                           <width>142</width>
-                           <height>0</height>
-                          </size>
-                         </property>
-                         <property name="statusTip">
-                          <string>pick probing subroutine</string>
-                         </property>
-                         <property name="layoutDirection">
-                          <enum>Qt::LeftToRight</enum>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QComboBox {
+                       </property>
+                       <property name="lineWidth">
+                        <number>0</number>
+                       </property>
+                       <property name="text">
+                        <string>Subroutine</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>0</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="VCPSettingsComboBox" name="surface_scan_subroutine_combobox">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>1</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>142</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="statusTip">
+                        <string>pick probing subroutine</string>
+                       </property>
+                       <property name="layoutDirection">
+                        <enum>Qt::LeftToRight</enum>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QComboBox {
 	border: 1px solid black;
 	border-radius: 3px;
 	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(81, 86, 85), stop:0.489795 rgb(99, 102, 102), stop:0.699799 rgb(85, 88, 94), stop:0.90444 rgb(77, 84, 86), stop:0.160246 rgb(83, 84, 91), stop:1 rgb(109, 115, 118));
@@ -29062,94 +29082,46 @@ QComboBox QAbstractItemView{
  	selection-background-color: #999999;
 	selection-color: #4f4f4f;
 }</string>
-                         </property>
-                         <property name="editable">
-                          <bool>false</bool>
-                         </property>
-                         <property name="currentText">
-                          <string/>
-                         </property>
-                         <property name="placeholderText">
-                          <string>smart_probe.ngc</string>
-                         </property>
-                         <property name="settingName" stdset="0">
-                          <string>surface-scan.subroutine</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
+                       </property>
+                       <property name="editable">
+                        <bool>false</bool>
+                       </property>
+                       <property name="currentText">
+                        <string/>
+                       </property>
+                       <property name="placeholderText">
+                        <string>smart_probe.ngc</string>
+                       </property>
+                       <property name="settingName" stdset="0">
+                        <string>surface-scan.subroutine</string>
+                       </property>
+                      </widget>
                      </item>
                      <item>
-                      <widget class="VCPSettingsCheckBox" name="surface_scan_end_pos_roundup_3056">
+                      <widget class="VCPSettingsPushButton" name="surface_scan_end_pos_roundup_3056">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
-                         <width>200</width>
-                         <height>25</height>
+                         <width>107</width>
+                         <height>38</height>
                         </size>
                        </property>
-                       <property name="baseSize">
+                       <property name="maximumSize">
                         <size>
-                         <width>0</width>
-                         <height>0</height>
+                         <width>107</width>
+                         <height>16777215</height>
                         </size>
                        </property>
-                       <property name="palette">
-                        <palette>
-                         <active>
-                          <colorrole role="WindowText">
-                           <brush brushstyle="SolidPattern">
-                            <color alpha="255">
-                             <red>255</red>
-                             <green>255</green>
-                             <blue>255</blue>
-                            </color>
-                           </brush>
-                          </colorrole>
-                         </active>
-                         <inactive>
-                          <colorrole role="WindowText">
-                           <brush brushstyle="SolidPattern">
-                            <color alpha="255">
-                             <red>255</red>
-                             <green>255</green>
-                             <blue>255</blue>
-                            </color>
-                           </brush>
-                          </colorrole>
-                         </inactive>
-                         <disabled>
-                          <colorrole role="WindowText">
-                           <brush brushstyle="SolidPattern">
-                            <color alpha="255">
-                             <red>190</red>
-                             <green>190</green>
-                             <blue>190</blue>
-                            </color>
-                           </brush>
-                          </colorrole>
-                         </disabled>
-                        </palette>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <family>BebasKai</family>
-                         <pointsize>14</pointsize>
-                        </font>
-                       </property>
-                       <property name="layoutDirection">
-                        <enum>Qt::RightToLeft</enum>
+                       <property name="styleSheet">
+                        <string notr="true">margin-left: 9px;</string>
                        </property>
                        <property name="text">
-                        <string>Round up:</string>
-                       </property>
-                       <property name="iconSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="rules" stdset="0">
-                        <string>[{&quot;name&quot;: &quot;enable&quot;, &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;True if ch[0] else False&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
+                        <string>ROUND UP</string>
                        </property>
                        <property name="settingName" stdset="0">
                         <string>surface-scan.end-pos-roundup</string>
@@ -29160,6 +29132,9 @@ QComboBox QAbstractItemView{
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_197">
+                     <property name="spacing">
+                      <number>12</number>
+                     </property>
                      <property name="leftMargin">
                       <number>5</number>
                      </property>
@@ -29340,7 +29315,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z safety position:</string>
+                        <string>Z safety position</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29405,7 +29380,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z probe min position:</string>
+                        <string>Z probe min position</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29483,7 +29458,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z fast probe FR:</string>
+                        <string>Z fast probe FR</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29551,7 +29526,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z slow probe FR:</string>
+                        <string>Z slow probe FR</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29632,7 +29607,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>XY Feedrate:</string>
+                        <string>XY Feedrate</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29700,7 +29675,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Z retract feedrate:</string>
+                        <string>Z retract feedrate</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29820,13 +29795,14 @@ color: white;
                         <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+padding-right: 3px;
 }</string>
                        </property>
                        <property name="lineWidth">
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Fade height:</string>
+                        <string>Fade height</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29882,13 +29858,14 @@ color: white;
                         <string notr="true">QLabel{
 font: 75 14pt &quot;Bebas Kai&quot;;
 color: white;
+margin-left: 9px;
 }</string>
                        </property>
                        <property name="lineWidth">
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Interpolation method:</string>
+                        <string>Interpolation method</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -29903,7 +29880,13 @@ color: white;
                        <property name="minimumSize">
                         <size>
                          <width>142</width>
-                         <height>0</height>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>30</height>
                         </size>
                        </property>
                        <property name="styleSheet">
@@ -29977,7 +29960,7 @@ color: white;
                         <number>0</number>
                        </property>
                        <property name="text">
-                        <string>Mesh transparency:</string>
+                        <string>Mesh transparency</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -30092,13 +30075,13 @@ border: 2px solid gray;
 }</string>
                        </property>
                        <property name="text">
-                        <string>30%</string>
+                        <string>0</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
                        <property name="rules" stdset="0">
-                        <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;settings:machine.jog.linear-speed-percentage&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;f\&quot;{ch[0]}%\&quot;&quot;, &quot;name&quot;: &quot;linear_jog_slider_dro&quot;}]</string>
+                        <string>[{&quot;name&quot;: &quot;New Rule&quot;, &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;f\&quot;{(ch[0])}\&quot;&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;settings:backplot.surface-map-transparency&quot;, &quot;trigger&quot;: true}]}]</string>
                        </property>
                       </widget>
                      </item>
@@ -30106,6 +30089,15 @@ border: 2px solid gray;
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_171">
+                     <property name="spacing">
+                      <number>12</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>5</number>
+                     </property>
                      <item>
                       <widget class="SubCallButton" name="surface_scan_param_update">
                        <property name="minimumSize">
@@ -30571,9 +30563,6 @@ QPushButton:checked {
                        <widget class="QWidget" name="page_8">
                         <layout class="QHBoxLayout" name="horizontalLayout_74">
                          <item>
-                          <widget class="GCodeProperties" name="gcodeproperties"/>
-                         </item>
-                         <item>
                           <widget class="QWidget" name="widget_102" native="true">
                            <property name="sizePolicy">
                             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -30599,6 +30588,9 @@ QPushButton:checked {
                             </property>
                            </layout>
                           </widget>
+                         </item>
+                         <item>
+                          <widget class="GCodeProperties" name="gcodeproperties"/>
                          </item>
                         </layout>
                        </widget>
@@ -46275,11 +46267,6 @@ font: 11pt bebas kai;
    <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
   </customwidget>
   <customwidget>
-   <class>VCPSettingsCheckBox</class>
-   <extends>QCheckBox</extends>
-   <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
-  </customwidget>
-  <customwidget>
    <class>VCPSettingsPushButton</class>
    <extends>QPushButton</extends>
    <header>qtpyvcp.widgets.input_widgets.setting_slider</header>
@@ -46379,7 +46366,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>597</y>
+     <y>561</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -46411,7 +46398,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>327</y>
+     <y>309</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -46427,7 +46414,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>102</y>
+     <y>99</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -46443,7 +46430,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>372</y>
+     <y>351</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -46523,7 +46510,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>282</y>
+     <y>267</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -46571,7 +46558,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>507</y>
+     <y>477</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -46586,7 +46573,7 @@ font: 11pt bebas kai;
    <slot>setFocus()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>772</x>
+     <x>682</x>
      <y>664</y>
     </hint>
     <hint type="destinationlabel">
@@ -46602,11 +46589,11 @@ font: 11pt bebas kai;
    <slot>findDialog()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1327</x>
+     <x>1326</x>
      <y>632</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1619</x>
+     <x>1617</x>
      <y>587</y>
     </hint>
    </hints>
@@ -46622,7 +46609,7 @@ font: 11pt bebas kai;
      <y>204</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1614</x>
+     <x>1612</x>
      <y>205</y>
     </hint>
    </hints>
@@ -46635,7 +46622,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>237</y>
+     <y>225</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -46650,12 +46637,12 @@ font: 11pt bebas kai;
    <slot>saveFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1458</x>
+     <x>1457</x>
      <y>632</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1619</x>
-     <y>470</y>
+     <x>1617</x>
+     <y>530</y>
     </hint>
    </hints>
   </connection>
@@ -46682,12 +46669,12 @@ font: 11pt bebas kai;
    <slot>EditorReadWrite(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1196</x>
+     <x>1195</x>
      <y>632</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1619</x>
-     <y>470</y>
+     <x>1617</x>
+     <y>530</y>
     </hint>
    </hints>
   </connection>
@@ -46715,7 +46702,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>552</y>
+     <y>519</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -46826,7 +46813,7 @@ font: 11pt bebas kai;
    <slot>loadSelectedFile()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1027</x>
+     <x>1026</x>
      <y>112</y>
     </hint>
     <hint type="destinationlabel">
@@ -46846,7 +46833,7 @@ font: 11pt bebas kai;
      <y>153</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1027</x>
+     <x>1026</x>
      <y>112</y>
     </hint>
    </hints>
@@ -46894,7 +46881,7 @@ font: 11pt bebas kai;
      <y>421</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1614</x>
+     <x>1612</x>
      <y>422</y>
     </hint>
    </hints>
@@ -46923,7 +46910,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>192</y>
+     <y>183</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -46987,7 +46974,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>147</y>
+     <y>141</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -47003,7 +46990,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>642</y>
+     <y>603</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -47018,12 +47005,12 @@ font: 11pt bebas kai;
    <slot>saveFileAs()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1589</x>
+     <x>1588</x>
      <y>632</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1619</x>
-     <y>470</y>
+     <x>1617</x>
+     <y>530</y>
     </hint>
    </hints>
   </connection>
@@ -47227,7 +47214,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>462</y>
+     <y>435</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -47243,7 +47230,7 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>877</x>
-     <y>417</y>
+     <y>393</y>
     </hint>
     <hint type="destinationlabel">
      <x>1177</x>
@@ -47387,11 +47374,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>88</y>
+     <y>121</y>
     </hint>
     <hint type="destinationlabel">
-     <x>201</x>
-     <y>82</y>
+     <x>708</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47403,11 +47390,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>90</y>
+     <y>214</y>
     </hint>
     <hint type="destinationlabel">
-     <x>248</x>
-     <y>82</y>
+     <x>1056</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47419,11 +47406,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>89</y>
+     <y>168</y>
     </hint>
     <hint type="destinationlabel">
-     <x>248</x>
-     <y>82</y>
+     <x>1056</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47435,11 +47422,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>91</y>
+     <y>261</y>
     </hint>
     <hint type="destinationlabel">
-     <x>248</x>
-     <y>82</y>
+     <x>1056</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47451,11 +47438,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>92</y>
+     <y>307</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
-     <y>82</y>
+     <x>1186</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47467,11 +47454,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>93</y>
+     <y>354</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
-     <y>82</y>
+     <x>1186</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47483,11 +47470,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>94</y>
+     <y>400</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
-     <y>82</y>
+     <x>1315</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47498,12 +47485,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>204</x>
-     <y>83</y>
+     <x>225</x>
+     <y>264</y>
     </hint>
     <hint type="destinationlabel">
-     <x>248</x>
-     <y>82</y>
+     <x>882</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47514,12 +47501,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>169</x>
-     <y>83</y>
+     <x>190</x>
+     <y>357</y>
     </hint>
     <hint type="destinationlabel">
-     <x>201</x>
-     <y>82</y>
+     <x>1575</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47531,11 +47518,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>88</y>
+     <y>121</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47547,11 +47534,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>90</y>
+     <y>214</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47563,11 +47550,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>89</y>
+     <y>168</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47579,11 +47566,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>91</y>
+     <y>261</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47595,11 +47582,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>92</y>
+     <y>307</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47611,11 +47598,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>93</y>
+     <y>354</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47627,11 +47614,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>522</x>
-     <y>94</y>
+     <y>400</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47643,11 +47630,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>272</x>
-     <y>93</y>
+     <y>354</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47659,11 +47646,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>272</x>
-     <y>94</y>
+     <y>400</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47675,11 +47662,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>308</x>
-     <y>100</y>
+     <y>495</y>
     </hint>
     <hint type="destinationlabel">
-     <x>119</x>
-     <y>83</y>
+     <x>145</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -47690,12 +47677,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>169</x>
-     <y>83</y>
+     <x>190</x>
+     <y>404</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
-     <y>82</y>
+     <x>1445</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47707,11 +47694,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>393</x>
-     <y>103</y>
+     <y>497</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
-     <y>82</y>
+     <x>1445</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47723,11 +47710,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>236</x>
-     <y>103</y>
+     <y>497</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
-     <y>82</y>
+     <x>1445</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47739,11 +47726,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>315</x>
-     <y>102</y>
+     <y>450</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
-     <y>82</y>
+     <x>1445</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47755,11 +47742,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>315</x>
-     <y>104</y>
+     <y>543</y>
     </hint>
     <hint type="destinationlabel">
-     <x>200</x>
-     <y>82</y>
+     <x>1445</x>
+     <y>85</y>
     </hint>
    </hints>
   </connection>
@@ -47770,11 +47757,11 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1486</x>
+     <x>1484</x>
      <y>267</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1615</x>
+     <x>1613</x>
      <y>268</y>
     </hint>
    </hints>
@@ -47803,11 +47790,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>285</x>
-     <y>95</y>
+     <y>250</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47819,11 +47806,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>533</x>
-     <y>95</y>
+     <y>250</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47835,11 +47822,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>285</x>
-     <y>97</y>
+     <y>289</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47851,11 +47838,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>285</x>
-     <y>99</y>
+     <y>328</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47867,11 +47854,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>285</x>
-     <y>100</y>
+     <y>367</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47883,11 +47870,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>285</x>
-     <y>102</y>
+     <y>406</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47899,11 +47886,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>533</x>
-     <y>97</y>
+     <y>289</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47915,11 +47902,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>533</x>
-     <y>99</y>
+     <y>328</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47931,11 +47918,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>533</x>
-     <y>100</y>
+     <y>367</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47947,11 +47934,11 @@ font: 11pt bebas kai;
    <hints>
     <hint type="sourcelabel">
      <x>533</x>
-     <y>102</y>
+     <y>406</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47962,12 +47949,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>303</x>
-     <y>229</y>
+     <x>1162</x>
+     <y>263</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47978,12 +47965,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>289</x>
-     <y>170</y>
+     <x>1148</x>
+     <y>204</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -47994,12 +47981,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>289</x>
-     <y>238</y>
+     <x>1148</x>
+     <y>272</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48010,12 +47997,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>271</x>
-     <y>129</y>
+     <x>1130</x>
+     <y>163</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48026,12 +48013,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>394</x>
-     <y>521</y>
+     <x>1253</x>
+     <y>555</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48042,12 +48029,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>544</x>
-     <y>521</y>
+     <x>1403</x>
+     <y>555</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48058,12 +48045,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>318</x>
-     <y>521</y>
+     <x>1177</x>
+     <y>555</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48074,12 +48061,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>434</x>
-     <y>521</y>
+     <x>1293</x>
+     <y>555</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48090,12 +48077,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>550</x>
-     <y>521</y>
+     <x>1409</x>
+     <y>555</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48106,12 +48093,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1572</x>
+     <x>1570</x>
      <y>559</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48122,12 +48109,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1572</x>
+     <x>1570</x>
      <y>598</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48138,12 +48125,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1572</x>
+     <x>1570</x>
      <y>637</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>72</y>
+     <x>189</x>
+     <y>444</y>
     </hint>
    </hints>
   </connection>
@@ -48154,11 +48141,11 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1486</x>
+     <x>1484</x>
      <y>384</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1615</x>
+     <x>1613</x>
      <y>385</y>
     </hint>
    </hints>
@@ -48170,12 +48157,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>221</x>
-     <y>162</y>
+     <x>196</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>440</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48186,12 +48173,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>389</x>
-     <y>162</y>
+     <x>368</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>440</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48202,12 +48189,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>491</x>
-     <y>162</y>
+     <x>538</x>
+     <y>122</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>440</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48218,12 +48205,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>221</x>
-     <y>201</y>
+     <x>196</x>
+     <y>165</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>448</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48234,12 +48221,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>389</x>
-     <y>201</y>
+     <x>368</x>
+     <y>165</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>448</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48250,12 +48237,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>490</x>
-     <y>201</y>
+     <x>538</x>
+     <y>165</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>448</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48266,12 +48253,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>288</x>
-     <y>337</y>
+     <x>283</x>
+     <y>334</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>456</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48282,12 +48269,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>487</x>
-     <y>337</y>
+     <x>538</x>
+     <y>334</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>456</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48302,8 +48289,8 @@ font: 11pt bebas kai;
      <y>376</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>464</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48318,8 +48305,8 @@ font: 11pt bebas kai;
      <y>376</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>464</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48334,8 +48321,8 @@ font: 11pt bebas kai;
      <y>415</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>472</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48350,8 +48337,8 @@ font: 11pt bebas kai;
      <y>415</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>472</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48378,12 +48365,12 @@ font: 11pt bebas kai;
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>167</x>
-     <y>268</y>
+     <x>192</x>
+     <y>256</y>
     </hint>
     <hint type="destinationlabel">
-     <x>295</x>
-     <y>577</y>
+     <x>283</x>
+     <y>606</y>
     </hint>
    </hints>
   </connection>
@@ -48407,17 +48394,17 @@ font: 11pt bebas kai;
  </designerdata>
  <buttongroups>
   <buttongroup name="mainorthoperspbtnGroup"/>
-  <buttongroup name="probepagewcsbtnGroup"/>
   <buttongroup name="gcodemdibtnGroup"/>
-  <buttongroup name="probetabGroup"/>
   <buttongroup name="xycalbtnGroup"/>
-  <buttongroup name="customwcsbtnGroup"/>
-  <buttongroup name="spindlerpmsourcebtnGroup"/>
-  <buttongroup name="proberoutinebtnGroup"/>
-  <buttongroup name="tooloffsetdirbtnGroup"/>
-  <buttongroup name="settertabGroup"/>
-  <buttongroup name="btngrpMdi"/>
-  <buttongroup name="sidebartabGroup"/>
   <buttongroup name="probehelpGroup"/>
+  <buttongroup name="proberoutinebtnGroup"/>
+  <buttongroup name="settertabGroup"/>
+  <buttongroup name="customwcsbtnGroup"/>
+  <buttongroup name="tooloffsetdirbtnGroup"/>
+  <buttongroup name="probetabGroup"/>
+  <buttongroup name="spindlerpmsourcebtnGroup"/>
+  <buttongroup name="sidebartabGroup"/>
+  <buttongroup name="probepagewcsbtnGroup"/>
+  <buttongroup name="btngrpMdi"/>
  </buttongroups>
 </ui>
