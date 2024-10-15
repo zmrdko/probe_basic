@@ -26,7 +26,7 @@ class SurfaceScan:
         """Populate combobox and connect the signal for when the selected index changes."""
         # Add items to combobox
         self.subroutine_combobox.addItem("SMARTPROBE COMPENSATION", {'probe_ngc': "smartprobe_compensation.ngc"})
-        self.subroutine_combobox.addItem("SIMPLE PROBE", {'probe_ngc': "simple_probe.ngc"})
+        self.subroutine_combobox.addItem("SURFACE SCAN", {'probe_ngc': "surface_scan.ngc"})
         self.subroutine_combobox.addItem("TEST PROBE",{'probe_ngc':"test_probe.ngc"})
         # Connect the combobox's index changed signal to a method
         self.subroutine_combobox.currentIndexChanged.connect(self.update_probing_subroutine)
@@ -63,10 +63,10 @@ class SurfaceScan:
 
     def update_probing_subroutine(self, index):
         """Method to handle combobox selection changes."""
-        print(f"Selected index: {index}, Subroutine: {self.subroutine_combobox.itemText(index)}")
+        print(f"Selected index: {index}, Subroutine: {self.subroutine_combobox.itemText(index)} ngc file: {self.subroutine_combobox.itemData(index)['probe_ngc']}")
         # Add more logic here if needed
         self.scan_execute.setProperty("text",f"RUN {self.subroutine_combobox.itemText(index)}")
-        self.scan_execute.setProperty("filename",self.subroutine_combobox.itemText(index))
+        self.scan_execute.setProperty("filename",self.subroutine_combobox.itemData(index)['probe_ngc'])
 
     def update_interpolation_method(self, index):
         """Method to handle combobox selection changes."""

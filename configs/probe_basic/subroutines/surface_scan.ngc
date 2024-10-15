@@ -1,0 +1,65 @@
+o<surface_scan> sub
+  ;(MSG, SURFACE_TEST.NGC)
+  M64 P0  (turn off compensation)
+  ;T1 M6 (Install probe)
+  #<_x-start-pos> = #3050  (X start position)
+  #<_y-start-pos> = #3053 (Y start position)
+
+  #<_x-end-pos> = #3051 (X end position, will be rounded up or down according to end-pos_roundup if the calculated number of columns is not an integer)
+  #<_y-end-pos> = #3054 (Y end position, will be rounded up or down according to end-pos_roundup if the calculated number of columns is not an integer)
+
+  #<_end-pos_roundup> = 0 (set to 1 to roundup, else round down)
+  (If the given parameters generate a non-integer number of columns and/or rows, set this parameter to 1 to roundup, meaning the actual probing area will exceed the specified end position)
+  (Else, the number of columns and/or rows  will be rounded down to ensure specified end position value is not exceeded)
+
+  #<_x-point-spacing> = #3052 (X increment/spacing between columns)
+  #<_y-point-spacing> = #3055 (Y increment/spacing between rows)
+
+
+  #<_z-safety-pos> = #3057 (Z safety position - should be above the highest point on the part)
+  #<_z-probe-min-pos> = #3058 (Z probe minimum position - the Z min limit of probing moves and Z travel)
+
+  #<_probe-xy-traverse-feedrate> = #3061 (probe XY traverse feedrate - for all XY probing moves that do not record points)
+  #<_probe-z-fast-feedrate> = #3059 (probe Z fast feedrate - for initial Z touch at recording location, and recording points if the slow probe move is not enabled)
+  #<_probe-z-retract-feedrate> = #3062 (probe Z retract feedrate - for all Z retractions away from the part after contact is made)
+
+  #<_probe-z-slow-feedrate> = #3060 (probe Z slow feedrate - for recording points if the slow probe move is enabled.)
+  (If not equal to 0, a successful Z probe hit at a point recording location will be followed with a slow probe move. If 0, this is disabled.)
+  
+  #<_wco_x> = [#<_abs_x> - #<_x>] (X axis work coordinate offset)
+  #<_wco_y> = [#<_abs_y> - #<_y>] (Y axis work coordinate offset)
+  #<_wco_z> = [#<_abs_z> - #<_z>] (Z axis work coordinate offset)
+  
+  (LOGOPEN,probe-results.txt)
+  (LOG,WCO #<_wco_x> #<_wco_y> #<_wco_z>)
+
+  G0 Z#<_z-safety-pos>
+  #<y> = #<_y-start-pos>
+  o101 while [#<y> LT #<_y-end-pos>]
+    #<x> = #<_x-start-pos>
+    o102 while [#<x> LE #<_x-end-pos>]
+      G0 X#<x> Y#<y>
+      G38.2 Z#<_z-probe-min-pos> F#<_probe-z-fast-feedrate>
+      (LOG,#5061 #5062 #5063)
+      G0 Z#<_z-safety-pos>
+      #<x> = [#<x>+#<_x-point-spacing>]
+    o102 endwhile
+    
+    #<y> = [#<y>+#<_y-point-spacing>]
+    #<x> = [#<_x-end-pos>]
+    
+    o103 while [#<x> GE #<_x-start-pos>]
+     G0 X#<x> Y#<y>
+      G38.2 Z#<_z-probe-min-pos> F#<_probe-z-fast-feedrate>
+      (LOG,#5061 #5062 #5063)
+      G0 Z#<_z-safety-pos>
+      #<x> = [#<x>-#<_x-point-spacing>]
+    o103 endwhile
+    
+    #<y> = [#<y>+#<_y-point-spacing>]
+  o101 endwhile
+
+  (LOGCLOSE)
+o<surface_scan> endsub
+
+M2
