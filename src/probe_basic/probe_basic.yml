@@ -457,8 +457,8 @@ settings:
     description: back plotter transparency
     default_value: 0
     persistent: true
-    min_value: 0.00
-    max_value: 1.00
+    min_value: 0
+    max_value: 100
 
 dialogs:
   about_probebasic:
