@@ -80,8 +80,6 @@ class ProbeBasic(VCPMainWindow):
         self.btnMdiSpace.clicked.connect(self.mdiSpace_clicked)
         self.surface_scan = SurfaceScan(self.surface_scan_subroutine_combobox,self.surface_scan_execute,self.surface_scan_interpolation)
 
-
-
         self.stat = getPlugin('status')
         self.surface_scan_load_extents.clicked.connect(self.surface_scan.get_extents)
         self.surface_scan_opacity_slider.valueChanged.connect(self.change_suface_mesh_transparency)
@@ -205,6 +203,10 @@ class ProbeBasic(VCPMainWindow):
     @Slot(QAbstractButton)
     def on_settertabGroup_buttonClicked(self, button):
         self.setter_tab_widget.setCurrentIndex(button.property('page'))
+
+    @Slot(QAbstractButton)
+    def on_surfacemaptabGroup_buttonClicked(self, button):
+        self.digitizing_tab_widget.setCurrentIndex(button.property('page'))
 
     @Slot(QAbstractButton)
     def on_sidebartabGroup_buttonClicked(self, button):
