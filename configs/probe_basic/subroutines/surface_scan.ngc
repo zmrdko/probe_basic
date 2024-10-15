@@ -28,7 +28,7 @@ o<surface_scan> sub
   
   #<_wco_x> = [#<_abs_x> - #<_x>] (X axis work coordinate offset)
   #<_wco_y> = [#<_abs_y> - #<_y>] (Y axis work coordinate offset)
-  #<_wco_z> = [#<_abs_z> - #<_z>] (Z axis work coordinate offset)
+  #<_wco_z> = [#<_abs_z> - #<_z> - #5403] (Z axis work coordinate offset including tool length offset for a probe)
   
   (LOGOPEN,probe-results.txt)
   (LOG,WCO #<_wco_x> #<_wco_y> #<_wco_z>)
