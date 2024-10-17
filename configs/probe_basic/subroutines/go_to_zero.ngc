@@ -2,7 +2,7 @@ o<go_to_zero> sub
 
 M73
 G90
-G53 G0 Z0
+G53 G0 Z#5163
 G0 X0 Y0
 
 o100 if [EXISTS[#<_ini[traj]axes>]]

@@ -2,7 +2,8 @@ o<go_to_g30> sub
 
 M73
 G90
-G53 G0 Z0
+G53 G0 Z#5163
+G53 G0 X#5181 Y#5182
 G30
 
 o<go_to_g30> endsub

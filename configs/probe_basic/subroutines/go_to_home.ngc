@@ -2,8 +2,8 @@ o<go_to_home> sub
 
 M73
 G90
-G53 G0 Z0
-G53 G0 X0 Y0
+G53 G0 Z#5163
+G53 G0 X#5161 Y#5162
 
 o100 if [EXISTS[#<_ini[traj]axes>]]
     #<geometry> = #<_ini[traj]axes>

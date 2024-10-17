@@ -34,7 +34,7 @@ o<toolsetter_wco> sub
   o100 endif
 
   G90    (set absolute coordinates)
-  G53 G1 F[#<traverse_fr>] Z0    (move to z0 home position)
+  G53 G1 F[#<traverse_fr>] Z#5163    (move to z0 home position)
   G53 G1 F[#<traverse_fr>] X#<tool_touch_x_coords> Y#<tool_touch_y_coords>
   
   #<workspace_z> = #[5203 + [20 * #5220]]

@@ -22,6 +22,7 @@ M50 P0
 #<tool_touch_x_coords> = #5181
 #<tool_touch_y_coords> = #5182
 #<tool_touch_z_coords> = #5183
+#<machine_safe_z> = #5163
 
 #<tool_radius_offset> = [#<tool_diameter> / 2]
 #<left_offset_probing_position> = [#<tool_touch_x_coords> - #<tool_radius_offset>]
@@ -46,7 +47,7 @@ o110 if [2 EQ 2]
 o110 endif
 
 G90    (set absolute coordinates)
-G53 G1 F[#<traverse_fr>] Z0    (move to z0 home position)
+G53 G1 F[#<traverse_fr>] Z#<machine_safe_z>    (move to safe Z/home position)
 G53 G1 F[#<traverse_fr>] X#<tool_touch_x_coords> Y#<tool_touch_y_coords>
 G53 G1 F[#<traverse_fr>] Z#<tool_touch_z_coords>
 
@@ -85,7 +86,7 @@ o150 if [3 EQ 3]
 o150 endif
 
 G90    (set absolute coordinates)
-G53 G1 F[#<traverse_fr>] Z0 (Send Spindle to home zero position)
+G53 G1 F[#<traverse_fr>] Z#5163 (Send Spindle to home zero position)
 
 (define new tool length offset parameters)
 #<new_tool_length_offset> = [ABS[#<spindle_zero_height> + #5063 - #<offset_z>]]
