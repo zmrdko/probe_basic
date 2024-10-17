@@ -1,19 +1,19 @@
 o<go_to_home> sub
 
 M73
-G90
-G53 G0 Z#5163
-G53 G0 X#5161 Y#5162
 
-o100 if [EXISTS[#<_ini[traj]axes>]]
+G91 G28 Z0 (go home in Z only)
+G90 G28 (go home in X and Y)
+
+o120 if [EXISTS[#<_ini[traj]axes>]]
     #<geometry> = #<_ini[traj]axes>
-o100 endif
+o120 endif
 
-o110 if [#<geometry> EQ 4]
-    G53 G0 A0
-o110 else if [#<geometry> EQ 5]
-    G53 G0 A0 C0
-o110 endif
+o130 if [#<geometry> EQ 4]
+    G53 G0 A#5164
+o130 else if [#<geometry> EQ 5]
+    G53 G0 A#5164 C#5166
+o130 endif
 
 o<go_to_home> endsub
 
