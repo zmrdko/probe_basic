@@ -1,0 +1,32 @@
+ root:
+    id: "base"
+    model: "base.stl"
+    type: "table"
+    position: [93.75, 187.4, -212.39, 0, 0, 0]
+    origin: [0, 0, 0]
+    axis: null
+    joint: null
+    child_linear:
+        id: "y_axis"
+        model: "axis_Y.stl"
+        type: "linear"
+        position: [93.75, 187.4, -212.39, 0, 0, 0]
+        origin: [0, 0, 0]
+        axis: "y"
+        joint: 0
+        child_linear:
+            id: "x_axis"
+            model: "axis_X.stl"
+            type: "linear"
+            position: [93.75, 187.4, -212.39, 0, 0, 0]
+            origin: [0, 0, 0]
+            axis: "x"
+            joint: 0
+            child_linear:
+                id: "z_axis"
+                model: "axis_Z.stl"
+                type: "linear"
+                position: [93.75, 187.4, -212.39, 0, 0, 0]
+                origin: [0, 0, 0]
+                axis: "z"
+                joint: 0
