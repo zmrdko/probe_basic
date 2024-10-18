@@ -3,8 +3,8 @@ o<go_to_g30> sub
 M73
 
 o100 if [#<_abs_x> NE #5181 OR #<_abs_y> NE #5182]
-    G91 G28 Z0 (go home in Z only)
-    G91 G30 X0 Y0 (go to G30 in X and Y)
+    G53 G0 Z#5163 (go home in Z only)
+    G53 G0 X#5181 Y#5182 (go to G30 in X and Y)
 o100 endif
 
 G90 G30 (go G30 in Z)

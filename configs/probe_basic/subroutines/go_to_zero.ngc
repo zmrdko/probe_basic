@@ -2,7 +2,7 @@ o<go_to_zero> sub
 
 M73
 
-G91 G28 Z0 (move to safe Z)
+G53 G0 Z#5163 (move to safe Z)
 G90 G0 X0 Y0 (move to zero)
 
 o100 if [EXISTS[#<_ini[traj]axes>]]

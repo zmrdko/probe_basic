@@ -2,8 +2,8 @@ o<go_to_home> sub
 
 M73
 
-G91 G28 Z0 (go home in Z only)
-G90 G28 (go home in X and Y)
+G53 G0 Z#5163 (go home in Z only)
+G28 (go home in X and Y)
 
 o120 if [EXISTS[#<_ini[traj]axes>]]
     #<geometry> = #<_ini[traj]axes>
