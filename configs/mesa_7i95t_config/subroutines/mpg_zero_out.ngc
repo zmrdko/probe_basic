@@ -1,0 +1,13 @@
+O<mpg_zero_out> sub
+
+o100 if [#<_hal[axis.x.jog-enable]>]
+  G10 L20 P#5220 X0
+o100 elseif [#<_hal[axis.Y.jog-enable]>]
+  G10 L20 P#5220 Y0
+o100 elseif [#<_hal[axis.Z.jog-enable]>]
+  G10 L20 P#5220 Z0
+o100 endif
+
+O<mpg_zero_out> endsub
+
+M2

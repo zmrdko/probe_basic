@@ -1,0 +1,48 @@
+O<m6remap> sub
+;(debug, change: current_tool=#<_current_tool>)
+;(debug, change: selected_tool=#<_selected_tool>)
+
+;o100 if [EXISTS[#<_ini[tool_change]xpos>]]
+;  (debug, [tool_change]xpos exists: #<_ini[tool_change]xpos>)
+;o100 else
+;  (debug, [tool_change]xpos does not exist)
+;o100 endif
+
+;o110 if [EXISTS[#<_ini[tool_change]ypos>]]
+;  (debug, [tool_change]ypos exists: #<_ini[tool_change]ypos>)
+;o110 else
+;  (debug, [tool_change]ypos does not exist)
+;o110 endif
+
+M73
+
+#<tmp_current_tool> = #<_current_tool>
+#<tmp_selected_tool> = #<_selected_tool>
+#<init_x> = #<_x>
+#<init_y> = #<_y>
+#<init_z> = #<_z>
+
+(only do toolchange if the current tool is different from selected tool)
+o100 if [#<tmp_current_tool> NE #<tmp_selected_tool>]
+
+  (go to tool change position defined in ini, via safe Z0)
+  G90
+  G0 G53 Z#5163
+  G0 G53 X#<_ini[tool_change]xpos> Y#<_ini[tool_change]ypos>
+
+o100 endif
+
+M6 (use built in M6 behavior)
+
+(tool touchoff after M6 tool change)
+o110 if [#<tmp_current_tool> NE #<tmp_selected_tool>]
+  o<tool_touch_off> call
+o110 endif
+
+(go to initial XY position via safe Z0 then go initial Z0 position)
+G90
+G0 G53 Z#5163
+G0 X#<init_x> Y#<init_y>
+
+O<m6remap> endsub [1]
+m2

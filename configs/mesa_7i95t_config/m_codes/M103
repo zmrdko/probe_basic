@@ -1,0 +1,4 @@
+#!/bin/bash
+# file to turn on ssr0 to blow off chips from tool height setter
+halcmd setp hm2_7i95.0.ssr.00.out-00 False
+exit 0

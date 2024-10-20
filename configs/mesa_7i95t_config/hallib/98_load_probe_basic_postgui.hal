@@ -1,0 +1,7 @@
+loadrt time names=time.watch
+addf time.watch servo-thread
+
+loadrt not names=not.timer
+addf not.timer servo-thread
+
+loadusr -W hal_manualtoolchange

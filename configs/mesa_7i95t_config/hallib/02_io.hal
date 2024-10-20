@@ -1,0 +1,173 @@
+# Home and Limit Inputs
+net plus-home-joint-0 <= [MESA](CARD0).inmux.00.input-00-not
+net plus-home-joint-0 => joint.0.pos-lim-sw-in
+net plus-home-joint-0 => joint.0.home-sw-in
+net joint-0-fault <= [MESA](CARD0).inmux.00.input-01-not
+net joint-0-fault => joint.0.amp-fault-in
+
+net plus-home-joint-1 <= [MESA](CARD0).inmux.00.input-02-not
+net plus-home-joint-1 => joint.1.pos-lim-sw-in
+net plus-home-joint-1 => joint.1.home-sw-in
+net joint-1-fault <= [MESA](CARD0).inmux.00.input-03-not
+net joint-1-fault => joint.1.amp-fault-in
+
+net plus-home-joint-2 <= [MESA](CARD0).inmux.00.input-04-not
+net plus-home-joint-2 => joint.2.pos-lim-sw-in
+net plus-home-joint-2 => joint.2.home-sw-in
+net joint-2-fault <= [MESA](CARD0).inmux.00.input-05-not
+net joint-2-fault => joint.2.amp-fault-in
+
+net plus-home-joint-3 <= [MESA](CARD0).inmux.00.input-06-not
+net plus-home-joint-3 => joint.3.pos-lim-sw-in
+net plus-home-joint-3 => joint.3.home-sw-in
+net joint-3-fault <= [MESA](CARD0).inmux.00.input-07-not
+net joint-3-fault => joint.3.amp-fault-in
+
+
+# Outputs
+net joint-0-enable => [MESA](CARD0).ssr.00.out-02
+net mist-output <= iocontrol.0.coolant-mist
+net mist-output => [MESA](CARD0).ssr.00.out-01
+
+
+# Estop loop
+loadrt tp names=tp.estop_pulse
+addf tp.estop_pulse servo-thread
+setp tp.estop_pulse.pt 1
+
+loadrt and2 names=and2.estop
+addf and2.estop servo-thread
+
+loadrt or2 names=or2.estop
+addf or2.estop servo-thread
+
+loadrt not names=not.estop_pulse
+addf not.estop_pulse servo-thread
+
+loadrt timedelay names=timedelay.estop_reset
+addf timedelay.estop_reset servo-thread
+setp timedelay.estop_reset.on-delay 0.1 
+
+loadrt estop_latch names=estop_latch.joint0,estop_latch.joint1,estop_latch.joint2,estop_latch.joint3,estop_latch.main
+addf   estop_latch.joint0 servo-thread
+addf   estop_latch.joint1 servo-thread
+addf   estop_latch.joint2 servo-thread
+addf   estop_latch.joint3 servo-thread
+addf   estop_latch.main   servo-thread
+
+net aaa0 estop_latch.joint0.fault-in joint.0.faulted
+net bbb0 estop_latch.joint0.ok-out estop_latch.joint1.ok-in
+net aaa1 estop_latch.joint1.fault-in joint.1.faulted
+net bbb1 estop_latch.joint1.ok-out estop_latch.joint2.ok-in
+net aaa2 estop_latch.joint2.fault-in joint.2.faulted
+net bbb2 estop_latch.joint2.ok-out estop_latch.joint3.ok-in
+net aaa3 estop_latch.joint3.fault-in joint.3.faulted
+
+net estop.reset <= iocontrol.0.user-request-enable
+net estop.reset => [MESA](CARD0).ssr.00.out-03
+net estop.reset => timedelay.estop_reset.in
+net estop.reset => estop_latch.joint0.reset
+net estop.reset => estop_latch.joint1.reset
+net estop.reset => estop_latch.joint2.reset
+net estop.reset => estop_latch.joint3.reset
+net estop.reset => estop_latch.main.reset
+net estop.timedelay-reset <= timedelay.estop_reset.out 
+net estop.timedelay-reset => halui.estop.reset
+net estop.ok-in-and2-in0 <= iocontrol.0.user-enable-out
+net estop.ok-in-and2-in0 => and2.estop.in0
+net estop.ok-in-and2-in1 <= estop_latch.joint3.ok-out
+net estop.ok-in-and2-in1 => and2.estop.in1
+net estop.ok-in <= and2.estop.out
+net estop.ok-in => estop_latch.main.ok-in
+net estop.ok-out <= estop_latch.main.ok-out
+net estop.ok-out => iocontrol.0.emc-enable-in
+
+net estop.fault-in-or2-in0 <= [MESA](CARD0).inmux.00.input-23-not
+net estop.fault-in-or2-in0 => or2.estop.in0
+net estop.fault-in-or2-in1 <= estop_latch.joint3.fault-out
+net estop.fault-in-or2-in1 <= or2.estop.in1
+net estop.fault-in <= or2.estop.out
+net estop.fault-in => estop_latch.main.fault-in
+
+net estop.fault-out <= estop_latch.main.fault-out
+net estop.fault-out => tp.estop_pulse.in
+net estop.pulse <= tp.estop_pulse.q
+net estop.pulse => not.estop_pulse.in
+net estop.output <= not.estop_pulse.out
+net estop.output => [MESA](CARD0).ssr.00.out-04
+net estop.output => [MESA](CARD0).ssr.00.out-05
+
+
+# Probe with debounce and enabled only during probing mode
+loadrt and2 names=and2.probe
+addf and2.probe servo-thread
+
+loadrt comp names=comp.probe
+addf comp.probe servo-thread
+
+loadrt conv_s32_float names=conv_s32_float.probe
+addf conv_s32_float.probe servo-thread
+
+#constant for motion-type 38.2 (probe)
+loadrt constant names=constant.motion-probe
+addf constant.motion-probe servo-thread
+setp constant.motion-probe.value 5
+
+loadrt debounce cfg=1
+addf debounce.0 servo-thread
+setp debounce.0.delay 10
+
+net probe.convert-motion-type <= motion.motion-type
+net probe.convert-motion-type => conv_s32_float.probe.in
+net probe.compare-in0 <= conv_s32_float.probe.out
+net probe.compare-in0 => comp.probe.in0
+net probe.compare-in1 <= constant.motion-probe.out
+net probe.compare-in1 => comp.probe.in1
+net probe.mesa-input <= [MESA](CARD0).inmux.00.input-08-not
+net probe.mesa-input => debounce.0.0.in
+net probe.motion-type-condition <= comp.probe.equal
+net probe.motion-type-condition => and2.probe.in0
+net probe.debounced-out <= debounce.0.0.out
+net probe.debounced-out => and2.probe.in1
+net probe-in <= and2.probe.out
+net probe-in => motion.probe-input
+
+
+
+# External Program Pause/Resume and Run/Step Buttons
+
+#Pressing Run/Step will begin executing a program.
+#Pressing Hold/Resume while a program is running will pause the program.
+#Pressing Run/Step while a program is paused will single step the program.
+#Pressing Hold/Resume while a program is paused will return it to normal run mode.
+
+loadrt and2 names=and2.paused,and2.resume,and2.run,and2.step
+addf and2.paused servo-thread
+addf and2.resume servo-thread
+addf and2.run servo-thread
+addf and2.step servo-thread
+
+loadrt toggle names=toggle.resume
+addf toggle.resume servo-thread
+
+loadrt toggle2nist names=toggle2nist.resume
+addf toggle2nist.resume servo-thread
+
+# Pause/Resume Section
+#net pause-resume-btn and2.paused.in0 and2.resume.in0 <= [MESA](CARD0).inmux.00.input-16
+#net pdnt.program.is-paused toggle2nist.resume.is-on and2.paused.in1 and2.step.in1 <= halui.program.is-paused
+#net pdnt.program-is-running and2.resume.in1 <= halui.program.is-running
+#net pause-sig or2.0.in0 <= and2.paused.out
+#net resume-sig or2.0.in1 <= and2.resume.out
+#net toggle-ok toggle.resume.in <= or2.0.out
+#net togglesig toggle2nist.resume.in <= toggle.resume.out
+#net toggleon.or1 or2.2.in0 <= toggle2nist.resume.on
+#net toggleon halui.program.pause or2.2.out
+#net pdnt.program.resume.or1 or2.1.in0 <= toggle2nist.resume.off
+#net pdnt.program.resume halui.program.resume or2.1.out
+
+# Run/Step Section
+#net run-step-btn and2.run.in0 and2.step.in0 <= [MESA](CARD0).inmux.00.input-17
+#net prog-running and2.run.in1 <= halui.program.is-idle
+#net run-sig halui.mode.auto halui.program.run <= and2.run.out
+#net step-sig halui.program.step <= and2.step.out

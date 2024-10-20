@@ -1,0 +1,17 @@
+#
+# example usage of the DELTA VFD-B driver
+# detail HAL and INI settings are at configs/araisrobo/css/
+# 
+loadusr -Wn spindle-vfd vfde_vfd -n spindle-vfd
+
+# connect the spindle on pin to the VF-S11
+net pdnt.spindle.is-on => spindle-vfd.spindle-on spindle.0.on
+
+# Spindle speed command
+net spindle-speed  spindle.0.speed-out spindle-vfd.speed-command
+
+# connect the VF-S11 at speed to the motion at speed
+net vfdb-at-speed <= spindle-vfd.at-speed spindle.0.at-speed
+
+#enable VFD
+net joint-0-enable => spindle-vfd.enable

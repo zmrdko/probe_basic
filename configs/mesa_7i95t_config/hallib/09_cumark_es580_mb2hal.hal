@@ -1,0 +1,28 @@
+loadusr -Wn cumark_es580 mb2hal config=cumark_es580_mb2hal.ini
+
+loadrt mult2
+addf mult2.0 servo-thread
+setp mult2.0.in0 10
+
+loadrt mux4
+addf mux4.0 servo-thread
+setp mux4.0.in0 1   #stop
+setp mux4.0.in1 18  #forward
+setp mux4.0.in2 34  #reverse
+setp mux4.0.in3 128 #reset
+
+#loadrt and2 count=2
+addf and2.4 servo-thread
+addf and2.5 servo-thread
+
+#net spindle-cmd-rps-abs => mult2.0.in1
+#net Setpoint cumark_es580.W_2001H.00 <= mult2.0.out
+
+#net S-on and2.4.in0 <= motion.spindle-on 
+#net S-fwd and2.4.in1 <= motion.spindle-forward
+#net S-on and2.5.in0 
+#net S-rev and2.5.in1 <= motion.spindle-reverse
+#net S-on-fwd mux4.0.sel0 <= and2.4.out
+#net S-on-rev mux4.0.sel1 <= and2.5.out
+
+#net control cumark_es580.R_2000H.00 <= mux4.0.out

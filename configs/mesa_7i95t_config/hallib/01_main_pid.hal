@@ -1,0 +1,273 @@
+# This file was created with the Mesa Configuration Tool on Nov 25 2023 17:07:40
+# If you make changes to this file DO NOT run the configuration tool again!
+# This file will be replaced with a new file if you do!
+
+# kinematics
+loadrt [KINS](KINEMATICS)
+
+# motion controller
+loadrt [EMCMOT](EMCMOT) servo_period_nsec=[EMCMOT](SERVO_PERIOD) num_joints=[KINS](JOINTS) num_dio=30 num_aio=30
+
+# hostmot2 driver
+loadrt hostmot2
+loadrt [HM2](DRIVER) board_ip=[HM2](ADDRESS) config="num_encoders=4 num_stepgens=4 sserial_port_0=00000000"
+
+setp [MESA](CARD0).gpio.008.is_output true
+setp [MESA](CARD0).gpio.009.is_output true
+setp [MESA](CARD0).gpio.010.is_output true
+setp [MESA](CARD0).gpio.011.is_output true
+setp [MESA](CARD0).watchdog.timeout_ns 10000000
+
+loadrt pid names=pid.x1,pid.y1,pid.y2,pid.z1
+
+# THREADS
+addf [MESA](CARD0).read servo-thread
+addf [MESA](CARD0).write servo-thread
+addf motion-command-handler servo-thread
+addf motion-controller servo-thread
+addf pid.x1.do-pid-calcs servo-thread
+addf pid.y1.do-pid-calcs servo-thread
+addf pid.y2.do-pid-calcs servo-thread
+addf pid.z1.do-pid-calcs servo-thread
+
+# DPLL TIMER
+setp [MESA](CARD0).dpll.01.timer-us -50
+setp [MESA](CARD0).stepgen.timer-number 1
+setp [MESA](CARD0).encoder.timer-number 1
+
+# Joint 0 Axis X
+
+# PID Setup
+setp pid.x1.Pgain [JOINT_0](P)
+setp pid.x1.Igain [JOINT_0](I)
+setp pid.x1.Dgain [JOINT_0](D)
+setp pid.x1.bias [JOINT_0](BIAS)
+setp pid.x1.FF0 [JOINT_0](FF0)
+setp pid.x1.FF1 [JOINT_0](FF1)
+setp pid.x1.FF2 [JOINT_0](FF2)
+setp pid.x1.deadband [JOINT_0](DEADBAND)
+setp pid.x1.maxoutput [JOINT_0](MAX_OUTPUT)
+setp pid.x1.error-previous-target True
+# limit stepgen velocity corrections caused by position feedback jitter
+setp pid.x1.maxerror [JOINT_0](MAX_ERROR)
+
+# joint-0 enable chain
+net joint-0-index-enable <=> pid.x1.index-enable
+net joint-0-index-enable <=> joint.0.index-enable
+net joint-0-index-enable <=> [MESA](CARD0).encoder.00.index-enable
+#net joint-0-index-enable <=> [MESA](CARD0).stepgen.00.index-enable
+
+net joint-0-enable <= joint.0.amp-enable-out
+net joint-0-enable => [MESA](CARD0).stepgen.00.enable
+net joint-0-enable => pid.x1.enable
+
+# Joint 0 Step Generator Settings
+setp [MESA](CARD0).stepgen.00.dirsetup [JOINT_0](DIRSETUP)
+setp [MESA](CARD0).stepgen.00.dirhold [JOINT_0](DIRHOLD)
+setp [MESA](CARD0).stepgen.00.steplen [JOINT_0](STEPLEN)
+setp [MESA](CARD0).stepgen.00.stepspace [JOINT_0](STEPSPACE)
+setp [MESA](CARD0).stepgen.00.position-scale [JOINT_0](SCALE)
+setp [MESA](CARD0).stepgen.00.maxvel [JOINT_0](STEPGEN_MAX_VEL)
+setp [MESA](CARD0).stepgen.00.maxaccel [JOINT_0](STEPGEN_MAX_ACC)
+setp [MESA](CARD0).stepgen.00.step_type 0
+setp [MESA](CARD0).stepgen.00.control-type 1
+setp [MESA](CARD0).stepgen.00.direction.invert_output true 
+
+
+# position command and feedback
+net joint-0-pos-cmd <= joint.0.motor-pos-cmd
+net joint-0-pos-cmd => pid.x1.command
+net joint-0-pos-cmd <= [MESA](CARD0).stepgen.00.position-cmd
+
+#net joint-0-pos-fb <= [MESA](CARD0).stepgen.00.position-fb
+net joint-0-pos-fb <= [MESA](CARD0).encoder.00.position
+net joint-0-pos-fb => joint.0.motor-pos-fb
+net joint-0-pos-fb => pid.x1.feedback
+
+net joint.0.output => [MESA](CARD0).stepgen.00.velocity-cmd
+net joint.0.output <= pid.x1.output
+
+# Encoder Setup
+setp [MESA](CARD0).encoder.00.scale  [JOINT_0](ENCODER_SCALE)
+setp [MESA](CARD0).encoder.00.counter-mode 0
+setp [MESA](CARD0).encoder.00.filter 0
+setp [MESA](CARD0).encoder.00.index-invert 0
+setp [MESA](CARD0).encoder.00.index-mask 0
+setp [MESA](CARD0).encoder.00.index-mask-invert 0
+
+# Joint 1 Axis Y1
+
+# PID Setup
+setp pid.y1.Pgain [JOINT_1](P)
+setp pid.y1.Igain [JOINT_1](I)
+setp pid.y1.Dgain [JOINT_1](D)
+setp pid.y1.bias [JOINT_1](BIAS)
+setp pid.y1.FF0 [JOINT_1](FF0)
+setp pid.y1.FF1 [JOINT_1](FF1)
+setp pid.y1.FF2 [JOINT_1](FF2)
+setp pid.y1.deadband [JOINT_1](DEADBAND)
+setp pid.y1.maxoutput [JOINT_1](MAX_OUTPUT)
+setp pid.y1.error-previous-target True
+# limit stepgen velocity corrections caused by position feedback jitter
+setp pid.y1.maxerror [JOINT_1](MAX_ERROR)
+
+# joint-1 enable chain
+net joint-1-index-enable <=> joint.1.index-enable
+net joint-1-index-enable <=> [MESA](CARD0).encoder.01.index-enable
+#net joint-1-index-enable <=> [MESA](CARD0).stepgen.01.index-enable
+net joint-1-index-enable <=> pid.y1.index-enable
+
+net joint-1-enable <= joint.1.amp-enable-out
+net joint-1-enable => [MESA](CARD0).stepgen.01.enable
+net joint-1-enable => pid.y1.enable
+
+# Joint 1 Step Generator Settings
+setp [MESA](CARD0).stepgen.01.dirsetup [JOINT_1](DIRSETUP)
+setp [MESA](CARD0).stepgen.01.dirhold [JOINT_1](DIRHOLD)
+setp [MESA](CARD0).stepgen.01.steplen [JOINT_1](STEPLEN)
+setp [MESA](CARD0).stepgen.01.stepspace [JOINT_1](STEPSPACE)
+setp [MESA](CARD0).stepgen.01.position-scale [JOINT_1](SCALE)
+setp [MESA](CARD0).stepgen.01.maxvel [JOINT_1](STEPGEN_MAX_VEL)
+setp [MESA](CARD0).stepgen.01.maxaccel [JOINT_1](STEPGEN_MAX_ACC)
+setp [MESA](CARD0).stepgen.01.step_type 0
+setp [MESA](CARD0).stepgen.01.control-type 1
+
+
+# position command and feedback
+net joint-1-pos-cmd <= joint.1.motor-pos-cmd
+net joint-1-pos-cmd <= [MESA](CARD0).stepgen.01.position-cmd
+net joint-1-pos-cmd => pid.y1.command
+
+#net joint-1-pos-fb <= [MESA](CARD0).stepgen.01.position-fb
+net joint-1-pos-fb <= [MESA](CARD0).encoder.01.position
+net joint-1-pos-fb => joint.1.motor-pos-fb
+net joint-1-pos-fb => pid.y1.feedback
+
+net joint.1.output => [MESA](CARD0).stepgen.01.velocity-cmd
+net joint.1.output <= pid.y1.output
+
+# Encoder Setup
+setp [MESA](CARD0).encoder.01.scale  [JOINT_1](ENCODER_SCALE)
+setp [MESA](CARD0).encoder.01.counter-mode 0
+setp [MESA](CARD0).encoder.01.filter 0
+setp [MESA](CARD0).encoder.01.index-invert 0
+setp [MESA](CARD0).encoder.01.index-mask 0
+setp [MESA](CARD0).encoder.01.index-mask-invert 0
+
+# Joint 2 Axis Y2
+
+# PID Setup
+setp pid.y2.Pgain [JOINT_2](P)
+setp pid.y2.Igain [JOINT_2](I)
+setp pid.y2.Dgain [JOINT_2](D)
+setp pid.y2.bias [JOINT_2](BIAS)
+setp pid.y2.FF0 [JOINT_2](FF0)
+setp pid.y2.FF1 [JOINT_2](FF1)
+setp pid.y2.FF2 [JOINT_2](FF2)
+setp pid.y2.deadband [JOINT_2](DEADBAND)
+setp pid.y2.maxoutput [JOINT_2](MAX_OUTPUT)
+setp pid.y2.error-previous-target True
+# limit stepgen velocity corrections caused by position feedback jitter
+setp pid.y2.maxerror [JOINT_2](MAX_ERROR)
+
+# joint-2 enable chain
+net joint-2-index-enable <=> joint.2.index-enable
+net joint-2-index-enable <=> [MESA](CARD0).encoder.02.index-enable
+#net joint-2-index-enable <=> [MESA](CARD0).stepgen.02.index-enable
+net joint-2-index-enable <=> pid.y2.index-enable
+
+net joint-2-enable <= joint.2.amp-enable-out
+net joint-2-enable => [MESA](CARD0).stepgen.02.enable
+net joint-2-enable => pid.y2.enable
+
+# Joint 2 Step Generator Settings
+setp [MESA](CARD0).stepgen.02.dirsetup [JOINT_2](DIRSETUP)
+setp [MESA](CARD0).stepgen.02.dirhold [JOINT_2](DIRHOLD)
+setp [MESA](CARD0).stepgen.02.steplen [JOINT_2](STEPLEN)
+setp [MESA](CARD0).stepgen.02.stepspace [JOINT_2](STEPSPACE)
+setp [MESA](CARD0).stepgen.02.position-scale [JOINT_2](SCALE)
+setp [MESA](CARD0).stepgen.02.maxvel [JOINT_2](STEPGEN_MAX_VEL)
+setp [MESA](CARD0).stepgen.02.maxaccel [JOINT_2](STEPGEN_MAX_ACC)
+setp [MESA](CARD0).stepgen.02.step_type 0
+setp [MESA](CARD0).stepgen.02.control-type 1
+
+
+# position command and feedback
+net joint-2-pos-cmd <= joint.2.motor-pos-cmd
+net joint-2-pos-cmd <= [MESA](CARD0).stepgen.02.position-cmd
+net joint-2-pos-cmd => pid.y2.command
+
+#net joint-2-pos-fb <= [MESA](CARD0).stepgen.02.position-fb
+net joint-2-pos-fb <= [MESA](CARD0).encoder.02.position
+net joint-2-pos-fb => joint.2.motor-pos-fb
+net joint-2-pos-fb => pid.y2.feedback
+
+net joint.2.output => [MESA](CARD0).stepgen.02.velocity-cmd
+net joint.2.output <= pid.y2.output
+
+# Encoder Setup
+setp [MESA](CARD0).encoder.02.scale  [JOINT_2](ENCODER_SCALE)
+setp [MESA](CARD0).encoder.02.counter-mode 0
+setp [MESA](CARD0).encoder.02.filter 0
+setp [MESA](CARD0).encoder.02.index-invert 0
+setp [MESA](CARD0).encoder.02.index-mask 0
+setp [MESA](CARD0).encoder.02.index-mask-invert 0
+
+# Joint 3 Axis Z
+
+# PID Setup
+setp pid.z1.Pgain [JOINT_3](P)
+setp pid.z1.Igain [JOINT_3](I)
+setp pid.z1.Dgain [JOINT_3](D)
+setp pid.z1.bias [JOINT_3](BIAS)
+setp pid.z1.FF0 [JOINT_3](FF0)
+setp pid.z1.FF1 [JOINT_3](FF1)
+setp pid.z1.FF2 [JOINT_3](FF2)
+setp pid.z1.deadband [JOINT_3](DEADBAND)
+setp pid.z1.maxoutput [JOINT_3](MAX_OUTPUT)
+setp pid.z1.error-previous-target True
+# limit stepgen velocity corrections caused by position feedback jitter
+setp pid.z1.maxerror [JOINT_3](MAX_ERROR)
+
+# joint-3 enable chain
+net joint-3-index-enable <=> joint.3.index-enable
+net joint-3-index-enable <=> [MESA](CARD0).encoder.03.index-enable
+#net joint-3-index-enable <=> [MESA](CARD0).stepgen.03.index-enable
+net joint-3-index-enable <=> pid.z1.index-enable
+
+net joint-3-enable <= joint.3.amp-enable-out
+net joint-3-enable => [MESA](CARD0).stepgen.03.enable
+net joint-3-enable => pid.z1.enable
+
+# Joint 3 Step Generator Settings
+setp [MESA](CARD0).stepgen.03.dirsetup [JOINT_3](DIRSETUP)
+setp [MESA](CARD0).stepgen.03.dirhold [JOINT_3](DIRHOLD)
+setp [MESA](CARD0).stepgen.03.steplen [JOINT_3](STEPLEN)
+setp [MESA](CARD0).stepgen.03.stepspace [JOINT_3](STEPSPACE)
+setp [MESA](CARD0).stepgen.03.position-scale [JOINT_3](SCALE)
+setp [MESA](CARD0).stepgen.03.maxvel [JOINT_3](STEPGEN_MAX_VEL)
+setp [MESA](CARD0).stepgen.03.maxaccel [JOINT_3](STEPGEN_MAX_ACC)
+setp [MESA](CARD0).stepgen.03.step_type 0
+setp [MESA](CARD0).stepgen.03.control-type 1
+
+
+# position command and feedback
+net joint-3-pos-cmd <= joint.3.motor-pos-cmd
+net joint-3-pos-cmd <= [MESA](CARD0).stepgen.03.position-cmd
+net joint-3-pos-cmd => pid.z1.command
+
+#net joint-3-pos-fb <= [MESA](CARD0).stepgen.03.position-fb
+net joint-3-pos-fb <= [MESA](CARD0).encoder.03.position
+net joint-3-pos-fb => joint.3.motor-pos-fb
+net joint-3-pos-fb => pid.z1.feedback
+
+net joint.3.output => [MESA](CARD0).stepgen.03.velocity-cmd
+net joint.3.output <= pid.z1.output
+
+# Encoder Setup
+setp [MESA](CARD0).encoder.03.scale  [JOINT_3](ENCODER_SCALE)
+setp [MESA](CARD0).encoder.03.counter-mode 0
+setp [MESA](CARD0).encoder.03.filter 0
+setp [MESA](CARD0).encoder.03.index-invert 0
+setp [MESA](CARD0).encoder.03.index-mask 0
+setp [MESA](CARD0).encoder.03.index-mask-invert 0

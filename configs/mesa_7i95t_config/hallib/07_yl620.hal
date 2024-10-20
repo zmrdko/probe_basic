@@ -1,0 +1,28 @@
+# Place any HAL commands in this file that you want to run before the GUI.
+# This file will not be written over by the configuration tool.
+
+loadusr -Wn YL620 mb2hal config=yl620.ini
+#loadrt mult2
+#addf mult2.0 servo-thread
+#loadrt mux4
+#addf mux4.0 servo-thread
+#loadrt and2 count=2
+#addf and2.4 servo-thread
+#addf and2.5 servo-thread
+
+#setp mult2.0.in0 10
+#net spindle-cmd-rps-abs => mult2.0.in1
+#net Setpoint YL620.W_Setpoint.00 <= mult2.0.out
+
+#net S-on and2.4.in0 <= motion.spindle-on 
+#net S-fwd and2.4.in1 <= motion.spindle-forward
+#net S-on and2.5.in0 
+#net S-rev and2.5.in1 <= motion.spindle-reverse
+#net S-on-fwd mux4.0.sel0 <= and2.4.out
+#net S-on-rev mux4.0.sel1 <= and2.5.out
+#setp mux4.0.in0 1 #stop
+#setp mux4.0.in1 18 #forward
+#setp mux4.0.in2 34 #rverse
+#setp mux4.0.in3 128 #reset
+
+#net control YL620.W_Ctrl.00 <= mux4.0.out
