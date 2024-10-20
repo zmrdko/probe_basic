@@ -2,12 +2,14 @@ o<go_to_g30> sub
 
 M73
 
-o100 if [#<_abs_x> NE #5181 OR #<_abs_y> NE #5182]
-    G53 G0 Z#5163 (go home in Z only)
-    G53 G0 X#5181 Y#5182 (go to G30 in X and Y)
+G90 (absolute positioning)
+
+o100 if [#<_abs_x> NE #5181 OR #<_abs_y> NE #5182] (check if the position is not equal to G30)
+    G53 G0 Z#5163 (go home in Z only) (if its not equal, we move up with Z)
+    G53 G0 X#5181 Y#5182 (and go to G30 in X and Y)
 o100 endif
 
-G90 G30 (go G30 in Z)
+G53 G0 Z#5183 (go G30 in Z)
 
 o110 if [EXISTS[#<_ini[traj]axes>]]
     #<geometry> = #<_ini[traj]axes>

@@ -10,7 +10,7 @@
         id: "y_axis"
         model: "axis_Y.stl"
         type: "linear"
-        position: [93.75, 187.4, -212.39, 0, 0, 0]
+        position: [107, 185, -184.39, 0, 0, 0]
         origin: [0, 0, 0]
         axis: "y"
         joint: 0
@@ -18,7 +18,7 @@
             id: "x_axis"
             model: "axis_X.stl"
             type: "linear"
-            position: [93.75, 187.4, -212.39, 0, 0, 0]
+            position: [107, 185, -184.39, 0, 0, 0]
             origin: [0, 0, 0]
             axis: "x"
             joint: 0
@@ -26,7 +26,7 @@
                 id: "z_axis"
                 model: "axis_Z.stl"
                 type: "linear"
-                position: [93.75, 187.4, -212.39, 0, 0, 0]
+                position: [107, 185, -184.39, 0, 0, 0]
                 origin: [0, 0, 0]
                 axis: "z"
                 joint: 0

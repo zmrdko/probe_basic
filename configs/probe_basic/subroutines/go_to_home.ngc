@@ -2,6 +2,8 @@ o<go_to_home> sub
 
 M73
 
+G90 (absolute positioning)
+
 G53 G0 Z#5163 (go home in Z only)
 G28 (go home in X and Y)
 

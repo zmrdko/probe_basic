@@ -7,7 +7,7 @@ import linuxcnc
 from qtpyvcp.hal import getComponent
 from qtpyvcp.plugins import getPlugin
 from qtpyvcp.utilities.settings import getSetting, setSetting
-
+ 
 
 INIFILE = linuxcnc.ini(os.getenv("INI_FILE_NAME"))
 
@@ -21,6 +21,12 @@ class SurfaceScan:
         self.scan_execute = scan_execute
         self.interpolation_method = interpolation_method
         self.initialize_combobox()
+
+        self.comp = getComponent("qtpyvcp")
+        self.comp.addParam("_extent-x-min", "float", "rw")
+        self.comp.addParam("_extent-x-max", "float", "rw")
+        self.comp.addParam("_extent-y-min", "float", "rw")
+        self.comp.addParam("_extent-y-max", "float", "rw")
 
     def initialize_combobox(self):
         """Populate combobox and connect the signal for when the selected index changes."""
@@ -36,7 +42,6 @@ class SurfaceScan:
         self.interpolation_method.addItem("NEAREST",{'interpolation':2})
         self.interpolation_method.currentIndexChanged.connect(self.update_interpolation_method)
 
-        self.comp = getComponent("qtpyvcp")
 
     def get_extents(self):
         xmin = self.gcode_properties.x_min_extents()
@@ -60,6 +65,11 @@ class SurfaceScan:
         setSetting('surface-scan.y-start-pos', grid_y0)
         setSetting('surface-scan.x-end-pos', (grid_x0+grid_xdist))
         setSetting('surface-scan.y-end-pos', (grid_y0+grid_ydist))
+
+        self.comp.getParam('_extent-x-min').value = grid_x0
+        self.comp.getParam('_extent-x-max').value = grid_y0
+        self.comp.getParam('_extent-y-min').value = (grid_x0+grid_xdist)
+        self.comp.getParam('_extent-y-max').value = (grid_y0+grid_ydist)
 
     def update_probing_subroutine(self, index):
         """Method to handle combobox selection changes."""

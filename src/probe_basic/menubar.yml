@@ -113,6 +113,9 @@ menubar:
       - title: Show Surface Map
         action: settings.backplot.show-points-surface
 
+      - title: Show Machine Model
+        action: settings.backplot.show-machine-model
+
       - separator
 
       - title: Show Program Bounds

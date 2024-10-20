@@ -453,13 +453,6 @@ settings:
     min_value: 0
     max_value: 2
 
-  backplot.surface-map-transparency:
-    description: back plotter transparency
-    default_value: 0
-    persistent: true
-    min_value: 0
-    max_value: 100
-
 dialogs:
   about_probebasic:
     provider: qtpyvcp.widgets.dialogs.about_dialog:AboutDialog

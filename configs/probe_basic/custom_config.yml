@@ -1,6 +1,7 @@
 # example of a machine specific settings
 windows:
   mainwindow:
+    provider: custom_probebasic:CustomProbeBasic
     kwargs:
       confirm_exit: false
 
@@ -54,3 +55,6 @@ settings:
     persistent: true
     min_value: 0
     max_value: 100
+
+  backplot.show-machine-model:
+    default_value: false
