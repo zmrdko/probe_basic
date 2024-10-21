@@ -32,7 +32,8 @@ o<surface_scan> sub
   
   (LOGOPEN,probe-results.txt)
   (LOG,WCO #<_wco_x> #<_wco_y> #<_wco_z>)
-
+  G0 G53 Z#5163
+  G0 X#<_x-start-pos> Y#<_y-start-pos>
   G0 Z#<_z-safety-pos>
   #<y> = #<_y-start-pos>
   o101 while [#<y> LT #<_y-end-pos>]
