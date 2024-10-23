@@ -23,10 +23,6 @@ class SurfaceScan:
         self.initialize_combobox()
 
         self.comp = getComponent("qtpyvcp")
-        self.comp.addParam("_extent-x-min", "float", "rw")
-        self.comp.addParam("_extent-x-max", "float", "rw")
-        self.comp.addParam("_extent-y-min", "float", "rw")
-        self.comp.addParam("_extent-y-max", "float", "rw")
 
     def initialize_combobox(self):
         """Populate combobox and connect the signal for when the selected index changes."""
@@ -66,10 +62,13 @@ class SurfaceScan:
         setSetting('surface-scan.x-end-pos', (grid_x0+grid_xdist))
         setSetting('surface-scan.y-end-pos', (grid_y0+grid_ydist))
 
-        self.comp.getParam('_extent-x-min').value = grid_x0
-        self.comp.getParam('_extent-x-max').value = grid_y0
-        self.comp.getParam('_extent-y-min').value = (grid_x0+grid_xdist)
-        self.comp.getParam('_extent-y-max').value = (grid_y0+grid_ydist)
+        self.comp.getParam('extent-x-min').value = grid_x0
+        self.comp.getParam('extent-x-max').value = grid_y0
+        self.comp.getParam('extent-y-min').value = (grid_x0+grid_xdist)
+        self.comp.getParam('extent-y-max').value = (grid_y0+grid_ydist)
+        #self.comp.getParam("test_value").value = 123
+        
+        #somehow call o<surface_scan_param_update> sub here to update parameters in sim.var and we good
 
     def update_probing_subroutine(self, index):
         """Method to handle combobox selection changes."""

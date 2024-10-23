@@ -81,10 +81,19 @@ class ProbeBasic(VCPMainWindow):
         self.stat = getPlugin('status')
         self.surface_scan_load_extents.clicked.connect(self.surface_scan.get_extents)
         self.surface_scan_opacity_slider.valueChanged.connect(self.change_suface_mesh_transparency)
+        
+        self.surface_scan_x_start_pos_3050.textChanged.connect(self.update_extent_x_min)
+        self.surface_scan_x_end_pos_3051.textChanged.connect(self.update_extent_x_max)
+        self.surface_scan_y_start_pos_3053.textChanged.connect(self.update_extent_y_min)
+        self.surface_scan_y_end_pos_3054.textChanged.connect(self.update_extent_y_max)
 
-        comp = getComponent("qtpyvcp")
-        comp.addPin("compensation_enable.interp-method", "s32", "out")
-        comp.getPin("compensation_enable.interp-method").value = 1
+        self.comp = getComponent("qtpyvcp")
+        self.comp.addPin("compensation_enable.interp-method", "s32", "out")
+        self.comp.getPin("compensation_enable.interp-method").value = 1
+        self.comp.addParam("extent-x-min", "float", "rw")
+        self.comp.addParam("extent-x-max", "float", "rw")
+        self.comp.addParam("extent-y-min", "float", "rw")
+        self.comp.addParam("extent-y-max", "float", "rw")
 
         if (0 == int(INIFILE.find("ATC", "POCKETS") or 0)):
             atc_tab_index = self.tabWidget.indexOf(self.atc_tab)
@@ -103,6 +112,18 @@ class ProbeBasic(VCPMainWindow):
         
         self.load_user_buttons()
         self.load_var_file()
+
+    def update_extent_x_min(self, value):
+        self.comp.getParam("extent-x-min").value = value
+
+    def update_extent_x_max(self, value):
+        self.comp.getParam("extent-x-max").value = value
+        
+    def update_extent_y_min(self, value):
+        self.comp.getParam("extent-y-min").value = value
+
+    def update_extent_y_max(self, value):
+        self.comp.getParam("extent-y-max").value = value
 
     def load_user_buttons(self):
         self.user_button_modules = {}

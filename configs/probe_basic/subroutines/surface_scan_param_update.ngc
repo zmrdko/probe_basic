@@ -5,7 +5,7 @@ o<surface_scan_param_update> sub
   #<surface_scan_x_point_spacing_3052> = #3
   #<surface_scan_y_start_pos_3053> = #4
   #<surface_scan_y_end_pos_3054> = #5
-  #<surface_scan_y_spacing_3055> = #6
+  #<surface_scan_y_point_spacing_3055> = #6
   ;#<surface_scan_end_pos_roundup_3056> = #7
   #<surface_scan_z_safety_pos_3057> = #8
   #<surface_scan_z_probe_min_pos_3058> = #9
@@ -24,7 +24,7 @@ o<surface_scan_param_update> sub
 
   #3054 = #<surface_scan_y_end_pos_3054>
 
-  #3055 = #<surface_scan_y_spacing_3055>
+  #3055 = #<surface_scan_y_point_spacing_3055>
 
   ;#3056 = #<surface_scan_end_pos_roundup_3056>
 
