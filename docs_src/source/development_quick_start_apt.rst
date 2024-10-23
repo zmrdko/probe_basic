@@ -2,109 +2,102 @@
 Probe Basic APT Develop Install
 ===============================
 
-
 **Probe Basic APT Installation Guide for use with Debian 12 Bookworm and LinuxCNC version 2.9 or Later**
 
+Important Requirements
+----------------------
 
-**Important Requirements:**
+    - Probe Basic is currently designed for 1920x1080 screen sizes only!
+    - Probe Basic Install by apt is for amd64 only currently!
+    - Probe Basic requires graphics hardware that supports OpenGL 3.2 and OpenGL Shading Language (GLSL) 1.50 or later
+    - Probe Basic is tested on xfce4, during install of Debian 12 ISO:
+    - DO NOT enter a Root password during installation, leave blank and skip this page.
 
-- Probe Basic is currently designed for 1920x1080 screen sizes only!
-- Probe Basic Install by apt is for amd64 only currently!
-- Probe Basic requires graphics hardware that supports OpenGL 3.2 and OpenGL Shading Language (GLSL) 1.50 or later
-- Probe Basic is tested on xfce4, during install of Debian 12 ISO:
-- DO NOT enter a Root password during installation, leave blank and skip this page.
+    During installation, this screen below will appear, be sure to uncheck gnome and check xfce as pictured below. No other changes on this page are needed.
 
-
-    During installation, this screen below will appear, be sure to uncheck gnome and check xfce as pictured below. no other changes on this page are needed.
-
-
-.. image:: images/xfce_check_doc.png
-   :align: center
+    .. image:: images/xfce_check_doc.png
+        :align: center
 
 
+Installation Steps
+------------------
 
+1. Download the Linux Debian 12 Bookworm ISO Image File
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+    Download from: https://www.debian.org/download
 
-**Download the Linux Debian 12 Bookworkm ISO Image File**
-
-::
-
-    https://www.debian.org/download
-
-
-Select the Linux Debian 12 Bookworm Netinst CD ISO from the above link. you will need to make a bootable dvd or USB thumb drive depending on how you plan to install.  The below software is extremely easy and works flawlessly with linux debian OS images. Below is the link for it. I recommend using 2-4gb USB drive for quicker flashing.
-
-::
+    Select the Linux Debian 12 Bookworm Netinst CD ISO from the above link. You will need to make a bootable DVD or USB thumb drive depending on how you plan to install. The below software is extremely easy and works flawlessly with Linux Debian OS images:
 
     https://www.balena.io/etcher/?ref=etcher_update
 
+    Once you have created your flash stick for LinuxCNC, proceed to install and boot the system. (Note: It is advised to have an ethernet cable internet connection during install). Select the graphical installation option. Follow the steps on screen to complete installation. When you are greeted by the Linux Desktop Selection Page, uncheck the GNOME option and check the XFCE4 option.
 
-Once you have created your flash stick for linuxcnc proceed to install and boot the system. (note: It is advised to have an ethernet cable internet connection during install).  Select the graphical installation option. Follow the steps on screen to complete installation.  When you are greeted by the Linux Desktop Selection Page, uncheck the GNOME option and check the XFCE4 option.
+2. Update the System
+^^^^^^^^^^^^^^^^^^^^
 
-After installation, copy the following in the main terminal one line at a time and hit enter, select Y for yes if asked at any point during installation.  If the return shows "All up to Date" then you can proceed to the next step.
+    After installation, run the following commands in the main terminal:
 
-::
+    .. code-block:: bash
 
-    sudo apt update
+        sudo apt update
+        sudo apt upgrade
 
-    sudo apt upgrade
+3. Install LinuxCNC
+^^^^^^^^^^^^^^^^^^^
 
+    If you have not already installed LinuxCNC from apt, use the following command:
 
+    .. code-block:: bash
 
-**If you have not already installed linuxcnc from apt, use the following line in main terminal:**
+        sudo apt install linuxcnc-uspace linuxcnc-uspace-dev mesaflash
 
-::
+    Once you have installed LinuxCNC, open it and start the axis sim briefly and then shut it down to ensure the installation was successful.
 
-    sudo apt install linuxcnc-uspace linuxcnc-uspace-dev mesaflash
+4. Add the APT Repository for the Installation type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+    **AMD64 for PC Installation Repository:**
 
+        Run the following commands in the main terminal one at a time:
 
-**Once you have installed linuxcnc, open linuxcnc and start the axis sim briefly and then you can shut it down to ensure the installation was succesful.**
+        .. code-block:: bash
 
+            sudo apt install curl
+            echo 'deb [arch=amd64] https://repository.qtpyvcp.com/apt develop main' | sudo tee /etc/apt/sources.list.d/kcjengr.list
+            curl -sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/kcjengr.gpg
+            gpg --keyserver keys.openpgp.org --recv-key 2DEC041F290DF85A
 
-**Adding the apt repository to Debian 12, Run the following Lines in Main terminal one at a time**
+    
+    **NEW - ARM64 Raspberry Pi 4 and 5 Installation Repository:**
 
-::
+        Run the following commands in the main terminal one at a time:
 
-    sudo apt install curl
+        .. code-block:: bash
 
+            sudo apt install curl
+            echo 'deb [arch=arm64] https://repository.qtpyvcp.com/apt develop main' | sudo tee /etc/apt/sources.list.d/kcjengr.list
+            curl -sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/kcjengr.gpg
+            gpg --keyserver keys.openpgp.org --recv-key 2DEC041F290DF85A
 
-    echo 'deb [arch=amd64] https://repository.qtpyvcp.com/apt develop main' | sudo tee /etc/apt/sources.list.d/kcjengr.list
+5. Update the Repositories
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+    .. code-block:: bash
 
-    curl -sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/kcjengr.gpg
+        sudo apt update
 
+6. Install QtPyVCP and Probe Basic
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    gpg --keyserver keys.openpgp.org --recv-key 2DEC041F290DF85A
+    .. code-block:: bash
 
+        sudo apt install python3-qtpyvcp
+        sudo apt install python3-probe-basic
 
+    You are now installed! You should be able to launch the Probe Basic sim from within the LinuxCNC applications dropdown menu.
 
-**Update the Repositories**
+Updating and Configuration
+--------------------------
 
-::
-
-    sudo apt update
-
-
-
-**Install QtPyVCP and Probe Basic**
-
-::
-
-    sudo apt install python3-qtpyvcp
-
-    sudo apt install python3-probe-basic
-
-
-
-**You are all installed!  You should now be able to launch the Probe Basic sim from within the linuxcnc applications dropdown menu.**
-
-
-**Updating of probe basic and qtpyvcp will occur when your run the normal "sudo apt update, sudo apt upgrade" commands.  During updating, the probe basic sim configuration files will be overwritten.  It is strongly recommended to create your machine configuration files with unique names to avoid having them overwritten during updates.**
-
-**To build your own machine configuration, please follow the instructions in this document:**
-
-
-https://forum.linuxcnc.org/qtpyvcp/48401-configuration-file-conversion-doc-for-probe-basic-py3
-
-
+    Updating of Probe Basic and QtPyVCP will occur when you run the normal "sudo apt update, sudo apt upgrade" commands. During updating, the Probe Basic sim configuration files will be overwritten. It is strongly recommended to create your machine configuration files with unique names to avoid having them overwritten during updates.

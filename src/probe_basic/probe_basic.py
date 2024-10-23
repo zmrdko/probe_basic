@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-# import sys;sys.path.append(r'~/.p2/pool/plugins/org.python.pydev.core_8.3.0.202104101217/pysrc')
-# import pydevd;pydevd.settrace()
 
 import os
 import sys
@@ -73,8 +71,8 @@ class ProbeBasic(VCPMainWindow):
     """Main window class for the ProbeBasic VCP."""
     def __init__(self, *args, **kwargs):
         super(ProbeBasic, self).__init__(*args, **kwargs)
-        self.filesystemtable.sortByColumn(3, Qt.DescendingOrder) # sorting via 'datemodified' header 3
-        self.filesystemtable_2.sortByColumn(3, Qt.DescendingOrder) # sorting via 'datemodified' header 3
+        self.filesystemtable.sortByColumn(3, Qt.DescendingOrder)
+        self.filesystemtable_2.sortByColumn(3, Qt.DescendingOrder)
         self.run_from_line_Num.setValidator(QRegExpValidator(QRegExp("[0-9]*")))
         self.btnMdiBksp.clicked.connect(self.mdiBackSpace_clicked)
         self.btnMdiSpace.clicked.connect(self.mdiSpace_clicked)
@@ -93,7 +91,7 @@ class ProbeBasic(VCPMainWindow):
             self.tabWidget.setTabVisible(atc_tab_index, False)
             self.tabWidget.removeTab(atc_tab_index)
             
-        self.vtk.setViewMachine()  # set view to machine at startup
+        self.vtk.setViewMachine()
 
         if (getSetting("spindle-rpm-display.calculated-rpm").getValue()):
             self.spindle_rpm_source_widget.setCurrentIndex(self.spindle_calculated_rpm_button.property('page'))
@@ -102,8 +100,32 @@ class ProbeBasic(VCPMainWindow):
             self.spindle_rpm_source_widget.setCurrentIndex(self.spindle_encoder_rpm_button.property('page'))
     
         self.load_user_tabs()
+        
+        self.load_user_buttons()
         self.load_var_file()
 
+    def load_user_buttons(self):
+        self.user_button_modules = {}
+        self.user_buttons = {}
+        
+        user_buttons_paths = INIFILE.findall("DISPLAY", "USER_BUTTONS_PATH")
+
+        for user_buttons_path in user_buttons_paths:
+            user_button_path = os.path.expanduser(user_buttons_path)
+            user_button_folders = os.listdir(user_buttons_path)
+            for user_button in user_button_folders:
+                if not os.path.isdir(os.path.join(user_buttons_path, user_button)):
+                    continue
+                module_name = "user_buttons." + os.path.basename(user_buttons_path) + "." + user_buttons_path
+                spec = importlib.util.spec_from_file_location(module_name, os.path.join(os.path.dirname(user_buttons_path), user_button, user_button + ".py"))
+                self.user_button_modules[module_name] = importlib.util.module_from_spec(spec)
+                sys.modules[module_name] = self.user_button_modules[module_name]
+                spec.loader.exec_module(self.user_button_modules[module_name])
+                
+                self.user_buttons[module_name] = self.user_button_modules[module_name].UserButton()
+                
+                self.user_buttons_layout.addWidget( self.user_buttons[module_name])
+               
     def load_var_file(self):
 
         var_filename = INIFILE.find("RS274NGC", "PARAMETER_FILE") # Get var file name from INI
@@ -160,7 +182,7 @@ class ProbeBasic(VCPMainWindow):
     def load_user_tabs(self):
         self.user_tab_modules = {}
         self.user_tabs = {}
-        sidebar_loaded = False;
+        sidebar_loaded = False
         user_tabs_paths = INIFILE.findall("DISPLAY", "USER_TABS_PATH")
 
         for user_tabs_path in user_tabs_paths:
@@ -272,5 +294,3 @@ class ProbeBasic(VCPMainWindow):
         if text != 'null':
             text += ' '
             parent.mdiEntry.setText(text)
-
-
