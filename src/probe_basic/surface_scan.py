@@ -22,6 +22,8 @@ class SurfaceScan:
         self.interpolation_method = interpolation_method
         self.initialize_combobox()
 
+        self.s = linuxcnc.stat()
+        self.c = linuxcnc.command()
         self.comp = getComponent("qtpyvcp")
 
     def initialize_combobox(self):
@@ -38,6 +40,9 @@ class SurfaceScan:
         self.interpolation_method.addItem("NEAREST",{'interpolation':2})
         self.interpolation_method.currentIndexChanged.connect(self.update_interpolation_method)
 
+    def ok_for_mdi(self):
+        self.s.poll()
+        return not self.s.estop and self.s.enabled and self.s.homed and (self.s.interp_state == linuxcnc.INTERP_IDLE)
 
     def get_extents(self):
         xmin = self.gcode_properties.x_min_extents()
@@ -67,6 +72,11 @@ class SurfaceScan:
         self.comp.getParam('extent-y-min').value = (grid_x0+grid_xdist)
         self.comp.getParam('extent-y-max').value = (grid_y0+grid_ydist)
         #self.comp.getParam("test_value").value = 123
+
+        if self.ok_for_mdi():
+            self.c.mode(linuxcnc.MODE_MDI)
+            self.c.wait_complete() # wait until mode switch executed
+            self.c.mdi("o<surface_scan_parameter_update> call")
         
         #somehow call o<surface_scan_param_update> sub here to update parameters in sim.var and we good
 
