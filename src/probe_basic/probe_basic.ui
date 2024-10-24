@@ -29024,7 +29024,7 @@ color: white;
                       </widget>
                      </item>
                      <item>
-                      <widget class="VCPSettingsLineEdit" name="surface_scan_y_spacing_3055">
+                      <widget class="VCPSettingsLineEdit" name="surface_scan_y_point_spacing_3055">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -38956,7 +38956,10 @@ QLabel[style=&quot;homing&quot;]{
 }</string>
                  </property>
                  <property name="text">
-                  <string>REF Z</string>
+                  <string>REF X</string>
+                 </property>
+                 <property name="rules" stdset="0">
+                  <string>[{&quot;name&quot;: &quot;New Rule&quot;, &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'ZEROED' if ch[0] else 'REF X'&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint.0.homed&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.axis:z</string>
@@ -39070,15 +39073,13 @@ QLabel[style=&quot;homing&quot;]{
                   <enum>Qt::NoFocus</enum>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">QPushButton {
-   	font: 15pt &quot;Bebas Kai&quot;;
-}</string>
+                  <string notr="true">background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));</string>
                  </property>
                  <property name="text">
                   <string>REF ALL</string>
                  </property>
                  <property name="rules" stdset="0">
-                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}]</string>
+                  <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'HOMED' if ch[0] else 'REF ALL'&quot;, &quot;name&quot;: &quot;reference_all&quot;}, {&quot;name&quot;: &quot;reference_all_bck&quot;, &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;'background:  qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(85, 85, 238, 255), stop:0.544974 rgba(90, 91, 239, 255), stop:1 rgba(126, 135, 243, 255));' if ch[0] else 'background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255));'&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:all_axes_homed&quot;, &quot;trigger&quot;: true}]}]</string>
                  </property>
                  <property name="actionName" stdset="0">
                   <string>machine.home.all</string>
@@ -48092,7 +48093,7 @@ font: 11pt bebas kai;
   </connection>
   <connection>
    <sender>surface_scan_x_start_pos_3050</sender>
-   <signal>editingFinished()</signal>
+   <signal>textChanged(QString)</signal>
    <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
@@ -48108,7 +48109,7 @@ font: 11pt bebas kai;
   </connection>
   <connection>
    <sender>surface_scan_x_end_pos_3051</sender>
-   <signal>editingFinished()</signal>
+   <signal>textChanged(QString)</signal>
    <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
@@ -48140,7 +48141,7 @@ font: 11pt bebas kai;
   </connection>
   <connection>
    <sender>surface_scan_y_start_pos_3053</sender>
-   <signal>editingFinished()</signal>
+   <signal>textChanged(QString)</signal>
    <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
@@ -48156,7 +48157,7 @@ font: 11pt bebas kai;
   </connection>
   <connection>
    <sender>surface_scan_y_end_pos_3054</sender>
-   <signal>editingFinished()</signal>
+   <signal>textChanged(QString)</signal>
    <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
    <hints>
@@ -48171,7 +48172,7 @@ font: 11pt bebas kai;
    </hints>
   </connection>
   <connection>
-   <sender>surface_scan_y_spacing_3055</sender>
+   <sender>surface_scan_y_point_spacing_3055</sender>
    <signal>editingFinished()</signal>
    <receiver>surface_scan_param_update</receiver>
    <slot>click()</slot>
@@ -48314,6 +48315,22 @@ font: 11pt bebas kai;
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>surface_scan_end_pos_roundup_3056</sender>
+   <signal>clicked()</signal>
+   <receiver>surface_scan_param_update</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>485</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>587</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <designerdata>
   <property name="gridDeltaX">
@@ -48333,19 +48350,19 @@ font: 11pt bebas kai;
   </property>
  </designerdata>
  <buttongroups>
-  <buttongroup name="probehelpGroup"/>
-  <buttongroup name="customwcsbtnGroup"/>
-  <buttongroup name="xycalbtnGroup"/>
-  <buttongroup name="surfacemaptabGroup"/>
-  <buttongroup name="tooloffsetdirbtnGroup"/>
-  <buttongroup name="sidebartabGroup"/>
-  <buttongroup name="btngrpMdi"/>
-  <buttongroup name="probetabGroup"/>
   <buttongroup name="probepagewcsbtnGroup"/>
-  <buttongroup name="proberoutinebtnGroup"/>
-  <buttongroup name="settertabGroup"/>
+  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="tooloffsetdirbtnGroup"/>
+  <buttongroup name="probetabGroup"/>
+  <buttongroup name="surfacemaptabGroup"/>
+  <buttongroup name="probehelpGroup"/>
   <buttongroup name="mainorthoperspbtnGroup"/>
+  <buttongroup name="sidebartabGroup"/>
+  <buttongroup name="proberoutinebtnGroup"/>
   <buttongroup name="spindlerpmsourcebtnGroup"/>
+  <buttongroup name="settertabGroup"/>
+  <buttongroup name="btngrpMdi"/>
+  <buttongroup name="customwcsbtnGroup"/>
   <buttongroup name="gcodemdibtnGroup"/>
  </buttongroups>
 </ui>
