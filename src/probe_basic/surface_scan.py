@@ -12,19 +12,91 @@ from qtpyvcp.utilities.settings import getSetting, setSetting
 INIFILE = linuxcnc.ini(os.getenv("INI_FILE_NAME"))
 
 class SurfaceScan:
-
-
-    def __init__(self, subroutine_combobox,scan_execute,interpolation_method):
+    """Surface Scan class for the ProbeBasic VCP."""
+    def __init__(self, parent):
         self.gcode_properties = getPlugin("gcode_properties")
-        # I dont know how to handle this: self.surface_scan_subroutine_combobox.currentIndexChanged.connect(self.function)
-        self.subroutine_combobox = subroutine_combobox
-        self.scan_execute = scan_execute
-        self.interpolation_method = interpolation_method
+        self.subroutine_combobox = parent.surface_scan_subroutine_combobox
+        self.scan_execute = parent.surface_scan_execute
+        self.interpolation_method = parent.surface_scan_interpolation
         self.initialize_combobox()
 
         self.s = linuxcnc.stat()
         self.c = linuxcnc.command()
         self.comp = getComponent("qtpyvcp")
+        
+        self.comp.addPin("compensation_enable.interp-method", "s32", "out")
+        self.comp.getPin("compensation_enable.interp-method").value = 1
+        self.comp.addParam("extent-x-min", "float", "rw")
+        self.comp.addParam("extent-x-max", "float", "rw")
+        self.comp.addParam("extent-x-spacing", "float", "rw")
+        self.comp.addParam("extent-y-min", "float", "rw")
+        self.comp.addParam("extent-y-max", "float", "rw")
+        self.comp.addParam("extent-y-spacing", "float", "rw")
+        self.comp.addParam("end-pos-roundup", "float", "rw")
+        self.comp.addParam("z_safety_pos", "float", "rw")
+        self.comp.addParam("z_probe_min_pos", "float", "rw")
+        self.comp.addParam("probe_z_fast_feedrate", "float", "rw")
+        self.comp.addParam("probe_z_slow_feedrate", "float", "rw")
+        self.comp.addParam("probe_xy_traverse_feedrate", "float", "rw")
+        self.comp.addParam("probe_z_retract_feedrate", "float", "rw")
+        self.comp.addParam("compensation_fade_height", "float", "rw")
+
+        parent.surface_scan_x_start_pos_3050.textChanged.connect(self.update_extent_x_min)
+        parent.surface_scan_x_end_pos_3051.textChanged.connect(self.update_extent_x_max)
+        parent.surface_scan_x_point_spacing_3052.textChanged.connect(self.update_extent_x_spacing)
+        parent.surface_scan_y_start_pos_3053.textChanged.connect(self.update_extent_y_min)
+        parent.surface_scan_y_end_pos_3054.textChanged.connect(self.update_extent_y_max)
+        parent.surface_scan_y_point_spacing_3055.textChanged.connect(self.update_extent_y_spacing)
+        parent.surface_scan_end_pos_roundup_3056.clicked.connect(self.update_end_pos_roundup)
+        parent.surface_scan_z_safety_pos_3057.textChanged.connect(self.update_z_safety_pos)
+        parent.surface_scan_z_probe_min_pos_3058.textChanged.connect(self.update_z_probe_min_pos)
+        parent.surface_scan_probe_z_fast_feedrate_3059.textChanged.connect(self.update_probe_z_fast_feedrate)
+        parent.surface_scan_probe_z_slow_feedrate_3060.textChanged.connect(self.update_probe_z_slow_feedrate)
+        parent.surface_scan_probe_xy_traverse_feedrate_3061.textChanged.connect(self.update_probe_xy_traverse_feedrate)
+        parent.surface_scan_probe_z_retract_feedrate_3062.textChanged.connect(self.update_probe_z_retract_feedrate)
+        parent.surface_scan_compensation_fade_height_3064.textChanged.connect(self.update_compensation_fade_height)
+        
+    def update_extent_x_min(self, value):
+        self.comp.getParam("extent-x-min").value = value
+
+    def update_extent_x_max(self, value):
+        self.comp.getParam("extent-x-max").value = value
+
+    def update_extent_x_spacing(self, value):
+        self.comp.getParam("extent-x-spacing").value = value
+
+    def update_extent_y_min(self, value):
+        self.comp.getParam("extent-y-min").value = value
+
+    def update_extent_y_max(self, value):
+        self.comp.getParam("extent-y-max").value = value
+
+    def update_extent_y_spacing(self, value):
+        self.comp.getParam("extent-y-spacing").value = value
+
+    def update_end_pos_roundup(self, value):
+        self.comp.getParam("end-pos-roundup").value = value
+
+    def update_z_safety_pos(self, value):
+        self.comp.getParam("z_safety_pos").value = value
+        
+    def update_z_probe_min_pos(self, value):
+        self.comp.getParam("z_probe_min_pos").value = value
+        
+    def update_probe_z_fast_feedrate(self, value):
+        self.comp.getParam("probe_z_fast_feedrate").value = value
+        
+    def update_probe_z_slow_feedrate(self, value):
+        self.comp.getParam("probe_z_slow_feedrate").value = value
+        
+    def update_probe_xy_traverse_feedrate(self, value):
+        self.comp.getParam("probe_xy_traverse_feedrate").value = value
+        
+    def update_probe_z_retract_feedrate(self, value):
+        self.comp.getParam("probe_z_retract_feedrate").value = value
+        
+    def update_compensation_fade_height(self, value):
+        self.comp.getParam("compensation_fade_height").value = value
 
     def initialize_combobox(self):
         """Populate combobox and connect the signal for when the selected index changes."""
@@ -76,7 +148,7 @@ class SurfaceScan:
         if self.ok_for_mdi():
             self.c.mode(linuxcnc.MODE_MDI)
             self.c.wait_complete() # wait until mode switch executed
-            self.c.mdi("o<surface_scan_parameter_update> call")
+            self.c.mdi("o<surface_scan_param_update> call")
         
         #somehow call o<surface_scan_param_update> sub here to update parameters in sim.var and we good
 
