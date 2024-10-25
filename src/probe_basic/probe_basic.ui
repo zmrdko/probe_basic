@@ -2618,7 +2618,7 @@ QPushButton:checked {
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>../../../../../../../../../../Desktop/images/left_arrow.png</normaloff>../../../../../../../../../../Desktop/images/left_arrow.png</iconset>
+                           <normaloff>../../../../../../../../../../../../Desktop/images/left_arrow.png</normaloff>../../../../../../../../../../../../Desktop/images/left_arrow.png</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -5673,7 +5673,7 @@ QTabWidget QTabBar::tab {
                          <rect>
                           <x>0</x>
                           <y>0</y>
-                          <width>80</width>
+                          <width>240</width>
                           <height>811</height>
                          </rect>
                         </property>
@@ -32455,7 +32455,7 @@ color: black;
 padding: 20px;</string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;IMPORTANT: PLEASE READ, &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline;&quot;&gt;ACTION REQUIRED!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline; color:#170cd9;&quot;&gt;Develop Branch has now become Stable Branch! &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;Probe Basic is moving to a stable and development apt version. This is to give users the ability to try and test the latest working branch of Probe Basic easily via changing the apt source list file. If you are seeing this message, you were already on the develop version, or were on the Stable version and now will need to make some changes to your configuration files.  The changes are required and will need to be done before using the interface succesfully.  you can follow the guide linked below to accomplish these changes.  important note, all the files shown being copied over are required, do not reuse the old version of those files as they will no longer work and cause errors.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;For Instructions on changing your config documents, please visit the following url and follow the instructions:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/machine_config.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/machine_config.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;If on Develop version you may wish to lock in this new stable release by changing the apt source list to stable, this can be done following the instruction link below:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;IMPORTANT: PLEASE READ, &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline;&quot;&gt;ACTION REQUIRED!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic; text-decoration: underline; color:#170cd9;&quot;&gt;Develop Branch has now become Stable Branch! &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;Probe Basic has moved to a stable and development apt version. This is to give users the ability to try and test the latest working branch of Probe Basic easily via changing the apt source list file. If you are seeing this message, you were already on the develop version, or were on the Stable version and now will need to make some changes to your configuration files. The changes are required and will need to be done before using the interface succesfully. you can follow the guide linked below to accomplish these changes. important note, all the files shown being copied over are required, do not reuse the old version of those files as they will no longer work and cause errors.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; font-weight:600; color:#000000;&quot;&gt;**Notes:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Droid Sans Mono','monospace','monospace'; font-size:14px; color:#000000;&quot;&gt;see machine config doc for new ini line needed for &amp;quot;user_buttons&amp;quot; and copy over the user_buttons folder from sim into your machine config. this allows users to edit the buttons in the main bottom window left side under the cycle start to adjust for their own use case and machine type. these edits can be done by running editvcp in terminal and navigating to the user_buttons folder and selecting the template_user_buttons.ui file. the changes will remain in the config folder and will not be overwritten on updates.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;For Instructions on changing your config documents, please visit the following url and follow the instructions:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/machine_config.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/machine_config.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;If on Develop version you may wish to lock in this new stable release by changing the apt source list to stable, this can be done following the instruction link below:&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://kcjengr.github.io/probe_basic/stable_develop_branch_change.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="textFormat">
                   <enum>Qt::AutoText</enum>
@@ -36062,12 +36062,18 @@ QPushButton:checked {
       <item>
        <widget class="QFrame" name="main_control_qframe">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
         <property name="minimumSize">
+         <size>
+          <width>340</width>
+          <height>340</height>
+         </size>
+        </property>
+        <property name="maximumSize">
          <size>
           <width>340</width>
           <height>340</height>
@@ -36089,21 +36095,24 @@ QPushButton:checked {
           <number>6</number>
          </property>
          <property name="leftMargin">
-          <number>22</number>
+          <number>20</number>
          </property>
          <property name="topMargin">
-          <number>9</number>
+          <number>12</number>
          </property>
          <property name="rightMargin">
-          <number>22</number>
+          <number>20</number>
          </property>
          <property name="bottomMargin">
-          <number>4</number>
+          <number>3</number>
          </property>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_92">
+           <property name="spacing">
+            <number>6</number>
+           </property>
            <property name="bottomMargin">
-            <number>4</number>
+            <number>3</number>
            </property>
            <item>
             <widget class="ActionButton" name="cycle_start_button">
@@ -36115,14 +36124,14 @@ QPushButton:checked {
              </property>
              <property name="minimumSize">
               <size>
-               <width>0</width>
-               <height>52</height>
+               <width>140</width>
+               <height>50</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>52</height>
+               <height>50</height>
               </size>
              </property>
              <property name="focusPolicy">
@@ -36185,14 +36194,14 @@ QPushButton:checked {
              </property>
              <property name="minimumSize">
               <size>
-               <width>0</width>
-               <height>52</height>
+               <width>140</width>
+               <height>50</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>52</height>
+               <height>50</height>
               </size>
              </property>
              <property name="focusPolicy">
@@ -36220,6 +36229,9 @@ QPushButton:checked {
            </property>
            <property name="topMargin">
             <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>3</number>
            </property>
           </layout>
          </item>
@@ -36253,117 +36265,148 @@ border-radius: 1px;
           </widget>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_89">
-           <item>
-            <widget class="ActionButton" name="power_button">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>75</width>
-               <height>35</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>75</width>
-               <height>35</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
+          <widget class="QWidget" name="widget" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>1</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>300</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_89">
+            <property name="leftMargin">
+             <number>1</number>
+            </property>
+            <property name="topMargin">
+             <number>3</number>
+            </property>
+            <property name="rightMargin">
+             <number>4</number>
+            </property>
+            <property name="bottomMargin">
+             <number>8</number>
+            </property>
+            <item>
+             <widget class="ActionButton" name="power_button">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>75</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>75</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
    	font: 15pt &quot;Bebas Kai&quot;;
 }</string>
-             </property>
-             <property name="text">
-              <string>POWER</string>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
-             </property>
-             <property name="actionName" stdset="0">
-              <string>machine.power.toggle</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="ref_coilumn_header_16">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget" native="true">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>32</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>32</height>
-              </size>
-             </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_40">
-              <property name="spacing">
-               <number>0</number>
               </property>
-              <property name="topMargin">
-               <number>1</number>
+              <property name="text">
+               <string>POWER</string>
               </property>
-              <property name="bottomMargin">
-               <number>1</number>
+              <property name="checkable">
+               <bool>true</bool>
               </property>
-              <item>
-               <widget class="HalLabel" name="timerhours">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">HalLabel {
+              <property name="actionName" stdset="0">
+               <string>machine.power.toggle</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="ref_coilumn_header_16">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>32</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_40">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
+               <item>
+                <widget class="HalLabel" name="timerhours">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">HalLabel {
     border-style: solid;
     border-color: silver;
     border-top-left-radius: 5px;
@@ -36379,43 +36422,43 @@ border-radius: 1px;
 	font: 75 17pt &quot;Bebas Kai&quot;;
     padding-left: 5px;
 }</string>
-                </property>
-                <property name="text">
-                 <string>00</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="textFormat" stdset="0">
-                 <string>02d</string>
-                </property>
-                <property name="pinType" stdset="0">
-                 <enum>HalLabel::u32</enum>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_2">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>5</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>5</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QLabel {
+                 </property>
+                 <property name="text">
+                  <string>00</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="textFormat" stdset="0">
+                  <string>02d</string>
+                 </property>
+                 <property name="pinType" stdset="0">
+                  <enum>HalLabel::u32</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>4</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>4</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
     border-style: solid;
     border-color: silver;
     border-radius: 0px;
@@ -36427,37 +36470,37 @@ border-radius: 1px;
     background: white;
 	font: 75 17pt &quot;Bebas Kai&quot;;
 }</string>
-                </property>
-                <property name="text">
-                 <string>:</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="HalLabel" name="timerminutes">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>22</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>22</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">HalLabel {
+                 </property>
+                 <property name="text">
+                  <string>:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="HalLabel" name="timerminutes">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>24</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>24</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">HalLabel {
     border-style: solid;
     border-color: silver;
     border-width: 1px;
@@ -36470,43 +36513,43 @@ border-radius: 1px;
     background: white;
 	font: 75 17pt &quot;Bebas Kai&quot;;
 }</string>
-                </property>
-                <property name="text">
-                 <string>00</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="textFormat" stdset="0">
-                 <string>02d</string>
-                </property>
-                <property name="pinType" stdset="0">
-                 <enum>HalLabel::u32</enum>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_3">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>3</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>3</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QLabel {
+                 </property>
+                 <property name="text">
+                  <string>00</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="textFormat" stdset="0">
+                  <string>02d</string>
+                 </property>
+                 <property name="pinType" stdset="0">
+                  <enum>HalLabel::u32</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>4</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>4</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
     border-style: solid;
     border-color: silver;
     border-radius: 0px;
@@ -36518,37 +36561,37 @@ border-radius: 1px;
     background: white;
 	font: 75 17pt &quot;Bebas Kai&quot;;
 }</string>
-                </property>
-                <property name="text">
-                 <string>:</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="HalLabel" name="timerseconds">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>30</width>
-                  <height>30</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">HalLabel {
+                 </property>
+                 <property name="text">
+                  <string>:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="HalLabel" name="timerseconds">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">HalLabel {
     border-style: solid;
     border-color: silver;
     border-width: 1px;
@@ -36565,84 +36608,85 @@ border-radius: 1px;
 	font: 75 17pt &quot;Bebas Kai&quot;;
     padding-right: 5px;
 }</string>
-                </property>
-                <property name="text">
-                 <string>00</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="textFormat" stdset="0">
-                 <string>02d</string>
-                </property>
-                <property name="pinType" stdset="0">
-                 <enum>HalLabel::u32</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="ref_coilumn_header_18">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="ActionButton" name="exit_button">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>75</width>
-               <height>35</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>75</width>
-               <height>35</height>
-              </size>
-             </property>
-             <property name="focusPolicy">
-              <enum>Qt::NoFocus</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(226, 64, 64, 255), stop:0.446154 rgba(204, 0, 0, 255), stop:0.764103 rgba(225, 67, 67, 255), stop:1 rgba(249, 142, 142, 255))</string>
-             </property>
-             <property name="text">
-              <string>E-STOP</string>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
-             </property>
-             <property name="rules" stdset="0">
-              <string>[{&quot;name&quot;: &quot;estop_button_color&quot;, &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;\&quot;background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255))\&quot; if ch[0] else \&quot;background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(226, 64, 64, 255), stop:0.446154 rgba(204, 0, 0, 255), stop:0.764103 rgba(225, 67, 67, 255), stop:1 rgba(249, 142, 142, 255))\&quot;&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:estop&quot;, &quot;trigger&quot;: true}]}]</string>
-             </property>
-             <property name="actionName" stdset="0">
-              <string>machine.estop.toggle</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+                 </property>
+                 <property name="text">
+                  <string>00</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="textFormat" stdset="0">
+                  <string>02d</string>
+                 </property>
+                 <property name="pinType" stdset="0">
+                  <enum>HalLabel::u32</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="ref_coilumn_header_18">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="ActionButton" name="exit_button">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>75</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>75</width>
+                <height>35</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(226, 64, 64, 255), stop:0.446154 rgba(204, 0, 0, 255), stop:0.764103 rgba(225, 67, 67, 255), stop:1 rgba(249, 142, 142, 255))</string>
+              </property>
+              <property name="text">
+               <string>E-STOP</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="rules" stdset="0">
+               <string>[{&quot;name&quot;: &quot;estop_button_color&quot;, &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;\&quot;background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(213, 218, 216, 255), stop:0.169312 rgba(82, 82, 83, 255), stop:0.328042 rgba(72, 70, 73, 255), stop:0.492063 rgba(78, 77, 79, 255), stop:0.703704 rgba(72, 70, 73, 255), stop:0.86 rgba(82, 82, 83, 255), stop:1 rgba(213, 218, 216, 255))\&quot; if ch[0] else \&quot;background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(226, 64, 64, 255), stop:0.446154 rgba(204, 0, 0, 255), stop:0.764103 rgba(225, 67, 67, 255), stop:1 rgba(249, 142, 142, 255))\&quot;&quot;, &quot;channels&quot;: [{&quot;url&quot;: &quot;status:estop&quot;, &quot;trigger&quot;: true}]}]</string>
+              </property>
+              <property name="actionName" stdset="0">
+               <string>machine.estop.toggle</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -44158,6 +44202,12 @@ QLabel[style=&quot;homing&quot;]{
           <height>340</height>
          </size>
         </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>340</height>
+         </size>
+        </property>
         <property name="focusPolicy">
          <enum>Qt::NoFocus</enum>
         </property>
@@ -46281,6 +46331,7 @@ font: 11pt bebas kai;
  </customwidgets>
  <resources>
   <include location="probe_basic.qrc"/>
+  <include location="probe_basic.qrc"/>
  </resources>
  <connections>
   <connection>
@@ -48351,18 +48402,19 @@ font: 11pt bebas kai;
  </designerdata>
  <buttongroups>
   <buttongroup name="probepagewcsbtnGroup"/>
-  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="gcodemdibtnGroup"/>
   <buttongroup name="tooloffsetdirbtnGroup"/>
-  <buttongroup name="probetabGroup"/>
-  <buttongroup name="surfacemaptabGroup"/>
-  <buttongroup name="probehelpGroup"/>
-  <buttongroup name="mainorthoperspbtnGroup"/>
+  <buttongroup name="btngrpMdi"/>
+  <buttongroup name="spindlerpmsourcebtnGroup"/>
+  <buttongroup name="customwcsbtnGroup"/>
   <buttongroup name="sidebartabGroup"/>
+  <buttongroup name="xycalbtnGroup"/>
+  <buttongroup name="surfacemaptabGroup"/>
   <buttongroup name="proberoutinebtnGroup"/>
   <buttongroup name="spindlerpmsourcebtnGroup"/>
   <buttongroup name="settertabGroup"/>
-  <buttongroup name="btngrpMdi"/>
-  <buttongroup name="customwcsbtnGroup"/>
-  <buttongroup name="gcodemdibtnGroup"/>
+  <buttongroup name="probetabGroup"/>
+  <buttongroup name="probehelpGroup"/>
+  <buttongroup name="mainorthoperspbtnGroup"/>
  </buttongroups>
 </ui>
