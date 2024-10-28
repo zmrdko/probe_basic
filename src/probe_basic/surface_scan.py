@@ -3,6 +3,7 @@ import os
 
 
 import linuxcnc
+from PyQt5.QtGui import QIntValidator
 
 from qtpyvcp.hal import getComponent
 from qtpyvcp.plugins import getPlugin
@@ -20,10 +21,12 @@ class SurfaceScan:
         self.interpolation_method = parent.surface_scan_interpolation
         self.initialize_combobox()
 
+        self.parent = parent
         self.s = linuxcnc.stat()
         self.c = linuxcnc.command()
         self.comp = getComponent("qtpyvcp")
-        
+
+
         self.comp.addPin("compensation_enable.interp-method", "s32", "out")
         self.comp.getPin("compensation_enable.interp-method").value = 1
         self.comp.addParam("extent-x-min", "float", "rw")
@@ -41,23 +44,52 @@ class SurfaceScan:
         self.comp.addParam("probe_z_retract_feedrate", "float", "rw")
         self.comp.addParam("compensation_fade_height", "float", "rw")
 
-        parent.surface_scan_x_start_pos_3050.textChanged.connect(self.update_extent_x_min)
-        parent.surface_scan_x_end_pos_3051.textChanged.connect(self.update_extent_x_max)
-        parent.surface_scan_x_point_spacing_3052.textChanged.connect(self.update_extent_x_spacing)
-        parent.surface_scan_y_start_pos_3053.textChanged.connect(self.update_extent_y_min)
-        parent.surface_scan_y_end_pos_3054.textChanged.connect(self.update_extent_y_max)
-        parent.surface_scan_y_point_spacing_3055.textChanged.connect(self.update_extent_y_spacing)
-        parent.surface_scan_end_pos_roundup_3056.clicked.connect(self.update_end_pos_roundup)
-        parent.surface_scan_z_safety_pos_3057.textChanged.connect(self.update_z_safety_pos)
-        parent.surface_scan_z_probe_min_pos_3058.textChanged.connect(self.update_z_probe_min_pos)
-        parent.surface_scan_probe_z_fast_feedrate_3059.textChanged.connect(self.update_probe_z_fast_feedrate)
-        parent.surface_scan_probe_z_slow_feedrate_3060.textChanged.connect(self.update_probe_z_slow_feedrate)
-        parent.surface_scan_probe_xy_traverse_feedrate_3061.textChanged.connect(self.update_probe_xy_traverse_feedrate)
-        parent.surface_scan_probe_z_retract_feedrate_3062.textChanged.connect(self.update_probe_z_retract_feedrate)
-        parent.surface_scan_compensation_fade_height_3064.textChanged.connect(self.update_compensation_fade_height)
+
+        onlyInt = QIntValidator()
+        onlyInt.setRange(-9999, 9999)
+
+        self.parent.surface_scan_x_start_pos_3050.setValidator(onlyInt)
+        self.parent.surface_scan_x_end_pos_3051.setValidator(onlyInt)
+        self.parent.surface_scan_x_point_spacing_3052.setValidator(onlyInt)
+        self.parent.surface_scan_y_start_pos_3053.setValidator(onlyInt)
+        self.parent.surface_scan_y_end_pos_3054.setValidator(onlyInt)
+        self.parent.surface_scan_y_point_spacing_3055.setValidator(onlyInt)
+        # self.parent.surface_scan_end_pos_roundup_3056.setValidator(onlyInt)
+        self.parent.surface_scan_z_safety_pos_3057.setValidator(onlyInt)
+        self.parent.surface_scan_z_probe_min_pos_3058.setValidator(onlyInt)
+        self.parent.surface_scan_probe_z_fast_feedrate_3059.setValidator(onlyInt)
+        self.parent.surface_scan_probe_z_slow_feedrate_3060.setValidator(onlyInt)
+        self.parent.surface_scan_probe_xy_traverse_feedrate_3061.setValidator(onlyInt)
+        self.parent.surface_scan_probe_z_retract_feedrate_3062.setValidator(onlyInt)
+        self.parent.surface_scan_compensation_fade_height_3064.setValidator(onlyInt)
+
+
+        self.parent.surface_scan_x_start_pos_3050.textChanged.connect(self.update_extent_x_min)
+        self.parent.surface_scan_x_end_pos_3051.textChanged.connect(self.update_extent_x_max)
+        self.parent.surface_scan_x_point_spacing_3052.textChanged.connect(self.update_extent_x_spacing)
+        self.parent.surface_scan_y_start_pos_3053.textChanged.connect(self.update_extent_y_min)
+        self.parent.surface_scan_y_end_pos_3054.textChanged.connect(self.update_extent_y_max)
+        self.parent.surface_scan_y_point_spacing_3055.textChanged.connect(self.update_extent_y_spacing)
+        self.parent.surface_scan_end_pos_roundup_3056.clicked.connect(self.update_end_pos_roundup)
+        self.parent.surface_scan_z_safety_pos_3057.textChanged.connect(self.update_z_safety_pos)
+        self.parent.surface_scan_z_probe_min_pos_3058.textChanged.connect(self.update_z_probe_min_pos)
+        self.parent.surface_scan_probe_z_fast_feedrate_3059.textChanged.connect(self.update_probe_z_fast_feedrate)
+        self.parent.surface_scan_probe_z_slow_feedrate_3060.textChanged.connect(self.update_probe_z_slow_feedrate)
+        self.parent.surface_scan_probe_xy_traverse_feedrate_3061.textChanged.connect(self.update_probe_xy_traverse_feedrate)
+        self.parent.surface_scan_probe_z_retract_feedrate_3062.textChanged.connect(self.update_probe_z_retract_feedrate)
+        self.parent.surface_scan_compensation_fade_height_3064.textChanged.connect(self.update_compensation_fade_height)
+
+    def value_filter(self, value):
+        try:
+            int(value)
+        except Exception as e:
+            return False
+
+        return True
         
     def update_extent_x_min(self, value):
-        self.comp.getParam("extent-x-min").value = value
+        if self.value_filter(value):
+            self.comp.getParam("extent-x-min").value = int(value)
 
     def update_extent_x_max(self, value):
         self.comp.getParam("extent-x-max").value = value
