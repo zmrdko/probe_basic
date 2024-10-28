@@ -30,20 +30,20 @@ class SurfaceScan:
 
         self.comp.addPin("compensation_enable.interp-method", "s32", "out")
         self.comp.getPin("compensation_enable.interp-method").value = 1
-        self.comp.addParam("extent-x-min", "float", "rw")
-        self.comp.addParam("extent-x-max", "float", "rw")
-        self.comp.addParam("extent-x-spacing", "float", "rw")
-        self.comp.addParam("extent-y-min", "float", "rw")
-        self.comp.addParam("extent-y-max", "float", "rw")
-        self.comp.addParam("extent-y-spacing", "float", "rw")
-        self.comp.addParam("end-pos-roundup", "float", "rw")
-        self.comp.addParam("z_safety_pos", "float", "rw")
-        self.comp.addParam("z_probe_min_pos", "float", "rw")
-        self.comp.addParam("probe_z_fast_feedrate", "float", "rw")
-        self.comp.addParam("probe_z_slow_feedrate", "float", "rw")
-        self.comp.addParam("probe_xy_traverse_feedrate", "float", "rw")
-        self.comp.addParam("probe_z_retract_feedrate", "float", "rw")
-        self.comp.addParam("compensation_fade_height", "float", "rw")
+        #self.comp.addParam("surface-scan.x-start-pos", "float", "rw")
+        #self.comp.addParam("extent-x-max", "float", "rw")
+        #self.comp.addParam("extent-x-spacing", "float", "rw")
+        #self.comp.addParam("extent-y-min", "float", "rw")
+        #self.comp.addParam("extent-y-max", "float", "rw")
+        #self.comp.addParam("extent-y-spacing", "float", "rw")
+        #self.comp.addParam("end-pos-roundup", "float", "rw")
+        #self.comp.addParam("z_safety_pos", "float", "rw")
+        #self.comp.addParam("z_probe_min_pos", "float", "rw")
+        #self.comp.addParam("probe_z_fast_feedrate", "float", "rw")
+        #self.comp.addParam("probe_z_slow_feedrate", "float", "rw")
+        #self.comp.addParam("probe_xy_traverse_feedrate", "float", "rw")
+        #self.comp.addParam("probe_z_retract_feedrate", "float", "rw")
+        #self.comp.addParam("compensation_fade_height", "float", "rw")
 
         valid_format = QDoubleValidator()
         valid_format.setRange(-999999, 999999, 9)
@@ -85,62 +85,62 @@ class SurfaceScan:
             return False
 
         return True
-        
+
     def update_extent_x_min(self, value):
         if self.value_filter(value):
-            self.comp.getParam("extent-x-min").value = value
+            self.comp.getParam("surface-scan.x-start-pos").value = value
 
     def update_extent_x_max(self, value):
         if self.value_filter(value):
-            self.comp.getParam("extent-x-max").value = value
+            self.comp.getParam("surface-scan.x-end-pos").value = value
 
     def update_extent_x_spacing(self, value):
         if self.value_filter(value):
-            self.comp.getParam("extent-x-spacing").value = value
+            self.comp.getParam("surface-scan.x-point-spacing").value = value
 
     def update_extent_y_min(self, value):
         if self.value_filter(value):
-            self.comp.getParam("extent-y-min").value = value
+            self.comp.getParam("surface-scan.y-start-pos").value = value
 
     def update_extent_y_max(self, value):
         if self.value_filter(value):
-            self.comp.getParam("extent-y-max").value = value
+            self.comp.getParam("surface-scan.y-end-pos").value = value
 
     def update_extent_y_spacing(self, value):
         if self.value_filter(value):
-            self.comp.getParam("extent-y-spacing").value = value
+            self.comp.getParam("surface-scan.y-point-spacing").value = value
 
     def update_end_pos_roundup(self, value):
         if self.value_filter(value):
-            self.comp.getParam("end-pos-roundup").value = value
+            self.comp.getParam("surface-scan.end-pos-roundup").value = value
 
     def update_z_safety_pos(self, value):
         if self.value_filter(value):
-            self.comp.getParam("z_safety_pos").value = value
+            self.comp.getParam("surface-scan.z-safety-pos").value = value
         
     def update_z_probe_min_pos(self, value):
         if self.value_filter(value):
-            self.comp.getParam("z_probe_min_pos").value = value
+            self.comp.getParam("surface-scan.z-probe-min-pos").value = value
         
     def update_probe_z_fast_feedrate(self, value):
         if self.value_filter(value):
-            self.comp.getParam("probe_z_fast_feedrate").value = value
+            self.comp.getParam("surface-scan.probe-z-fast-feedrate").value = value
 
     def update_probe_z_slow_feedrate(self, value):
         if self.value_filter(value):
-            self.comp.getParam("probe_z_slow_feedrate").value = value
+            self.comp.getParam("surface-scan.probe-z-slow-feedrate").value = value
         
     def update_probe_xy_traverse_feedrate(self, value):
         if self.value_filter(value):
-            self.comp.getParam("probe_xy_traverse_feedrate").value = value
+            self.comp.getParam("surface-scan.probe-xy-traverse-feedrate").value = value
         
     def update_probe_z_retract_feedrate(self, value):
         if self.value_filter(value):
-            self.comp.getParam("probe_z_retract_feedrate").value = value
+            self.comp.getParam("surface-scan.probe-z-retract-feedrate").value = value
         
     def update_compensation_fade_height(self, value):
         if self.value_filter(value):
-           self.comp.getParam("compensation_fade_height").value = value
+           self.comp.getParam("surface-scan.compensation-fade-height").value = value
 
     def initialize_combobox(self):
         """Populate combobox and connect the signal for when the selected index changes."""
@@ -183,10 +183,10 @@ class SurfaceScan:
         setSetting('surface-scan.x-end-pos', (grid_x0+grid_xdist))
         setSetting('surface-scan.y-end-pos', (grid_y0+grid_ydist))
 
-        self.comp.getParam('extent-x-min').value = grid_x0
-        self.comp.getParam('extent-x-max').value = grid_y0
-        self.comp.getParam('extent-y-min').value = (grid_x0+grid_xdist)
-        self.comp.getParam('extent-y-max').value = (grid_y0+grid_ydist)
+        self.comp.getParam('surface-scan.x-start-pos').value = grid_x0
+        self.comp.getParam('surface-scan.x-end-pos').value = grid_y0
+        self.comp.getParam('surface-scan.y-start-pos').value = (grid_x0+grid_xdist)
+        self.comp.getParam('surface-scan.y-end-pos').value = (grid_y0+grid_ydist)
         #self.comp.getParam("test_value").value = 123
 
         if self.ok_for_mdi():

@@ -438,6 +438,13 @@ settings:
     persistent: true
     min_value: -10000
     max_value: 10000
+    
+  surface-scan.compensation-fade-height:
+    description: test
+    default_value: 0.0
+    persistent: true
+    min_value: -10000
+    max_value: 10000
 
   surface-scan.subroutine:
     description: Active subroutine procedure

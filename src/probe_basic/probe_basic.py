@@ -64,8 +64,26 @@ const_setting_parameter = {
     "surface-scan.probe-z-fast-feedrate": 3059,
     "surface-scan.probe-z-slow-feedrate": 3060,
     "surface-scan.probe-xy-traverse-feedrate": 3061,
-    "surface-scan.probe-z-retract-feedrate": 3062
+    "surface-scan.probe-z-retract-feedrate": 3062,
+    "surface-scan.compensation-fade-height": 3064
 }
+
+
+  #3050 = #<_hal[qtpyvcp.extent-x-max]>
+  #3051 = #<_hal[qtpyvcp.extent-x-min]>
+  #3052 = #<_hal[qtpyvcp.extent-x-spacing]>
+  #3053 = #<_hal[qtpyvcp.extent-y-min]>
+  #3054 = #<_hal[qtpyvcp.extent-y-max]>
+  #3055 = #<_hal[qtpyvcp.extent-y-spacing]>
+  #3056 = #<_hal[qtpyvcp.end-pos-roundup]>
+  #3057 = #<_hal[qtpyvcp.z_safety_pos]>
+  #3058 = #<_hal[qtpyvcp.z_probe_min_pos]>
+  #3059 = #<_hal[qtpyvcp.probe_z_fast_feedrate]>
+  #3060 = #<_hal[qtpyvcp.probe_z_slow_feedrate]>
+  #3061 = #<_hal[qtpyvcp.probe_xy_traverse_feedrate]>
+  #3062 = #<_hal[qtpyvcp.probe_z_retract_feedrate]>
+  #3064 = #<_hal[qtpyvcp.compensation_fade_height]>
+
 
 class ProbeBasic(VCPMainWindow):
     """Main window class for the ProbeBasic VCP."""
@@ -167,8 +185,15 @@ class ProbeBasic(VCPMainWindow):
                                          setSetting('tool-setter-probe.setter-offset-direction-front', 1)
                                     case 3:
                                          setSetting('tool-setter-probe.setter-offset-direction-back', 1)
+                            elif matching_key == 'surface-scan.end-pos-roundup':
+                                setSetting(matching_key, int(float(file_value)))
+                                self.comp.addParam(matching_key, "float", "rw")
+                                self.comp.getParam(matching_key).value = file_value
                             else:
                                 setSetting(matching_key, file_value)
+                                self.comp.addParam(matching_key, "float", "rw")
+                                self.comp.getParam(matching_key).value = file_value
+                                
                         else:
                             print(f"Code '{file_code_as_int}' not found in const_setting_parameter, skipping...")
                     else:
