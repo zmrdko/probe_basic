@@ -46,7 +46,7 @@ class SurfaceScan:
         self.comp.addParam("compensation_fade_height", "float", "rw")
 
         valid_format = QDoubleValidator()
-        valid_format.setRange(-9999, 9999, 4)
+        valid_format.setRange(-999999, 999999, 9)
 
         self.parent.surface_scan_x_start_pos_3050.setValidator(valid_format)
         self.parent.surface_scan_x_end_pos_3051.setValidator(valid_format)
@@ -54,7 +54,6 @@ class SurfaceScan:
         self.parent.surface_scan_y_start_pos_3053.setValidator(valid_format)
         self.parent.surface_scan_y_end_pos_3054.setValidator(valid_format)
         self.parent.surface_scan_y_point_spacing_3055.setValidator(valid_format)
-        # self.parent.surface_scan_end_pos_roundup_3056.setValidator(validFloat)
         self.parent.surface_scan_z_safety_pos_3057.setValidator(valid_format)
         self.parent.surface_scan_z_probe_min_pos_3058.setValidator(valid_format)
         self.parent.surface_scan_probe_z_fast_feedrate_3059.setValidator(valid_format)
@@ -63,21 +62,20 @@ class SurfaceScan:
         self.parent.surface_scan_probe_z_retract_feedrate_3062.setValidator(valid_format)
         self.parent.surface_scan_compensation_fade_height_3064.setValidator(valid_format)
 
-
-        self.parent.surface_scan_x_start_pos_3050.textChanged.connect(self.update_extent_x_min)
-        self.parent.surface_scan_x_end_pos_3051.textChanged.connect(self.update_extent_x_max)
-        self.parent.surface_scan_x_point_spacing_3052.textChanged.connect(self.update_extent_x_spacing)
-        self.parent.surface_scan_y_start_pos_3053.textChanged.connect(self.update_extent_y_min)
-        self.parent.surface_scan_y_end_pos_3054.textChanged.connect(self.update_extent_y_max)
-        self.parent.surface_scan_y_point_spacing_3055.textChanged.connect(self.update_extent_y_spacing)
+        self.parent.surface_scan_x_start_pos_3050.textEdited.connect(self.update_extent_x_min)
+        self.parent.surface_scan_x_end_pos_3051.textEdited.connect(self.update_extent_x_max)
+        self.parent.surface_scan_x_point_spacing_3052.textEdited.connect(self.update_extent_x_spacing)
+        self.parent.surface_scan_y_start_pos_3053.textEdited.connect(self.update_extent_y_min)
+        self.parent.surface_scan_y_end_pos_3054.textEdited.connect(self.update_extent_y_max)
+        self.parent.surface_scan_y_point_spacing_3055.textEdited.connect(self.update_extent_y_spacing)
         self.parent.surface_scan_end_pos_roundup_3056.clicked.connect(self.update_end_pos_roundup)
-        self.parent.surface_scan_z_safety_pos_3057.textChanged.connect(self.update_z_safety_pos)
-        self.parent.surface_scan_z_probe_min_pos_3058.textChanged.connect(self.update_z_probe_min_pos)
-        self.parent.surface_scan_probe_z_fast_feedrate_3059.textChanged.connect(self.update_probe_z_fast_feedrate)
-        self.parent.surface_scan_probe_z_slow_feedrate_3060.textChanged.connect(self.update_probe_z_slow_feedrate)
-        self.parent.surface_scan_probe_xy_traverse_feedrate_3061.textChanged.connect(self.update_probe_xy_traverse_feedrate)
-        self.parent.surface_scan_probe_z_retract_feedrate_3062.textChanged.connect(self.update_probe_z_retract_feedrate)
-        self.parent.surface_scan_compensation_fade_height_3064.textChanged.connect(self.update_compensation_fade_height)
+        self.parent.surface_scan_z_safety_pos_3057.textEdited.connect(self.update_z_safety_pos)
+        self.parent.surface_scan_z_probe_min_pos_3058.textEdited.connect(self.update_z_probe_min_pos)
+        self.parent.surface_scan_probe_z_fast_feedrate_3059.textEdited.connect(self.update_probe_z_fast_feedrate)
+        self.parent.surface_scan_probe_z_slow_feedrate_3060.textEdited.connect(self.update_probe_z_slow_feedrate)
+        self.parent.surface_scan_probe_xy_traverse_feedrate_3061.textEdited.connect(self.update_probe_xy_traverse_feedrate)
+        self.parent.surface_scan_probe_z_retract_feedrate_3062.textEdited.connect(self.update_probe_z_retract_feedrate)
+        self.parent.surface_scan_compensation_fade_height_3064.textEdited.connect(self.update_compensation_fade_height)
 
     @staticmethod
     def value_filter(value):
