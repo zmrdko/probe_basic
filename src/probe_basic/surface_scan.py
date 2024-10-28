@@ -45,24 +45,23 @@ class SurfaceScan:
         self.comp.addParam("probe_z_retract_feedrate", "float", "rw")
         self.comp.addParam("compensation_fade_height", "float", "rw")
 
+        valid_format = QDoubleValidator()
+        valid_format.setRange(-9999, 9999, 4)
 
-        onlyInt = QDoubleValidator()
-        onlyInt.setRange(-9999, 9999)
-
-        self.parent.surface_scan_x_start_pos_3050.setValidator(onlyInt)
-        self.parent.surface_scan_x_end_pos_3051.setValidator(onlyInt)
-        self.parent.surface_scan_x_point_spacing_3052.setValidator(onlyInt)
-        self.parent.surface_scan_y_start_pos_3053.setValidator(onlyInt)
-        self.parent.surface_scan_y_end_pos_3054.setValidator(onlyInt)
-        self.parent.surface_scan_y_point_spacing_3055.setValidator(onlyInt)
-        # self.parent.surface_scan_end_pos_roundup_3056.setValidator(onlyInt)
-        self.parent.surface_scan_z_safety_pos_3057.setValidator(onlyInt)
-        self.parent.surface_scan_z_probe_min_pos_3058.setValidator(onlyInt)
-        self.parent.surface_scan_probe_z_fast_feedrate_3059.setValidator(onlyInt)
-        self.parent.surface_scan_probe_z_slow_feedrate_3060.setValidator(onlyInt)
-        self.parent.surface_scan_probe_xy_traverse_feedrate_3061.setValidator(onlyInt)
-        self.parent.surface_scan_probe_z_retract_feedrate_3062.setValidator(onlyInt)
-        self.parent.surface_scan_compensation_fade_height_3064.setValidator(onlyInt)
+        self.parent.surface_scan_x_start_pos_3050.setValidator(valid_format)
+        self.parent.surface_scan_x_end_pos_3051.setValidator(valid_format)
+        self.parent.surface_scan_x_point_spacing_3052.setValidator(valid_format)
+        self.parent.surface_scan_y_start_pos_3053.setValidator(valid_format)
+        self.parent.surface_scan_y_end_pos_3054.setValidator(valid_format)
+        self.parent.surface_scan_y_point_spacing_3055.setValidator(valid_format)
+        # self.parent.surface_scan_end_pos_roundup_3056.setValidator(validFloat)
+        self.parent.surface_scan_z_safety_pos_3057.setValidator(valid_format)
+        self.parent.surface_scan_z_probe_min_pos_3058.setValidator(valid_format)
+        self.parent.surface_scan_probe_z_fast_feedrate_3059.setValidator(valid_format)
+        self.parent.surface_scan_probe_z_slow_feedrate_3060.setValidator(valid_format)
+        self.parent.surface_scan_probe_xy_traverse_feedrate_3061.setValidator(valid_format)
+        self.parent.surface_scan_probe_z_retract_feedrate_3062.setValidator(valid_format)
+        self.parent.surface_scan_compensation_fade_height_3064.setValidator(valid_format)
 
 
         self.parent.surface_scan_x_start_pos_3050.textChanged.connect(self.update_extent_x_min)
@@ -80,7 +79,8 @@ class SurfaceScan:
         self.parent.surface_scan_probe_z_retract_feedrate_3062.textChanged.connect(self.update_probe_z_retract_feedrate)
         self.parent.surface_scan_compensation_fade_height_3064.textChanged.connect(self.update_compensation_fade_height)
 
-    def value_filter(self, value):
+    @staticmethod
+    def value_filter(value):
         try:
             float(value)
         except Exception as e:
