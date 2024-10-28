@@ -3,7 +3,8 @@ import os
 
 
 import linuxcnc
-from PyQt5.QtGui import QIntValidator
+
+from PyQt5.QtGui import QDoubleValidator
 
 from qtpyvcp.hal import getComponent
 from qtpyvcp.plugins import getPlugin
@@ -45,7 +46,7 @@ class SurfaceScan:
         self.comp.addParam("compensation_fade_height", "float", "rw")
 
 
-        onlyInt = QIntValidator()
+        onlyInt = QDoubleValidator()
         onlyInt.setRange(-9999, 9999)
 
         self.parent.surface_scan_x_start_pos_3050.setValidator(onlyInt)
@@ -81,7 +82,7 @@ class SurfaceScan:
 
     def value_filter(self, value):
         try:
-            int(value)
+            float(value)
         except Exception as e:
             return False
 
@@ -89,46 +90,59 @@ class SurfaceScan:
         
     def update_extent_x_min(self, value):
         if self.value_filter(value):
-            self.comp.getParam("extent-x-min").value = int(value)
+            self.comp.getParam("extent-x-min").value = value
 
     def update_extent_x_max(self, value):
-        self.comp.getParam("extent-x-max").value = value
+        if self.value_filter(value):
+            self.comp.getParam("extent-x-max").value = value
 
     def update_extent_x_spacing(self, value):
-        self.comp.getParam("extent-x-spacing").value = value
+        if self.value_filter(value):
+            self.comp.getParam("extent-x-spacing").value = value
 
     def update_extent_y_min(self, value):
-        self.comp.getParam("extent-y-min").value = value
+        if self.value_filter(value):
+            self.comp.getParam("extent-y-min").value = value
 
     def update_extent_y_max(self, value):
-        self.comp.getParam("extent-y-max").value = value
+        if self.value_filter(value):
+            self.comp.getParam("extent-y-max").value = value
 
     def update_extent_y_spacing(self, value):
-        self.comp.getParam("extent-y-spacing").value = value
+        if self.value_filter(value):
+            self.comp.getParam("extent-y-spacing").value = value
 
     def update_end_pos_roundup(self, value):
-        self.comp.getParam("end-pos-roundup").value = value
+        if self.value_filter(value):
+            self.comp.getParam("end-pos-roundup").value = value
 
     def update_z_safety_pos(self, value):
-        self.comp.getParam("z_safety_pos").value = value
+        if self.value_filter(value):
+            self.comp.getParam("z_safety_pos").value = value
         
     def update_z_probe_min_pos(self, value):
-        self.comp.getParam("z_probe_min_pos").value = value
+        if self.value_filter(value):
+            self.comp.getParam("z_probe_min_pos").value = value
         
     def update_probe_z_fast_feedrate(self, value):
-        self.comp.getParam("probe_z_fast_feedrate").value = value
-        
+        if self.value_filter(value):
+            self.comp.getParam("probe_z_fast_feedrate").value = value
+
     def update_probe_z_slow_feedrate(self, value):
-        self.comp.getParam("probe_z_slow_feedrate").value = value
+        if self.value_filter(value):
+            self.comp.getParam("probe_z_slow_feedrate").value = value
         
     def update_probe_xy_traverse_feedrate(self, value):
-        self.comp.getParam("probe_xy_traverse_feedrate").value = value
+        if self.value_filter(value):
+            self.comp.getParam("probe_xy_traverse_feedrate").value = value
         
     def update_probe_z_retract_feedrate(self, value):
-        self.comp.getParam("probe_z_retract_feedrate").value = value
+        if self.value_filter(value):
+            self.comp.getParam("probe_z_retract_feedrate").value = value
         
     def update_compensation_fade_height(self, value):
-        self.comp.getParam("compensation_fade_height").value = value
+        if self.value_filter(value):
+           self.comp.getParam("compensation_fade_height").value = value
 
     def initialize_combobox(self):
         """Populate combobox and connect the signal for when the selected index changes."""
