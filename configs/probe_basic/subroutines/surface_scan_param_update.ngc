@@ -1,19 +1,19 @@
 o<surface_scan_param_update> sub
   
-  #3050 = #<_hal[qtpyvcp.extent-x-max]>
-  #3051 = #<_hal[qtpyvcp.extent-x-min]>
-  #3052 = #<_hal[qtpyvcp.extent-x-spacing]>
-  #3053 = #<_hal[qtpyvcp.extent-y-min]>
-  #3054 = #<_hal[qtpyvcp.extent-y-max]>
-  #3055 = #<_hal[qtpyvcp.extent-y-spacing]>
-  #3056 = #<_hal[qtpyvcp.end-pos-roundup]>
-  #3057 = #<_hal[qtpyvcp.z_safety_pos]>
-  #3058 = #<_hal[qtpyvcp.z_probe_min_pos]>
-  #3059 = #<_hal[qtpyvcp.probe_z_fast_feedrate]>
-  #3060 = #<_hal[qtpyvcp.probe_z_slow_feedrate]>
-  #3061 = #<_hal[qtpyvcp.probe_xy_traverse_feedrate]>
-  #3062 = #<_hal[qtpyvcp.probe_z_retract_feedrate]>
-  #3064 = #<_hal[qtpyvcp.compensation_fade_height]>
+  #3050 = #<_hal[qtpyvcp.surface-scan.x-start-pos]>
+  #3051 = #<_hal[qtpyvcp.surface-scan.x-end-pos]>
+  #3052 = #<_hal[qtpyvcp.surface-scan.x-point-spacing]>
+  #3053 = #<_hal[qtpyvcp.surface-scan.y-start-pos]>
+  #3054 = #<_hal[qtpyvcp.surface-scan.y-end-pos]>
+  #3055 = #<_hal[qtpyvcp.surface-scan.y-point-spacing]>
+  #3056 = #<_hal[qtpyvcp.surface-scan.end-pos-roundup]>
+  #3057 = #<_hal[qtpyvcp.surface-scan.z-safety-pos]>
+  #3058 = #<_hal[qtpyvcp.surface-scan.z-probe-min-pos]>
+  #3059 = #<_hal[qtpyvcp.surface-scan.probe-z-fast-feedrate]>
+  #3060 = #<_hal[qtpyvcp.surface-scan.probe-z-slow-feedrate]>
+  #3061 = #<_hal[qtpyvcp.surface-scan.probe-xy-traverse-feedrate]>
+  #3062 = #<_hal[qtpyvcp.surface-scan.probe-z-retract-feedrate]>
+  #3064 = #<_hal[qtpyvcp.surface-scan.compensation-fade-height]>
 
 o<surface_scan_param_update> endsub [1]
 
